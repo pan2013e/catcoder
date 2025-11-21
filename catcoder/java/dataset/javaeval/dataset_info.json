@@ -1,0 +1,98 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "testmethods": {
+      "feature": {
+        "dtype": "string",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "bug_id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "source": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "task_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "source_dir": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "package": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "path": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "lines": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "focal_fn_signature": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "focal_fn_name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "focal_fn_full": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "hint": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "focal_ctx": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "doctest": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "docstring": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "sanitized_path": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "original_task_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "infile_context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "rag_data": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "extended_context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "repocoder_data": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

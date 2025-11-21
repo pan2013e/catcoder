@@ -1,0 +1,9 @@
+You are given a blank Rust function with type context, referential code snippet and docstrings. Complete the Rust function with correct and functional code, and make use of the provided context if possible. Do NOT output any extra information. Provide your answer in [CODE] and [/CODE] tags.
+
+[CONTEXT]
+{{data['focal_ctx']}}
+{{data['rag_data']}}
+[/CONTEXT]
+[CODE]
+{{data['docstring']}}
+{{data['focal_fn_signature']}}

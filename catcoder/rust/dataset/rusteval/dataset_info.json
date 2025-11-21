@@ -1,0 +1,71 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "task_id": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "package": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "path": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "lines": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "docstring": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "signature": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "fn_name": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "fn_full": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "hint": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "focal_ctx": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "test_body": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "rag_data": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "repocoder_data": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "extended_context": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "infile_context": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

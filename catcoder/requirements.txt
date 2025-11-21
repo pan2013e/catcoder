@@ -1,0 +1,14 @@
+backoff==2.2.1
+chromadb==0.5.5
+datasets==2.14.6
+Jinja2==3.1.2
+langchain==0.2.14
+langchain-community==0.2.12
+langchain-core==0.2.33
+numpy==1.26.1
+openai==1.25.2
+python-dotenv==1.0.0
+rank_bm25==0.2.2
+sentence-transformers
+torch
+vllm
