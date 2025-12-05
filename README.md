@@ -17,7 +17,7 @@
 
 - A clean `conda` environment is recommended, so that the following operations only affect a specific environment.
 - cd into `catcoder/rust` and unzip `crates.zip` to the current directory.
-    - In the unzipped folder, there are several repositories. Users are advised to run `cargo test` in each repo before evaluation. This would download dependencies and build reusable binary objects. Thus, this can speedup future testing procedures and prevent unexpected test failures or timeouts.
+    - In the unzipped folder, there are several repositories. Users are advised to run `cargo test` in each repo before evaluation. This would download dependencies (which can be slow in some regions, depending on the network condition) and build reusable binary objects. Thus, this can speedup future testing procedures and prevent unexpected test failures or timeouts.
 - To run evaluation code, install the dependencies by running `pip install -r requirements.txt` in `catcoder`.
 - To use CatCoder's code for further research, it has to be configured in addition to the previous steps:
     - cd into `catcoder/tools/java`, and run `python setup.py install`.
