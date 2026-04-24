@@ -9,3 +9,4 @@ Cargo.lock
 *.so
 .env
 .omx/
+.trae/
