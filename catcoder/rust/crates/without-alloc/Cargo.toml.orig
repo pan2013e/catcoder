@@ -1,0 +1,30 @@
+[package]
+name = "without-alloc"
+version = "0.2.2"
+description = "Replacements for `Box`, `Rc`, `Vec`, .. without `alloc`"
+authors = ["Andreas Molzer <andreas.molzer@gmx.de>"]
+edition = "2018"
+license = "MIT"
+documentation = "https://docs.rs/without-alloc"
+repository = "https://github.com/HeroicKatora/static-alloc"
+readme = "Readme.md"
+categories = ["embedded", "memory-management", "no-std"]
+
+[features]
+default = []
+
+# Nightly features might be removed in any new compiler OR new versions of the
+# library. Pin both exact versions if you intend to use them.
+#
+# Enable features depending on `set_ptr_value` feature gate.
+nightly_set_ptr_value = []
+
+[dependencies]
+alloc-traits = { path = "../alloc-traits", version = "0.1.0" }
+unsize = "1.1.0"
+
+[dev-dependencies]
+static-alloc = { path = "../static-alloc" }
+
+[package.metadata.docs.rs]
+all-features = true

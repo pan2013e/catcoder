@@ -1,0 +1,73 @@
+{
+  "benchmark": "rusteval_xc",
+  "lastest_eval": {
+    "compile@1": 1.0,
+    "pass@1": 0.8400000000000001
+  },
+  "n": 10,
+  "k": [
+    1
+  ],
+  "fn_codes": [
+    [
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let n_blocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; n_blocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let nblocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; nblocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let n_blocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; n_blocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }",
+      "pub fn from_elem (nbits: usize, bit: bool) -> Self {\n        let n_blocks = blocks_for_bits::<B>(nbits);\n        let val = if bit { !B::zero() } else { B::zero() };\n        let mut storage = vec![val; n_blocks];\n        let mut bv = BitVec { storage, nbits };\n        bv.fix_last_block();\n        bv\n    }"
+    ],
+    [
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }",
+      "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n        let mut bit_vec = BitVec::with_capacity(len);\n        for i in 0..len {\n            bit_vec.push(f(i));\n        }\n        bit_vec\n    }"
+    ],
+    [
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }",
+      "pub fn get (&self, i: usize) -> Option<bool> {\n        if i >= self.nbits {\n            None\n        } else {\n            let w = i / B::bits();\n            let b = i % B::bits();\n            let flag = B::one() << b;\n            Some((self.storage[w] & flag) != B::zero())\n        }\n    }"
+    ],
+    [
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let mask = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | mask;\n        } else {\n            self.storage[w] = self.storage[w] & !mask;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set(&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }",
+      "pub fn set (&mut self, i: usize, x: bool) {\n        assert!(i < self.nbits, \"index out of bounds\");\n        let w = i / B::bits();\n        let b = i % B::bits();\n        let flag = B::one() << b;\n        if x {\n            self.storage[w] = self.storage[w] | flag;\n        } else {\n            self.storage[w] = self.storage[w] & !flag;\n        }\n    }"
+    ],
+    [
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }",
+      "pub fn negate (&mut self) {\n        self.ensure_invariant();\n        for w in &mut self.storage {\n            *w = !*w;\n        }\n        self.fix_last_block();\n    }"
+    ]
+  ]
+}

@@ -1,0 +1,125 @@
+stages:
+  - syntax-check
+  - lint
+  - unit-test
+  - report
+  - deploy
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - target
+    - Cargo.lock
+    - coverage
+
+variables:
+  CARGO_HOME: $CI_PROJECT_DIR/cargo
+  APT_CACHE_DIR: $CI_PROJECT_DIR/apt
+
+before_script:
+  - apt-get update -yq
+  - apt-get install -o dir::cache::archives="$APT_CACHE_DIR" -y cmake gfortran
+  - set PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig
+  - cargo --version
+  - rustc --version
+
+syntax-check:
+  stage: syntax-check
+  image: rust:latest
+  script:
+    - cargo rustc -- -D warnings
+
+fmt:
+  stage: lint
+  needs: ["syntax-check"]
+  image: rust:latest
+  script:
+    - rustup component add rustfmt
+    - cargo fmt --check
+
+test-default:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test
+
+test-native:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test --no-default-features --features native
+
+test-serde:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test --no-default-features --features "native serde-serialize"
+
+test-openblas:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test --tests --no-default-features --features openblas
+
+test-netlib:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test --tests --no-default-features --features netlib
+
+test-intelmkl:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test --tests --no-default-features --features intel-mkl
+
+test-convert-mint:
+  stage: unit-test
+  needs: ["fmt"]
+  image: rust:latest
+  script:
+    - cargo test --tests --no-default-features --features "native convert-mint"
+  
+coverage:
+ stage: report
+ image: rust:latest
+ variables:
+   OUTPUT_FOLDER: ./target/coverage
+ script:
+   - rustup component add llvm-tools-preview
+   - rm -rf $OUTPUT_FOLDER
+   - RUSTFLAGS="-Cinstrument-coverage" LLVM_PROFILE_FILE="$OUTPUT_FOLDER/coverage-%p-%m.profraw" CARGO_INCREMENTAL=0 cargo test --tests
+   # generate html report
+   - cargo install grcov
+   - ./cargo/bin/grcov --version
+   - ./cargo/bin/grcov $OUTPUT_FOLDER --binary-path ./target/debug/ -s . -t html --branch --ignore-not-existing --ignore "/*" --ignore "examples/**" --ignore "cargo/**" --ignore "tests/**" -o $OUTPUT_FOLDER/html
+   - ./cargo/bin/grcov $OUTPUT_FOLDER --binary-path ./target/debug/ -s . -t cobertura --branch --ignore-not-existing --ignore "/*" --ignore "examples/**" --ignore "cargo/**" --ignore "tests/**" -o $OUTPUT_FOLDER/cobertura
+   - head $OUTPUT_FOLDER/html/coverage.json
+ coverage: '/\"label\"\:\"coverage\"\,\"message\"\:\"(\d{1,3}.\d{1,2})%"/'
+ artifacts:
+   paths:
+     - ./target/coverage/
+     - ./*.profraw
+   reports:
+    coverage_report:
+      coverage_format: cobertura
+      path: ./target/coverage/cobertura
+
+#pages:
+#  stage: deploy
+#  only:
+#    - main
+#  image: "registry.gitlab.com/rustmath/mathru/coverage:latest"
+#  script:
+#    - mkdir -p public/mathru/report
+#    - cp --recursive coverage/ public/mathru/report
+#  artifacts:
+#    paths:
+#      - public
+#    expire_in: 1h

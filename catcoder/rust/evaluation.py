@@ -1,10 +1,11 @@
 import os
 import json
-
+import time
 from datasets import load_from_disk
+from google import genai
+from google.genai import types
 
 from metrics import CratePassK
-from inference import Model, OpenAIModel, VllmClientModel
 from util import (
     build_prompt,
     remove_markdown, 
@@ -12,6 +13,43 @@ from util import (
     truncate_generation,
 )
 
+# =================================================================
+# 1. NOSSO MOTOR DE IA CUSTOMIZADO (GEMINI)
+# =================================================================
+class GeminiModel:
+    def __init__(self, api_key, model_name="models/gemini-3.1-flash-lite"):
+        self.model_name = model_name
+        self.client = genai.Client(api_key=api_key)
+        # O CatCoder usa o 'info' para dar nome ao arquivo json salvo
+        self.info = model_name.replace("/", "-")
+
+    def infer(self, prompt, max_tentativas=3):
+        for tentativa in range(max_tentativas):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        # Instrução rígida para gerar SÓ código Rust
+                        system_instruction="You are an expert Rust developer. You must complete the Rust code provided in the prompt. Output ONLY the raw, functional Rust code. Do not include markdown blocks like ```rust or ```python. Do not write explanations. Just the code.",
+                        temperature=0.2,
+                        max_output_tokens=1024,
+                    )
+                )
+                # Pausa obrigatória para o plano gratuito do Google (15 RPM)
+                time.sleep(4) 
+                return response.text
+            except Exception as e:
+                print(f"\nErro na tentativa {tentativa + 1}: {e}")
+                if tentativa < max_tentativas - 1:
+                    print("Aguardando 10 segundos para desafogar o servidor do Google...")
+                    time.sleep(10)
+                else:
+                    return ""
+
+# =================================================================
+# 2. ARQUITETURA ORIGINAL DO CATCODER
+# =================================================================
 class Benchmark:
     '''
     Base class for benchmarks. The benchmark is responsible for:
@@ -19,17 +57,17 @@ class Benchmark:
     - Generating code from model and postprocessing
     - Evaluating the generated code
     '''
-    def __init__(self, model: Model, name: str, n=10, k=[1,3,5], cache=False):
-        '''
-        - `n` and `k`, refer to https://arxiv.org/abs/2107.03374 for details.
-        - `cache`, whether to load cached results from disk. 
-        '''
+    def __init__(self, model, name: str, n=10, k=[1], cache=False):
         self.name = name
         self.model = model
         self.n = n
         self.k = k
         self.cache = cache
         self.data = load_from_disk(f'./dataset/{self.name}')
+        
+        # ---> CORTA O DATASET PARA RODAR APENAS 5 PROBLEMAS <---
+        self.data = self.data.select(range(5))
+        
         self.postprocs = [truncate_generation, remove_markdown, fix_fragmented_code]
         os.makedirs(f'results/{self.name}', exist_ok=True)
     
@@ -49,24 +87,17 @@ class Benchmark:
         return self._postprocess_code(self.model.infer(prompt))
     
     def _codegen(self, data, *_, **__):
-        '''
-        Use model to generate code. To support alternative models or pipelines, 
-        override this method in subclasses.
-        '''
         codes = []
-        
         for _ in range(self.n):
             codegen_prompt = build_prompt(self._from_hf_data(data), True)
             code = self._model(codegen_prompt)
             if not code.startswith('fn') and not code.startswith('pub fn'):
                 code = data['signature'] + ' ' + code
             codes.append(code)
-        
         return codes
 
     def _batched_codegen(self):
         fn_codes = []
-
         if self.cache and os.path.exists(self.cache_file):
             with open(self.cache_file, 'r') as f:
                 d = json.load(f)
@@ -79,13 +110,9 @@ class Benchmark:
                 results = self._codegen(data)
                 assert len(results) == self.n
                 fn_codes.append(results)
-        
         return fn_codes
     
     def _evaluate(self):
-        '''
-        Evaluate the generated code using unbiased pass@k metric.
-        '''
         raise NotImplementedError()
     
     def _dump_cache(self, metric, fn_codes):
@@ -106,9 +133,8 @@ class Benchmark:
     def evaluate(self):
         self._dump_cache(*self._evaluate())
 
-
 class RustEval(Benchmark):
-    def __init__(self, model: Model, n=10, cache=False):
+    def __init__(self, model, n=10, cache=False):
         super().__init__(model, 'rusteval', n=n, cache=cache)
         self.crates_base = './crates'
     
@@ -120,7 +146,7 @@ class RustEval(Benchmark):
         return metric, fn_codes
 
 class RustEvalCatCoder(RustEval):
-    def __init__(self, model: Model, n=10, cache=False):
+    def __init__(self, model, n=10, cache=False):
         super().__init__(model, n, cache)
         self.name = 'rusteval_xc'
         os.makedirs(f'results/{self.name}', exist_ok=True)
@@ -133,77 +159,16 @@ class RustEvalCatCoder(RustEval):
             'rag_data': data['rag_data'],
         }
 
-class RustEvalInFile(RustEval):
-    def __init__(self, model: Model, n=10, cache=False):
-        super().__init__(model, n, cache)
-        self.name = 'rusteval_if'
-        os.makedirs(f'results/{self.name}', exist_ok=True)
-
-    def _from_hf_data(self, data):
-        return {
-            'focal_fn_signature': data['signature'],
-            'docstring': data['docstring'],
-            'focal_ctx': data['infile_context'],
-            'rag_data': '',
-        }
-
-class RustEvalRepoCoder(RustEval):
-    def __init__(self, model: Model, n=10, cache=False):
-        super().__init__(model, n, cache)
-        self.name = 'rusteval_repo'
-        os.makedirs(f'results/{self.name}', exist_ok=True)
-
-    def _from_hf_data(self, data):
-        return {
-            'focal_fn_signature': data['signature'],
-            'docstring': data['docstring'],
-            'focal_ctx': '',
-            'rag_data': data['repocoder_data'],
-        }
-    
-class RustEvalVanilla(RustEval):
-    def __init__(self, model: Model, n=10, cache=False):
-        super().__init__(model, n, cache)
-        self.name = 'rusteval_basic'
-        os.makedirs(f'results/{self.name}', exist_ok=True)
-
-    def _from_hf_data(self, data):
-        return {
-            'focal_fn_signature': data['signature'],
-            'docstring': data['docstring'],
-            'focal_ctx': '',
-            'rag_data': '',
-        }
-    
-class RustEvalWithoutContext(RustEval):
-    def __init__(self, model: Model, n=10, cache=False):
-        super().__init__(model, n, cache)
-        self.name = 'rusteval-tc'
-        os.makedirs(f'results/{self.name}', exist_ok=True)
-
-    def _from_hf_data(self, data):
-        return {
-            'focal_fn_signature': data['signature'],
-            'docstring': data['docstring'],
-            'focal_ctx': '',
-            'rag_data': data['rag_data'],
-        }
-
-class RustEvalWithoutRetrieval(RustEval):
-    def __init__(self, model: Model, n=10, cache=False):
-        super().__init__(model, n, cache)
-        self.name = 'rusteval-cr'
-        os.makedirs(f'results/{self.name}', exist_ok=True)
-
-    def _from_hf_data(self, data):
-        return {
-            'focal_fn_signature': data['signature'],
-            'docstring': data['docstring'],
-            'focal_ctx': data['extended_context'],
-            'rag_data': '',
-        }
-
+# =================================================================
+# 3. BLOCO DE EXECUÇÃO
+# =================================================================
 if __name__ == '__main__':
-    model = VllmClientModel('codellama-13b')
+    # 1. COLOQUE SUA CHAVE DO GEMINI AQUI (A que começa com AIza...)
+    model = GeminiModel(api_key="API_GERADA")
+    
+    # 2. Inicializa o benchmark usando o CatCoder
+    # n=1 fará com que gere apenas 1 resposta para o problema selecionado
     benchmark = RustEvalCatCoder(model, n=10, cache=False)
+    
+    # 3. Roda a geração E a compilação/teste
     benchmark.evaluate()

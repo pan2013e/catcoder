@@ -1,4 +1,3 @@
-import multiprocessing as mp
 import numpy as np
 
 from functools import lru_cache
@@ -44,7 +43,10 @@ class CratePassK(Metric):
             _data = data.copy()
             _data['focal_fn_full'] = code
             args.append(_data)
-        results = mp.Pool(50).map(self._run_adapter_mp, args)
+        
+        # Execução sequencial para evitar o WinError 1450 e poupar memória RAM
+        results = [self._run_adapter_mp(arg) for arg in args]
+        
         compiles = sum([r[0] for r in results])
         passes = sum([r[1] for r in results])
         
