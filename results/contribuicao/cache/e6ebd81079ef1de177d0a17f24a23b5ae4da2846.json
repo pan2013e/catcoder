@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn pack_to(&mut self, minimum_capacity: usize) -> HashMap<Index<T>, Index<T>> {\n    if minimum_capacity < self.length {\n        panic!(\"minimum capacity must be greater than or equal to the current length\");\n    }\n\n    let mut map = HashMap::new();\n    let mut new_entries = Vec::with_capacity(minimum_capacity);\n    let mut current_index = self.head;\n\n    while let Some(index) = current_index {\n        if let Some(entry) = self.entries[index.get()].occupied_ref() {\n            let new_index = new_entries.len();\n            new_entries.push(entry.clone());\n            map.insert(index, Index::new(new_index));\n            current_index = entry.next;\n        } else {\n            break;\n        }\n    }\n\n    self.entries = new_entries.into_iter().map(Entry::Occupied).collect();\n    self.generation += 1;\n    self.head = Some(NonMaxUsize::new(0).unwrap());\n    self.tail = Some(NonMaxUsize::new(self.entries.len() - 1).unwrap());\n    self.vacant_head = None;\n\n    map\n}\n[/CODE]",
+  "input_tokens": 2804,
+  "output_tokens": 237,
+  "usd": 0.0005628,
+  "brl": 0.0031347960000000005,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 22,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "3dc5f0d2cb8df4465bd685a1b74b9e8ade9b0f32"
+  }
+}

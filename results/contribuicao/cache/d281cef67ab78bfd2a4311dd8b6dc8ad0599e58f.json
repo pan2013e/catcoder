@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec\n}\n[/CODE]",
+  "input_tokens": 1656,
+  "output_tokens": 43,
+  "usd": 0.00027419999999999994,
+  "brl": 0.0015272939999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 1,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "3c3ca817a3418e51145cd5b581147fb661d59fb4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn read_string(&mut self) -> Result<String> {\n    let bytes = self.read_bytes()?;\n    String::from_utf8(bytes).map_err(|_| Error::with_kind(ErrorKind::InvalidFormat))\n}\n[/CODE]",
+  "input_tokens": 1650,
+  "output_tokens": 51,
+  "usd": 0.0002781,
+  "brl": 0.001549017,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 70,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "d6ef87db56247177b9b43a98dc7dd20a7badfe99"
+  }
+}

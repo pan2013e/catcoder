@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão 0 é a correta, pois não há necessidade de verificar se a string escapada está vazia antes de retornar, já que a lógica de escape já garante que caracteres não especiais são adicionados ao resultado.\"}",
+  "input_tokens": 3528,
+  "output_tokens": 58,
+  "usd": 0.0005639999999999999,
+  "brl": 0.00314148,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 48,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "6d44b7ed6e5d6dd400bc3aa86f940d4d1807929e"
+  }
+}

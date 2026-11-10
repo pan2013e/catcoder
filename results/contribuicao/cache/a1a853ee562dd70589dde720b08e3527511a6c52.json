@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.top())\n}\n[/CODE]",
+  "input_tokens": 1402,
+  "output_tokens": 27,
+  "usd": 0.00022649999999999998,
+  "brl": 0.0012616049999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 59,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "f418736a96fa49232ec5905cdd59942e902ef7e8"
+  }
+}

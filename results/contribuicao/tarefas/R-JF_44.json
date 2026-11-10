@@ -1,0 +1,30 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 1,
+  "acoes": [
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn remove_times (&mut self, val: &K, times: usize) -> usize {\n    if let Some(count) = self.elem_counts.get_mut(val) {\n        let actual_removal = (*count).min(times);\n        *count -= actual_removal;\n\n        if *count == 0 {\n            self.elem_counts.remove(val);\n        }\n        self.size -= actual_removal;\n        actual_removal\n    } else {\n        0\n    }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 3494,
+  "tokens_out": 339,
+  "brl": 0.028582454999999996,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn remove_times (&mut self, val: &K, times: usize) -> usize {\n    if let Some(count) = self.elem_counts.get_mut(val) {\n        let actual_removal = (*count).min(times);\n        *count -= actual_removal;\n\n        if *count == 0 {\n            self.elem_counts.remove(val);\n        }\n        self.size -= actual_removal;\n        actual_removal\n    } else {\n        0\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 44,
+  "lingua": "rust",
+  "rodada": "R-JF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 0.597588033
+}

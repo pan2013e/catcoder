@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let remaining_path = &self.path[start..];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "brl": 0.0,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let end = self.path.len();\n    let remaining_path = &self.path[start..end];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let remaining_path = &self.path[start..];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let remaining_path = &self.path[start..];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let remaining_path = &self.path[start..];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let remaining_path = &self.path[start..];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 75,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 1.106317299000001
+}

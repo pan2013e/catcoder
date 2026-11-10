@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn supports_payload(self) -> bool {\n    match self {\n        Method::Put | Method::Post | Method::Delete | Method::Patch => true,\n        _ => false,\n    }\n}\n[/CODE]",
+  "input_tokens": 855,
+  "output_tokens": 46,
+  "usd": 0.00015585,
+  "brl": 0.0008680845,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 50,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "e3b24a9b3f0f5d1cc3c45c46263f9c5273576b9c"
+  }
+}

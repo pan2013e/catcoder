@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `is_normalized` está correta, pois verifica se o esquema e a autoridade são válidos, se o caminho está normalizado e se a consulta, se existir, também está normalizada.\"}",
+  "input_tokens": 1922,
+  "output_tokens": 57,
+  "usd": 0.00032250000000000003,
+  "brl": 0.0017963250000000003,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 57,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "d9a8c2767c2ae582f3d05f1285fa755166fdfa5d"
+  }
+}

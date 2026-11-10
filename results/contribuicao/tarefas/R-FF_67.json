@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn push (&mut self, item: T) {\n    self.tree.insert(item, ());\n    self.tree.balance();\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 4213,
+  "tokens_out": 117,
+  "brl": 0.0039109755,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn push (&mut self, item: T) {\n    self.tree.insert(item, ());\n    self.tree.balance();\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn push(&mut self, item: T) {\n    self.tree.insert(item, ());\n    self.tree.balance();\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 67,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.3538451115
+}

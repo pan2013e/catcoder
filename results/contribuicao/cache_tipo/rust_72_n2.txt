@@ -1,0 +1,15 @@
+pub struct Reader<'a> {
+inner: &[u8],
+offset: usize,
+}
+fn new<T: ?Sized + AsRef<[u8]>>(inner: &T) -> Reader
+fn set_offset(&mut self, offset: usize) -> Result<()>
+fn read_bytes(&mut self) -> Result<Vec<u8>>
+fn read_mpint(&mut self) -> Result<Vec<u8>>
+fn read_string(&mut self) -> Result<String>
+fn read_u32(&mut self) -> Result<u32>
+fn read_u64(&mut self) -> Result<u64>
+pub enum Result<T, E> {
+Ok(T),
+Err(E),
+}

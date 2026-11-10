@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois trata corretamente o caso em que não há componentes restantes, retornando a raiz.\"}",
+  "input_tokens": 2339,
+  "output_tokens": 40,
+  "usd": 0.00037485,
+  "brl": 0.0020879145,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 77,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "48a2ba4cc69e311876fc2557b17a472e09419842"
+  }
+}

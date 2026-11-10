@@ -1,0 +1,134 @@
+{
+  "teto_brl": 20.0,
+  "rodadas": [
+    {
+      "id": "R-FF",
+      "lingua": "rust",
+      "geradora": "gpt-4o-mini",
+      "juiza": "gpt-4o-mini",
+      "n_planejado": 46,
+      "n_completas": 46,
+      "taxa_sucesso": 0.32608695652173914,
+      "taxa_compilacao": 0.5217391304347826,
+      "media_voltas": 2.652173913043478,
+      "media_n": 1.7391304347826086,
+      "acoes": {
+        "continua": 49,
+        "reverte": 35,
+        "parar": 38
+      },
+      "brl": 0.3983388285,
+      "tokens_in": 421987,
+      "tokens_out": 13695,
+      "reserva_brl": 0.0990928065
+    },
+    {
+      "id": "R-JF",
+      "lingua": "rust",
+      "geradora": "gpt-4o-mini",
+      "juiza": "gpt-5",
+      "n_planejado": 8,
+      "n_completas": 8,
+      "taxa_sucesso": 0.25,
+      "taxa_compilacao": 0.5,
+      "media_voltas": 1.0,
+      "media_n": 2.25,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 8
+      },
+      "brl": 0.213358293,
+      "tokens_in": 27292,
+      "tokens_out": 2751,
+      "reserva_brl": 0.4594411715
+    },
+    {
+      "id": "R-FFORTE",
+      "lingua": "rust",
+      "geradora": "gpt-5",
+      "juiza": "gpt-5",
+      "n_planejado": 4,
+      "n_completas": 4,
+      "taxa_sucesso": 0.0,
+      "taxa_compilacao": 0.75,
+      "media_voltas": 1.0,
+      "media_n": 2.5,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 4
+      },
+      "brl": 0.3787112625,
+      "tokens_in": 13433,
+      "tokens_out": 5120,
+      "reserva_brl": 1.0001656315
+    },
+    {
+      "id": "J-FF",
+      "lingua": "java",
+      "geradora": "gpt-4o-mini",
+      "juiza": "gpt-4o-mini",
+      "n_planejado": 30,
+      "n_completas": 0,
+      "taxa_sucesso": null,
+      "taxa_compilacao": null,
+      "media_voltas": null,
+      "media_n": null,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 0
+      },
+      "brl": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "reserva_brl": 0.0990928065
+    },
+    {
+      "id": "J-JF",
+      "lingua": "java",
+      "geradora": "gpt-4o-mini",
+      "juiza": "gpt-5",
+      "n_planejado": 6,
+      "n_completas": 0,
+      "taxa_sucesso": null,
+      "taxa_compilacao": null,
+      "media_voltas": null,
+      "media_n": null,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 0
+      },
+      "brl": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "reserva_brl": 0.4594411715
+    },
+    {
+      "id": "J-FFORTE",
+      "lingua": "java",
+      "geradora": "gpt-5",
+      "juiza": "gpt-5",
+      "n_planejado": 2,
+      "n_completas": 0,
+      "taxa_sucesso": null,
+      "taxa_compilacao": null,
+      "media_voltas": null,
+      "media_n": null,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 0
+      },
+      "brl": 0,
+      "tokens_in": 0,
+      "tokens_out": 0,
+      "reserva_brl": 1.0001656315
+    }
+  ],
+  "motivos": [
+    "Java não rodou: defects4j não respondeu."
+  ]
+}

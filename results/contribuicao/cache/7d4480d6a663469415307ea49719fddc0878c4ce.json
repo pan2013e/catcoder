@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A versão 0 possui uma lógica de alinhamento mais clara e correta, garantindo que os setores livres sejam devidamente alinhados com a configuração de alinhamento da GPT.\"}",
+  "input_tokens": 3864,
+  "output_tokens": 48,
+  "usd": 0.0006084,
+  "brl": 0.003388788,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 26,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "8397e569a3aa1d250e8327d136185f62cca6151b"
+  }
+}

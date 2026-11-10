@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn split_off(&mut self, at: usize) -> Self {\n    let mut new_map = VecMap::new();\n    \n    // Ensure the `at` index is within bounds\n    if at < self.n {\n        // Move elements from the original map to the new map\n        for i in at..self.n {\n            if let Some(value) = self.v[i].take() {\n                new_map.insert(value);\n            }\n        }\n        // Update the original map's size\n        self.n = at;\n    }\n    \n    new_map\n}\n[/CODE]",
+  "input_tokens": 1958,
+  "output_tokens": 121,
+  "usd": 0.00036629999999999996,
+  "brl": 0.002040291,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 82,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "b19d07ca16c292714bf802bcff7f1d7b31531857"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn sample_exact(degree: impl Into<PolynomialDegree>) -> Self {\n    let degree = degree.into();\n    match degree {\n        PolynomialDegree::Infinity => Polynomial {\n            coefficients: vec![Scalar::zero()],\n        },\n        PolynomialDegree::Finite(deg) => {\n            let mut coefficients = vec![Scalar::random(); (deg + 1) as usize];\n            coefficients[0] = Scalar::random(); // Ensure the constant term is non-zero\n            Polynomial { coefficients }\n        }\n    }\n}\n[/CODE]",
+  "input_tokens": 2026,
+  "output_tokens": 111,
+  "usd": 0.0003705,
+  "brl": 0.002063685,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 10,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "f96bad169e983af9fe5385ee0bea9cd8861c125c"
+  }
+}

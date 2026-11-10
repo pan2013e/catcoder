@@ -1,0 +1,9 @@
+{
+  "medido_brl": 1.106317299000001,
+  "teto_brl": 20.0,
+  "motivos": [
+    "Java não rodou: defects4j não respondeu."
+  ],
+  "rust": true,
+  "java": false
+}

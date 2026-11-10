@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn insert_times (&mut self, val: K, n: usize) {\n    let count = self.elem_counts.entry(val).or_insert(0);\n    *count += n;\n    self.size += n;\n}\n[/CODE]",
+  "input_tokens": 1290,
+  "output_tokens": 51,
+  "usd": 0.00022409999999999997,
+  "brl": 0.001248237,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 43,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "077124c269b72eb1603b9bd16c6b5845bcdf8c90"
+  }
+}

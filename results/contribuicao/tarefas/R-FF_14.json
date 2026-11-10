@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn back(&self) -> Option<&T> {\n    match self.entries.last() {\n        Some(Entry::Occupied(entry)) => Some(&entry.value),\n        _ => None,\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 3461,
+  "tokens_out": 166,
+  "brl": 0.0034464375000000003,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn back(&self) -> Option<&T> {\n    match self.entries.last() {\n        Some(Entry::Occupied(entry)) => Some(&entry.value),\n        _ => None,\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn back(&self) -> Option<&T> {\n    match self.entries.last() {\n        Some(Entry::Occupied(entry)) => Some(&entry.value),\n        _ => None,\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 14,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.365654904
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois trata o caso em que a string não precisa de escape, retornando uma referência ao `self` em vez de alocar uma nova string.\"}",
+  "input_tokens": 3663,
+  "output_tokens": 53,
+  "usd": 0.00058125,
+  "brl": 0.0032375625,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 48,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "4add3a5509249e28e2ec68d290ab6e05b1fb919b"
+  }
+}

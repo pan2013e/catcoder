@@ -39,6 +39,9 @@ features = ["span-locations"]
 version = "0.20.2"
 features = ["extension-module"]
 
+[patch.crates-io]
+ra_ap_stdx = { path = "vendor/ra_ap_stdx" }
+
 [dependencies.quote]
 version = "1.0"
 

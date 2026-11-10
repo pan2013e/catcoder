@@ -1,0 +1,60 @@
+pub struct GPT {
+pub sector_size: u64,
+pub header: GPTHeader,
+partitions: Vec<GPTPartitionEntry, Global>,
+pub align: u64,
+}
+fn new_from<R>(reader: &mut R, sector_size: u64, disk_guid: [u8; 16]) -> Result<GPT>
+fn read_from<R: ?Sized>(mut reader: &mut R, sector_size: u64) -> Result<GPT>
+fn find_from<R: ?Sized>(mut reader: &mut R) -> Result<GPT>
+fn find_alignment(header: &GPTHeader, partitions: &[GPTPartitionEntry]) -> u64
+fn check_partition_guids(&self) -> Result<()>
+fn check_partition_boundaries(&self) -> Result<()>
+fn write_into<W: ?Sized>(&mut self, mut writer: &mut W) -> Result<GPTHeader>
+fn find_at_sector(&self, sector: u64) -> Option<u32>
+fn find_free_sectors(&self) -> Vec<(u64, u64)>
+fn find_first_place(&self, size: u64) -> Option<u64>
+fn find_last_place(&self, size: u64) -> Option<u64>
+fn find_optimal_place(&self, size: u64) -> Option<u64>
+fn get_maximum_partition_size(&self) -> Result<u64>
+fn get_partition_byte_range(&self, partition_number: u32) -> Result<RangeInclusive<u64>>
+fn sort(&mut self)
+fn remove(&mut self, i: u32) -> Result<()>
+fn remove_at_sector(&mut self, sector: u64) -> Result<()>
+fn iter(&self) -> impl Iterator<Item = (u32, &GPTPartitionEntry)>
+fn iter_mut(&mut self) -> impl Iterator<Item = (u32, &mut GPTPartitionEntry)>
+fn write_protective_mbr_into<W: ?Sized>(mut writer: &mut W, sector_size: u64) -> Result<()>
+fn is_primary(&self) -> bool
+fn is_backup(&self) -> bool
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}
+pub struct GPTHeader {
+pub signature: [u8; 8],
+pub revision: [u8; 4],
+pub header_size: u32,
+pub crc32_checksum: u32,
+pub reserved: [u8; 4],
+pub primary_lba: u64,
+pub backup_lba: u64,
+pub first_usable_lba: u64,
+pub last_usable_lba: u64,
+pub disk_guid: [u8; 16],
+pub partition_entry_lba: u64,
+pub number_of_partition_entries: u32,
+pub size_of_partition_entry: u32,
+pub partition_entry_array_crc32: u32,
+}
+fn new_from<R>(reader: &mut R, sector_size: u64, disk_guid: [u8; 16]) -> Result<GPTHeader>
+fn read_from<R: ?Sized>(reader: &mut R) -> Result<GPTHeader>
+fn write_into<W: ?Sized>( &mut self, mut writer: &mut W, sector_size: u64, partitions: &[GPTPartitionEntry], ) -> Result<()>
+fn generate_crc32_checksum(&self) -> u32
+fn update_crc32_checksum(&mut self)
+fn generate_partition_entry_array_crc32(&self, partitions: &[GPTPartitionEntry]) -> u32
+fn update_partition_entry_array_crc32(&mut self, partitions: &[GPTPartitionEntry])
+fn update_from<S: ?Sized>(&mut self, seeker: &mut S, sector_size: u64) -> Result<()>
+fn is_primary(&self) -> bool
+fn is_backup(&self) -> bool

@@ -1,0 +1,50 @@
+{
+  "n_pedido": 3,
+  "n_usado": 3,
+  "voltas": 5,
+  "acoes": [
+    "reverte",
+    "continua",
+    "reverte",
+    "reverte",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let mut components = self.components().collect::<Vec<_>>();\n        components.pop(); // Remove the last component\n        if components.is_empty() {\n            Some(Path::new(\"/\")) // Return root if no components left\n        } else {\n            Some(Path::new(components.join(\"/\").as_str()))\n        }\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "brl": 0.0,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let components = self.components().collect::<Vec<_>>();\n        if components.len() > 1 {\n            let parent_components = &components[..components.len() - 1];\n            Some(Path::new(parent_components.join(\"/\").as_str()))\n        } else {\n            None\n        }\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let mut components = self.components().collect::<Vec<_>>();\n        components.pop(); // Remove the last component\n        if components.is_empty() {\n            Some(Path::new(\"/\")) // Return root if no components left\n        } else {\n            Some(Path::new(components.join(\"/\").as_str()))\n        }\n    }\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let mut components = self.components().collect::<Vec<_>>();\n        components.pop(); // Remove the last component\n        if components.is_empty() {\n            Some(Path::new(\"/\")) // Return root if no components left\n        } else {\n            Some(Path::new(components.join(\"/\").as_str()))\n        }\n    }\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let mut components = self.components().collect::<Vec<_>>();\n        components.pop(); // Remove the last component\n        if components.is_empty() {\n            Some(Path::new(\"/\")) // Return root if no components left\n        } else {\n            Some(Path::new(components.join(\"/\").as_str()))\n        }\n    }\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let mut components = self.components().collect::<Vec<_>>();\n        components.pop(); // Remove the last component\n        if components.is_empty() {\n            Some(Path::new(\"/\")) // Return root if no components left\n        } else {\n            Some(Path::new(components.join(\"/\").as_str()))\n        }\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 77,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 1.106317299000001
+}

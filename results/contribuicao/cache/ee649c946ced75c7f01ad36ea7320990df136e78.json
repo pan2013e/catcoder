@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão 0 não está correta, pois `values.clone()` não deve ser usado, pois isso não remove os valores do vetor original. A versão 1 é a correta.\"}",
+  "input_tokens": 2272,
+  "output_tokens": 50,
+  "usd": 0.0003708,
+  "brl": 0.0020653560000000004,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 52,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "4e3df080984f7a51bdb782ec4bebf1cf807519cb"
+  }
+}

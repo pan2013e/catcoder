@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn get(&self, i: usize) -> Option<bool> {\n    if i < self.nbits {\n        let block_index = i / B::bits();\n        let bit_index = i % B::bits();\n        let block = self.storage[block_index];\n        Some((block & (B::one() << bit_index)) != B::zero())\n    } else {\n        None\n    }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 8946,
+  "tokens_out": 249,
+  "brl": 0.008306541,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn get(&self, i: usize) -> Option<bool> {\n    if i < self.nbits {\n        let block_index = i / B::bits();\n        let bit_index = i % B::bits();\n        let block = self.storage[block_index];\n        Some((block & (B::one() << bit_index)) != B::zero())\n    } else {\n        None\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn get(&self, i: usize) -> Option<bool> {\n    if i < self.nbits {\n        let block_index = i / B::bits();\n        let bit_index = i % B::bits();\n        let block = self.storage[block_index];\n        Some((block & (B::one() << bit_index)) != B::zero())\n    } else {\n        None\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 2,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.339333312
+}

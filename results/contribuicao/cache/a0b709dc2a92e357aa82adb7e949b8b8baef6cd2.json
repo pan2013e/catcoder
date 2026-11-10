@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn as_path(&self) -> &'a Path {\n    let start = self.len_before_body();\n    let end = self.path.len();\n    let remaining_path = &self.path[start..end];\n    unsafe { Path::from_u8_slice(remaining_path) }\n}\n[/CODE]",
+  "input_tokens": 2220,
+  "output_tokens": 62,
+  "usd": 0.0003702,
+  "brl": 0.002062014,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 75,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "eb1b2a3c59aec40a73655bb871c29159247fca5d"
+  }
+}

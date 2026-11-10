@@ -1,12 +1,12 @@
 # AGENTS.md — CatCoder (fork do grupo)
 
-Leia este arquivo antes de alterar o repositório. Ele fixa três estados: o CatCoder do artigo, o que os dois commits do fork já fizeram, e a arquitetura alvo da contribuição. Mudanças futuras partem daqui. Não reimplemente o que o artigo já tem e não trate o loop atual como se ele já fosse o desenho alvo.
+Leia este arquivo antes de alterar o repositório. Ele fixa o CatCoder do artigo, os commits do fork, a arquitetura da contribuição e o que dessa arquitetura já está na árvore de `dev-davi`. Mudanças futuras partem daqui. Não reimplemente o que o artigo já tem. O laço Gemini de `47e841e` não é mais o código de trabalho: em `dev-davi` ele foi substituído pelo ciclo em `catcoder/contribuicao/`, ainda sem commit.
 
 ## O que é este repositório
 
 Fork de **CATCODER: Repository-Level Code Generation with Relevant Code and Type Context** (Zhiyuan Pan). O artigo gera o corpo de uma função a partir de dois contextos do repositório: código relevante recuperado por busca híbrida e contexto de tipo extraído por análise estática. A avaliação é pass@k (amostras independentes, compilação e testes).
 
-Remote: `https://github.com/AmandaCLima/catcoder.git`, branch `main`.
+Remote: `https://github.com/AmandaCLima/catcoder.git`. A `main` local e a `origin/main` estão em `47e841e`. O trabalho do grupo nesta máquina está em `dev-davi`, que rastreia `origin/dev-davi` em `c8260a8`. O ciclo, o grau N, os resultados e as figuras estão na árvore de trabalho, ainda sem commit.
 
 Histórico, do mais antigo ao atual:
 
@@ -15,31 +15,40 @@ Histórico, do mais antigo ao atual:
 | `3be2687` upload | Zhiyuan Pan | Código, datasets e resultados do artigo |
 | `1e35a5e`, `6c3874e` | Zhiyuan Pan | Ajustes do README. **`6c3874e` é o último commit do artigo** |
 | `1cd0182` | AmandaCLima (2026-11-06) | Pipeline Rust executável na máquina local |
-| `47e841e` | AmandaCLima (2026-11-09) | Loop gerador + juiz no Rust. **HEAD** |
+| `47e841e` | AmandaCLima (2026-11-09) | Loop gerador + juiz Gemini no Rust. **`main`** |
+| `c8260a8` | Davi-SB (2026-11-10) | `AGENTS.md` e `.gitignore`. **Ponta commitada de `dev-davi`** |
 
-Java, ferramentas de análise e os scripts de recuperação/extração continuam no estado do artigo. A contribuição em curso está no pipeline Rust.
+Java do artigo, a recuperação híbrida e o template do prompt continuam como no artigo. A contribuição mora em `catcoder/contribuicao/`, com o grau N no extrator Rust.
 
 ## Layout
 
 ```
 README.md                         instruções originais (Linux, GPU, Defects4J, rust-analyzer)
+docs/arquitetura.md               desenho da contribuição e tetos
+docs/experimentos.md              amostras, preços, teto de R$ 20 e o que é copiado do artigo
 results/{java,rust}/...           números e códigos gerados do artigo; não sobrescrever
+results/contribuicao/             amostra local: tarefas, cache, ledger, figuras, resultados.md
 catcoder/requirements.txt         deps do experimento (vLLM, LangChain, Chroma, rank_bm25, datasets)
+catcoder/contribuicao/            ciclo, runner, cache, figuras. Entrada: python -m catcoder.contribuicao.run
 catcoder/java/                    pipeline Java do artigo, intacto
-catcoder/rust/                    pipeline Rust; superfície ativa do fork
-catcoder/rust/dataset/rusteval/   HuggingFace dataset já com contextos pré-calculados
+catcoder/java/dataset/javaeval/   metadados do JavaEval; o Arrow data-00000-of-00001.arrow não está no disco
+catcoder/rust/                    pipeline Rust; evaluation.py agora só aponta para o runner
+catcoder/rust/dataset/rusteval/   HuggingFace dataset já com contextos pré-calculados (90 tarefas)
 catcoder/rust/crates/             crates do benchmark, descompactados em 1cd0182
 catcoder/rust/prompts/codegen     template [CONTEXT] + [CODE]
 catcoder/rust/results/            saídas locais do Gemini (não são os resultados do artigo)
-catcoder/tools/intellirust/       análise estática Rust (rust-analyzer)
+catcoder/tools/intellirust/       análise estática Rust; Context.build recebe degree
+catcoder/tools/intellirust/vendor/ ra_ap_stdx 0.0.198 com o cast que o rustc atual recusa
 catcoder/tools/java/              análise estática Java (Eclipse JDT LS via multilspy)
 ```
 
-O `evaluation.py` grava em caminho relativo. Rodado de `catcoder/rust`, a saída cai em `catcoder/rust/results/`. Os JSON em `results/` na raiz são do artigo.
+Os JSON em `results/java` e `results/rust` são do artigo. A amostra da contribuição fica em `results/contribuicao/` e não entra na média do pass@1. O `evaluation.py` do Rust, na árvore de trabalho, não gera mais: encerra e manda usar `python -m catcoder.contribuicao.run` a partir da raiz.
 
 Crates do RustEval: `bit-vec`, `curv-kzen`, `dlv-list`, `gptman`, `mathru`, `multiset`, `rocket_http`, `sdl2`, `splay_tree`, `sshkeys`, `unix_path`, `vec_map`, `without-alloc`. Há um `crates.zip` aninhado em `bit-vec/`; é resíduo da descompactação, não é fonte.
 
 ## Pipeline original do artigo
+
+O que segue descreve `6c3874e`. O grau N do Rust, na árvore de `dev-davi`, está parametrizado; o restante desta seção continua valendo.
 
 Geração em uma passada. Para cada tarefa, o modelo produz `n` amostras independentes (padrão `n=10`, temperatura 0.6, top_p 0.7). Cada amostra vê o mesmo prompt. Não há revisão, juiz nem escolha de versão. A métrica é compile@k e pass@k (`catcoder/rust/metrics.py`, `CratePassK`; o estimador é o de Chen et al., 2021).
 
@@ -111,7 +120,9 @@ Três arquivos de lógica, mais a árvore `catcoder/rust/crates/` descompactada:
 
 README do artigo continua pedindo Linux e GPU. O fork passou a rodar no Windows, em sequência, com Gemini.
 
-### `47e841e` — loop gerador + juiz (HEAD)
+### `47e841e` — loop gerador + juiz (main)
+
+Este commit é a `main`. Não é o código de trabalho em `dev-davi`: lá `evaluation.py` virou um aviso para o runner. O comportamento abaixo fica como referência do que a Amanda entregou, para não ser reintroduzido no lugar do ciclo.
 
 `catcoder/rust/evaluation.py` foi reescrito. A hierarquia `Benchmark` / `RustEval*` saiu deste arquivo. O fluxo atual de `gerar_e_testar_codigo`:
 
@@ -134,7 +145,7 @@ Java, `retrieve_relevant_code.py`, `extract_type_context.py`, `intellirust` e o 
 
 ## Arquitetura alvo
 
-A contribuição muda o CatCoder para o fluxo abaixo. Recuperação e extração seguem em paralelo e se encontram na construção do prompt; daí para baixo é um ciclo geradora/juíza.
+A especificação da contribuição está em `docs/arquitetura.md`. O plano de experimentos, modelos e o teto de R$ 20 estão em `docs/experimentos.md`. O fluxo abaixo é o resumo para orientar mudanças; a arquitetura é a referência.
 
 ```
 Recuperação de código relevante
@@ -165,39 +176,60 @@ Extração de contexto de tipo
                     +-- Parar -----------------------> Código final entregue
 ```
 
-Mapeamento para o código que já existe:
+Mapeamento para o código da árvore de `dev-davi`:
 
-| Etapa do desenho | Onde encostar | Situação em HEAD |
+| Etapa do desenho | Onde está | Situação |
 |---|---|---|
-| Busca híbrida BM25 + denso | `retrieve_relevant_code.py`, `EnsembleRetriever` 0.7/0.3 | Pronta no artigo. A avaliação consome `rag_data` pronto e não chama o retriever |
-| Grau N decidido por usuário ou LLM | não existe | Profundidade fixa em `Context.build` e `Analyzer.build_context` |
-| Grafo de tipos podado até N | `TreeNode.prune_forest`, `Context.build`, `extract_type_context.py` | Poda existe com `max_levels` cravado (1 no filtro de impl; um salto extra de tipo no `build`) |
-| Prompt `[CONTEXT]` + `[CODE]` | `prompts/codegen`, `util.build_prompt` | Igual ao artigo. Manter esse formato |
-| LLM geradora, gera ou revisa | `evaluation.py`, `gerar_e_testar_codigo` | Gera e, da segunda iteração em diante, revisa com código + feedback |
-| LLM juíza escolhe a versão | `evaluation.py`, segunda chamada Gemini | Só dá nota. Não escolhe versão nem ação |
-| Continua | seta cheia de volta à geradora | O laço sempre continua com o último feedback |
-| Reverte | seta tracejada de volta à geradora | Não há ação de reverter. Há um "melhor até agora" atualizado só quando a nota sobe |
-| Parar → código final | saída do laço | Limiar compilou e nota >= 9, ou 10 iterações |
+| Busca híbrida BM25 + denso | `retrieve_relevant_code.py`, `EnsembleRetriever` 0.7/0.3 | Pronta no artigo. O ciclo lê `rag_data` do dataset e corta em 16 trechos de 1 000 caracteres. Não reindexa |
+| Grau N decidido por LLM | `ciclo.escolher_n`, `gpt-4o-mini`, teto 4 | Feito. Uma chamada por tarefa, cache compartilhado entre as rodadas da mesma língua |
+| Grafo de tipos podado até N | `Context.build(degree=)`, `make_ctx` | Feito no Rust. N=0 devolve vazio; o padrão 2 preserva o salto do artigo. Java não tem esse grafo |
+| Prompt `[CONTEXT]` + `[CODE]` | `prompts/codegen`, `util.build_prompt` | Igual ao artigo |
+| LLM geradora, gera ou revisa | `ciclo.trajetoria` | Feito. Da segunda volta em diante revisa uma versão e o feedback |
+| LLM juíza escolhe a versão | `ciclo.trajetoria` | Feito. JSON `{"acao","versao","feedback"}`: Continua, Reverte ou Parar |
+| Continua / Reverte | conjunto `versoes` no ciclo | Feito. Continua revisa a versão recém-gerada. Reverte revisa o id anterior que a juíza indicar |
+| Parar → código final | fim do ciclo, depois `TestAdapter.test` | Feito. Parar, ou o fim da 5ª volta, entrega essa versão. O teste roda uma vez, no código entregue |
+| Métrica | `results/contribuicao/resumo.json` | Uma trajetória por tarefa. Sucesso = compilou e passou em todos os testes. Não é pass@k e não repete o vencedor 10 vezes |
 
-## O que falta para o desenho
+## O que já foi feito
 
-Planejar em cima destes buracos, nesta ordem. Cada item é uma diferença entre HEAD e a figura.
+Tudo isto está na árvore de `dev-davi` e ainda não foi commitado, fora o `c8260a8`.
 
-1. **Grau N.** Expor a profundidade do grafo de tipos. Quem decide é o usuário ou uma LLM, antes da extração. O valor entra na poda. Hoje o dataset guarda um `extended_context` de profundidade fixa; mudar N exige reextrair (chamar `make_ctx` / `Context.build` no laço, ou regenerar o campo), porque ler `extended_context` ignora N.
-2. **Poda até N.** Parametrizar a caminhada em `Context.build` e o `max_levels` de `prune_forest`, em vez de criar outro extrator. Java fica como está até a tarefa pedir paridade.
-3. **Decisão da juíza.** A saída deixa de ser só `{nota, feedback}`. A juíza escolhe qual versão reavaliar e devolve uma ação: Continua (revisar a versão corrente), Reverte (voltar a uma versão anterior e reavaliar essa), Parar (entregar o código final). As duas primeiras voltam para a geradora; Parar encerra.
-4. **Memória de versões.** Continua e Reverte precisam de um conjunto de versões (código, se compilou, feedback). O par `melhor_codigo` / `codigo_anterior` não representa essa escolha.
-5. **Métrica.** O artigo reporta compile@k e pass@k com `n` amostras independentes. O laço alvo produz uma trajetória por tarefa. Não gravar o vencedor repetido 10 vezes e chamar isso de pass@k. Quando for medir de novo, `CratePassK` e `TestAdapter.test` continuam em `metrics.py` / `test_adapter.py`; o laço atual só chama `compile()`.
+- Pacote `catcoder/contribuicao/` com tetos, cache por chamada, ledger de R$ 20 e o ciclo Continua / Reverte / Parar. `selfcheck.py` cobre corte, teto e retomada com cliente falso.
+- `Context.build` e `make_ctx` recebem `degree`. O texto de tipo fica em `results/contribuicao/cache_tipo/`.
+- `intellirust` compila no rustc atual com `vendor/ra_ap_stdx` e o `[patch.crates-io]` em `Cargo.toml`. O `.pyd` gerado não entra no git.
+- `TestAdapter` do Rust abre o fonte do crate em UTF-8. Sem isso, no Windows, a leitura quebra em cp1252.
+- Ambiente desta máquina: Python 3.12, `openai`, `datasets`, `matplotlib`, cargo e rust-analyzer. A chave é `OPENAI_API_KEY` no `.env`, que continua fora do git.
+- Três rodadas Rust, em 10 nov 2026, gasto medido no ledger R$ 1,11 de um teto de R$ 20. Os números estão em `results/contribuicao/resultados.md`.
 
-Recuperação híbrida e o template `[CONTEXT]` + `[CODE]` já batem com a figura. O trabalho neles é ligá-los ao laço se N e a extração passarem a acontecer em tempo de geração, não reescrevê-los.
+| Rodada | Par | Amostra | Passou nos testes | Compilou |
+|---|---|---|---|---|
+| R-FF | gpt-4o-mini / gpt-4o-mini | 46 | 15 (32,6%) | 24 (52,2%) |
+| R-JF | gpt-4o-mini / gpt-5 | 8 primeiras | 2 (25%) | 4 (50%) |
+| R-FFORTE | gpt-5 / gpt-5 | 4 primeiras | 0 | 3 (75%) |
+
+Cinco tarefas (R-FF 47, 48, 75, 77 e R-JF 75) pararam na primeira execução na leitura do fonte. Foram concluídas com `python -X utf8` e o cache da API. Os números da tabela já incluem essa retomada.
+
+As figuras `results/contribuicao/figuras/generalizacao.png` e `ablacao.png` copiam o pass@1 dos JSON do artigo e acrescentam a taxa da amostra Rust num painel separado. A Média do artigo só entra quando os seis modelos existem. Rust do artigo, neste checkout, só tem CodeLlama-13B. Java de -CR e -TC também só tem CodeLlama-13B.
+
+## O que ainda não
+
+- **Java da contribuição.** J-FF (30), J-JF (6) e J-FFORTE (2) não começaram. O preflight exige `defects4j` no PATH, e ele não está instalado. Além disso falta `catcoder/java/dataset/javaeval/data-00000-of-00001.arrow`, que o `state.json` nomeia. Defects4J é um fluxo de Linux (Perl, Git, SVN, JDK 8 e 11); nesta máquina o caminho é o WSL, com o experimento rodando dentro dele. A reserva dessas rodadas não foi gasta em tarefas Rust a mais.
+- **Poda por grau no Java.** O `Analyzer.build_context` do artigo não caminha num grafo. A rodada Java, quando existir, usa o `extended_context` do dataset, cortado em 12 000 caracteres, e só registra o N pedido.
+- **Barras do slide sem JSON.** Modelos de Rust que não são CodeLlama-13B, e -CR/-TC dos outros modelos de Java, ficam em branco. Não ler esses valores no screenshot.
+- **Ablação da contribuição.** -CR e -TC não foram reexecutados. O painel novo é só o sistema completo.
+- **Par gpt-5 / gpt-5.** A geradora devolveu código vazio e consumiu os 1024 tokens de saída em raciocínio interno. R-FFORTE em 0% não é uma comparação limpa de qualidade do modelo. Subir o teto de saída do gpt-5, se a conta couber nos R$ 20, é o conserto.
+- **Commit.** Código, `docs/`, resultados e figuras ainda não foram commitados em `dev-davi`. Nada disso entra na `main`.
+
+Retomar a amostra usa o mesmo comando, a partir da raiz, com `PYTHONUTF8=1` no Windows. Tarefa com `completo` é pulada. Chamada presente no cache não é repetida e não soma de novo no ledger.
 
 ## Restrições ao modificar
 
-- Superfície ativa: `catcoder/rust/` e, se o grau N precisar sair do extrator, `catcoder/tools/intellirust/`. Java permanece o pipeline do artigo até alguém pedir o contrário.
-- Preservar `6c3874e` como referência do artigo. As classes de baseline removidas do `evaluation.py` Rust ainda estão em `catcoder/java/evaluation.py` e nesse commit.
-- Não sobrescrever `results/` da raiz nem apresentar `catcoder/rust/results/` como resultado do artigo.
-- Não commitar chave de API. `GEMINI_API_KEY` no ambiente.
-- Manter o que `1cd0182` consertou para o Windows: `cargo` com `communicate` e timeout, avaliação de crates em sequência. Um `Pool` de dezenas de `cargo` reabre o `WinError 1450`.
-- Dependência nova só se a stdlib e o que está em `catcoder/requirements.txt` não cobrirem. Gemini entrou via `google-genai`, que não está no `requirements.txt` do artigo.
-- Comentários novos no código do fork podem seguir o português dos dois commits. Identificadores e o prompt do artigo ficam como estão, salvo a tarefa que muda o contrato da juíza.
-- Diff mínimo no lugar certo: profundidade de tipo no extrator, decisão do ciclo em `evaluation.py`. Não duplicar `EnsembleRetriever` nem o template Jinja.
+- Superfície ativa: `catcoder/contribuicao/`, o `degree` em `catcoder/tools/intellirust/` e `make_ctx` em `catcoder/rust/extract_type_context.py`. Java permanece o pipeline do artigo até a rodada Java ser possível.
+- Preservar `6c3874e` como referência do artigo. As classes de baseline do `evaluation.py` Rust estão em `catcoder/java/evaluation.py` e nesse commit. O `evaluation.py` Rust da árvore de trabalho não volta a ser o laço Gemini.
+- Não sobrescrever `results/java` nem `results/rust`. Não apresentar `results/contribuicao/` nem `catcoder/rust/results/` como resultado do artigo.
+- Não commitar chave de API. A contribuição lê `OPENAI_API_KEY` do `.env`. O laço de `47e841e` lia `GEMINI_API_KEY`.
+- Manter o que `1cd0182` consertou para o Windows: `cargo` com `communicate` e timeout, avaliação de crates em sequência. Um `Pool` de dezenas de `cargo` reabre o `WinError 1450`. A leitura do fonte do crate fica em UTF-8, e o comando roda com `python -X utf8`.
+- Dependência nova só se a stdlib e o que está em `catcoder/requirements.txt` não cobrirem. O ciclo usa `openai` e `python-dotenv`; as figuras usam `matplotlib`. Nenhum dos três está no `requirements.txt` do artigo.
+- Comentários novos no código do fork podem seguir o português dos commits do grupo. Identificadores e o prompt do artigo ficam como estão.
+- Não duplicar `EnsembleRetriever` nem o template Jinja. O ciclo chama `build_prompt`.
+- Os tetos de voltas, tokens de saída, grau N e tamanho de prompt estão em `docs/arquitetura.md`, seção Decisões. A amostra e o teto de R$ 20 estão em `docs/experimentos.md`. Implementação corta para esses tetos. Chamada de API sem `max_output_tokens` não sai. No gpt-5 esse teto inclui o raciocínio interno.

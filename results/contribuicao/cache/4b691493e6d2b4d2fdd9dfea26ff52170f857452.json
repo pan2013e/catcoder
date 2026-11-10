@@ -1,0 +1,16 @@
+{
+  "texto": "2",
+  "input_tokens": 143,
+  "output_tokens": 1,
+  "usd": 2.205e-05,
+  "brl": 0.0001228185,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 72,
+    "papel": "n",
+    "modelo": "gpt-4o-mini",
+    "volta": 0,
+    "prompt": "a908f550b4411b6bf6150462e59406756f68b78a"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let cur_len = self.v.len();\n    if len > cur_len {\n        self.v.reserve_exact(len - cur_len);\n    }\n}\n[/CODE]",
+  "input_tokens": 1628,
+  "output_tokens": 36,
+  "usd": 0.0002658,
+  "brl": 0.0014805060000000001,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 79,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "3c4273341b465fef0d48b756f8274c9b97c09839"
+  }
+}

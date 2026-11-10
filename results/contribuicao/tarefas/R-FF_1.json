@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "reverte",
+    "reverte",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn from_fn<F>(len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec.nbits = len;\n    bit_vec\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 18551,
+  "tokens_out": 626,
+  "brl": 0.017591452499999997,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn from_fn <F> (len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn from_fn<F>(len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec.nbits = len;\n    bit_vec\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn from_fn<F>(len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec.nbits = len;\n    bit_vec\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn from_fn<F>(len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec.nbits = len;\n    bit_vec\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn from_fn<F>(len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec.nbits = len;\n    bit_vec\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 1,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.17017213350000002
+}

@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn remove(&mut self, key: usize) -> Option<V> {\n    if key < self.v.len() {\n        let was = self.v[key].take();\n        if was.is_some() {\n            self.n -= 1;\n        }\n        was\n    } else {\n        None\n    }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 6364,
+  "tokens_out": 210,
+  "brl": 0.006018942,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn remove(&mut self, key: usize) -> Option<V> {\n    if key < self.v.len() {\n        let was = self.v[key].take();\n        if was.is_some() {\n            self.n -= 1;\n        }\n        was\n    } else {\n        None\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn remove(&mut self, key: usize) -> Option<V> {\n    if key < self.v.len() {\n        let was = self.v[key].take();\n        if was.is_some() {\n            self.n -= 1;\n        }\n        was\n    } else {\n        None\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 85,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.433995462
+}

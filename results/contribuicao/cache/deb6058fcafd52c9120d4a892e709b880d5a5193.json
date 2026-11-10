@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let degree = degree.into();\n    match degree {\n        PolynomialDegree::Infinity => Polynomial {\n            coefficients: vec![Scalar::zero()],\n        },\n        PolynomialDegree::Finite(deg) => {\n            let mut coefficients = vec![Scalar::random(); (deg + 1) as usize];\n            coefficients[0] = Scalar::random(); // Ensure the constant term is non-zero\n            Polynomial { coefficients }\n        }\n    }\n}\n[/CODE]",
+  "input_tokens": 1848,
+  "output_tokens": 96,
+  "usd": 0.0003348,
+  "brl": 0.0018648360000000001,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 10,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "c2096e4601e5889700b406d70c5126361d91fb29"
+  }
+}

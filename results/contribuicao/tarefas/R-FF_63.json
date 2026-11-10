@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn smallest(&mut self) -> Option<&T> {\n    self.tree.get_lftmost().map(|(v, _)| v)\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 5898,
+  "tokens_out": 111,
+  "brl": 0.005298741000000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn smallest(&mut self) -> Option<&T> {\n    self.tree.get_lftmost().map(|(v, _)| v)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn smallest(&mut self) -> Option<&T> {\n    self.tree.get_lftmost().map(|(v, _)| v)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 63,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.4819590105
+}

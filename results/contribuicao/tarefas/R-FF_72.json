@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn read_u64(&mut self) -> Result<u64> {\n    if self.offset >= self.inner.len() {\n        return Err(Error::with_kind(ErrorKind::UnexpectedEof));\n    }\n\n    let slice = &self.inner[self.offset..];\n    if slice.len() < 8 {\n        return Err(Error::with_kind(ErrorKind::InvalidFormat));\n    }\n\n    let value = BigEndian::read_u64(&slice[..8]);\n    self.offset += 8;\n\n    Ok(value)\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 7933,
+  "tokens_out": 287,
+  "brl": 0.0075871754999999996,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn read_u64(&mut self) -> Result<u64> {\n    if self.offset >= self.inner.len() {\n        return Err(Error::with_kind(ErrorKind::UnexpectedEof));\n    }\n\n    let slice = &self.inner[self.offset..];\n    if slice.len() < 8 {\n        return Err(Error::with_kind(ErrorKind::InvalidFormat));\n    }\n\n    let value = BigEndian::read_u64(&slice[..8]);\n    self.offset += 8;\n\n    Ok(value)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn read_u64(&mut self) -> Result<u64> {\n    if self.offset >= self.inner.len() {\n        return Err(Error::with_kind(ErrorKind::UnexpectedEof));\n    }\n\n    let slice = &self.inner[self.offset..];\n    if slice.len() < 8 {\n        return Err(Error::with_kind(ErrorKind::InvalidFormat));\n    }\n\n    let value = BigEndian::read_u64(&slice[..8]);\n    self.offset += 8;\n\n    Ok(value)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 72,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.25497454799999997
+}

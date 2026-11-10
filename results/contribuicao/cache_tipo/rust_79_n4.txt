@@ -1,0 +1,34 @@
+pub struct VecMap<V> {
+n: usize,
+v: Vec<Option<V>, Global>,
+}
+fn new() -> Self
+fn with_capacity(capacity: usize) -> Self
+fn capacity(&self) -> usize
+fn reserve_len(&mut self, len: usize)
+fn reserve_len_exact(&mut self, len: usize)
+fn shrink_to_fit(&mut self)
+fn keys(&self) -> Keys<V>
+fn values(&self) -> Values<V>
+fn values_mut(&mut self) -> ValuesMut<V>
+fn iter(&self) -> Iter<V>
+fn iter_mut(&mut self) -> IterMut<V>
+fn append(&mut self, other: &mut Self)
+fn split_off(&mut self, at: usize) -> Self
+fn drain(&mut self) -> Drain<V>
+fn len(&self) -> usize
+fn is_empty(&self) -> bool
+fn clear(&mut self)
+fn get(&self, key: usize) -> Option<&V>
+fn contains_key(&self, key: usize) -> bool
+fn get_mut(&mut self, key: usize) -> Option<&mut V>
+fn insert(&mut self, key: usize, value: V) -> Option<V>
+fn remove(&mut self, key: usize) -> Option<V>
+fn entry(&mut self, key: usize) -> Entry<V>
+fn retain<F>(&mut self, mut f: F)
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}

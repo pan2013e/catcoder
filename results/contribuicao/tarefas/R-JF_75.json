@@ -1,0 +1,30 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 1,
+  "acoes": [
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn as_path(&self) -> &'a Path {\n    let remaining = &self.path[self.len_before_body()..];\n    unsafe { Path::from_u8_slice(remaining) }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "brl": 0.0,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn as_path(&self) -> &'a Path {\n    let remaining = &self.path[self.len_before_body()..];\n    unsafe { Path::from_u8_slice(remaining) }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 75,
+  "lingua": "rust",
+  "rodada": "R-JF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 1.106317299000001
+}

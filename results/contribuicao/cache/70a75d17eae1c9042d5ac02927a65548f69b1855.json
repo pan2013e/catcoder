@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `pack_to` está correta e atende aos requisitos especificados na documentação. Ela reorganiza os valores existentes, garante a capacidade mínima e atualiza os índices corretamente.\"}",
+  "input_tokens": 3077,
+  "output_tokens": 51,
+  "usd": 0.00049215,
+  "brl": 0.0027412755000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 22,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "953f690123028e18d92c50ab2fb8e2a0e19c2cb6"
+  }
+}

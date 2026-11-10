@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A implementação não está correta, pois `values.clone()` não remove os elementos do vetor original, apenas faz uma cópia. A função deve adicionar todos os valores do vetor ao cabeçalho e depois limpar o vetor original.\"}",
+  "input_tokens": 2197,
+  "output_tokens": 59,
+  "usd": 0.00036495,
+  "brl": 0.0020327715000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 52,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "b73d9966694128c2be43b3d5558bf70e76ce5409"
+  }
+}

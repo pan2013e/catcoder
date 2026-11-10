@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"A função está correta e funcional.\"}",
+  "input_tokens": 2015,
+  "output_tokens": 21,
+  "usd": 0.00031484999999999993,
+  "brl": 0.0017537144999999997,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 54,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "56ea6fc354b754853a40ed4a0852594d823ce005"
+  }
+}

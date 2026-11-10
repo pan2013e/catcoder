@@ -1,0 +1,14 @@
+pub enum Method {
+Get,
+Put,
+Post,
+Delete,
+Options,
+Head,
+Trace,
+Connect,
+Patch,
+}
+fn from_hyp(method: &hyper::Method) -> Option<Method>
+fn supports_payload(self) -> bool
+fn as_str(self) -> &'static str

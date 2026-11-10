@@ -1,0 +1,51 @@
+pub struct Rect {
+raw: {unknown},
+}
+fn new(x: i32, y: i32, width: u32, height: u32) -> Rect
+fn from_center<P>(center: P, width: u32, height: u32) -> Rect
+fn x(&self) -> i32
+fn y(&self) -> i32
+fn width(&self) -> u32
+fn height(&self) -> u32
+fn size(&self) -> (u32, u32)
+fn set_x(&mut self, x: i32)
+fn set_y(&mut self, y: i32)
+fn set_width(&mut self, width: u32)
+fn set_height(&mut self, height: u32)
+fn left(&self) -> i32
+fn right(&self) -> i32
+fn top(&self) -> i32
+fn bottom(&self) -> i32
+fn center(&self) -> Point
+fn top_left(&self) -> Point
+fn top_right(&self) -> Point
+fn bottom_left(&self) -> Point
+fn bottom_right(&self) -> Point
+fn set_right(&mut self, right: i32)
+fn set_bottom(&mut self, bottom: i32)
+fn center_on<P>(&mut self, point: P)
+fn offset(&mut self, x: i32, y: i32)
+fn reposition<P>(&mut self, point: P)
+fn resize(&mut self, width: u32, height: u32)
+fn contains_point<P>(&self, point: P) -> bool
+fn contains_rect(&self, other: Rect) -> bool
+fn raw(&self) -> *const sys::SDL_Rect
+fn raw_mut(&mut self) -> *mut sys::SDL_Rect
+fn raw_slice(slice: &[Rect]) -> *const sys::SDL_Rect
+fn from_ll(raw: sys::SDL_Rect) -> Rect
+fn from_enclose_points<R: Into<Option<Rect>>>( points: &[Point], clipping_rect: R, ) -> Option<Rect>
+fn has_intersection(&self, other: Rect) -> bool
+fn intersection(&self, other: Rect) -> Option<Rect>
+fn union(&self, other: Rect) -> Rect
+fn intersect_line(&self, start: Point, end: Point) -> Option<(Point, Point)>
+pub struct Point {
+raw: {unknown},
+}
+fn new(x: i32, y: i32) -> Point
+fn from_ll(raw: sys::SDL_Point) -> Point
+fn raw_slice(slice: &[Point]) -> *const sys::SDL_Point
+fn raw(&self) -> *const sys::SDL_Point
+fn offset(self, x: i32, y: i32) -> Point
+fn scale(self, f: i32) -> Point
+fn x(self) -> i32
+fn y(self) -> i32

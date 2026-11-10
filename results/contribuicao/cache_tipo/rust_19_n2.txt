@@ -1,0 +1,76 @@
+pub struct VecList<T> {
+entries: Vec<Entry<T>, Global>,
+generation: u64,
+head: Option<NonMaxUsize>,
+length: usize,
+tail: Option<NonMaxUsize>,
+vacant_head: Option<NonMaxUsize>,
+}
+fn back(&self) -> Option<&T>
+fn back_index(&self) -> Option<Index<T>>
+fn back_mut(&mut self) -> Option<&mut T>
+fn capacity(&self) -> usize
+fn clear(&mut self)
+fn contains(&self, value: &T) -> bool
+fn drain(&mut self) -> Drain<'_, T>
+fn front(&self) -> Option<&T>
+fn front_index(&self) -> Option<Index<T>>
+fn front_mut(&mut self) -> Option<&mut T>
+fn get(&self, index: Index<T>) -> Option<&T>
+fn get_unchecked(&self, index: Index<T>) -> &T
+fn get_mut(&mut self, index: Index<T>) -> Option<&mut T>
+fn get_unchecked_mut(&mut self, index: Index<T>) -> &mut T
+fn get_next_index(&self, index: Index<T>) -> Option<Index<T>>
+fn get_previous_index(&self, index: Index<T>) -> Option<Index<T>>
+fn update_link(&mut self, index: Option<NonMaxUsize>, next: Option<NonMaxUsize>)
+fn move_after(&mut self, index: Index<T>, target: Index<T>)
+fn move_before(&mut self, index: Index<T>, target: Index<T>)
+fn indices(&self) -> Indices<'_, T>
+fn insert_after(&mut self, index: Index<T>, value: T) -> Index<T>
+fn insert_before(&mut self, index: Index<T>, value: T) -> Index<T>
+fn insert_empty(&mut self, value: T) -> Index<T>
+fn insert_new( &mut self, value: T, previous: Option<NonMaxUsize>, next: Option<NonMaxUsize>, ) -> NonMaxUsize
+fn is_empty(&self) -> bool
+fn iter(&self) -> Iter<'_, T>
+fn iter_mut(&mut self) -> IterMut<'_, T>
+fn len(&self) -> usize
+fn new() -> Self
+fn pack_to(&mut self, minimum_capacity: usize) -> HashMap<Index<T>, Index<T>>
+fn pack_to_fit(&mut self) -> HashMap<Index<T>, Index<T>>
+fn pop_back(&mut self) -> Option<T>
+fn pop_front(&mut self) -> Option<T>
+fn push_back(&mut self, value: T) -> Index<T>
+fn push_front(&mut self, value: T) -> Index<T>
+fn remove(&mut self, index: Index<T>) -> Option<T>
+fn remove_entry(&mut self, index: NonMaxUsize) -> Option<OccupiedEntry<T>>
+fn remove_helper( &mut self, previous_index: Option<NonMaxUsize>, index: NonMaxUsize, next_index: Option<NonMaxUsize>, ) -> OccupiedEntry<T>
+fn reserve(&mut self, additional_capacity: usize)
+fn retain<Predicate>(&mut self, mut predicate: Predicate)
+fn with_capacity(capacity: usize) -> Self
+pub struct Index<T> {
+generation: u64,
+index: NonMaxUsize,
+phantom: PhantomData<T>,
+}
+fn new(index: NonMaxUsize, generation: u64) -> Index<T>
+fn index(&self) -> usize
+pub enum Option<T> {
+None,
+Some(T),
+}
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}
+struct NonMaxUsize(NonZero<usize>);
+fn get(&self) -> usize
+fn new(index: usize) -> Option<Self>
+fn new_unchecked(index: usize) -> Self
+fn checked_add(&self, rhs: usize) -> Option<Self>
+fn checked_sub(&self, rhs: usize) -> Option<Self>
+fn zero() -> Self
+pub struct PhantomData<T>
+where
+T: PointeeSized,

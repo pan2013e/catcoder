@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois trata corretamente o caso em que não há componentes restantes, retornando o root '/'. As outras versões não fazem isso.\"}",
+  "input_tokens": 2448,
+  "output_tokens": 48,
+  "usd": 0.000396,
+  "brl": 0.00220572,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 77,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "ecdfd305742014146066d904e17e88faee9ecd15"
+  }
+}

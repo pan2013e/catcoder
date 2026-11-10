@@ -1,0 +1,23 @@
+pub struct Polynomial<T> {
+coef: Vec<T, Global>,
+}
+fn from_coef(mut coef: Vec<T>) -> Polynomial<T>
+fn from_root(root: Vec<T>) -> Polynomial<T>
+fn from_legendre(n: u32) -> Polynomial<T>
+fn from_bernstein(v: u32, n: u32) -> Polynomial<T>
+fn from_chebyshev_t(n: u32) -> Polynomial<T>
+fn from_chebyshev_u(n: u32) -> Polynomial<T>
+fn from_bessel(n: u32) -> Polynomial<T>
+fn from_bessel_reverse(n: u32) -> Polynomial<T>
+fn eval(&self, x: T) -> T
+fn degree(&self) -> usize
+fn reduce_coef(mut coef: Vec<T>) -> Vec<T>
+fn reduce(self) -> Self
+fn differentiate(&self) -> Polynomial<T>
+fn integrate(&self) -> Polynomial<T>
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}

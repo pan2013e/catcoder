@@ -1,0 +1,17 @@
+{
+  "texto": "",
+  "input_tokens": 1677,
+  "output_tokens": 1024,
+  "usd": 0.01233625,
+  "brl": 0.0687129125,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "rust",
+    "indice": 44,
+    "rodada": "R-FFORTE",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "b7ed984f7b1a79009a184a77467dc978c291a902"
+  }
+}

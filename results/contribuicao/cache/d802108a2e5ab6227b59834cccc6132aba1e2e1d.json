@@ -1,0 +1,17 @@
+{
+  "texto": "```rust\npub fn skip(mut self, n: usize) -> Self {\n    self.pos += n;\n    self\n}\n```",
+  "input_tokens": 1550,
+  "output_tokens": 27,
+  "usd": 0.0002487,
+  "brl": 0.001385259,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 55,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "15a53cb068b3f10ae5b79da76ffc5e6695fea171"
+  }
+}

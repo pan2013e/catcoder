@@ -1,0 +1,35 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn reserve_len_exact (&mut self, len: usize) {\n    let cur_len = self.v.len();\n    if len > cur_len {\n        self.v.reserve_exact(len - cur_len);\n    }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 7017,
+  "tokens_out": 160,
+  "brl": 0.006397423500000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn reserve_len_exact (&mut self, len: usize) {\n    let cur_len = self.v.len();\n    if len > cur_len {\n        self.v.reserve_exact(len - cur_len);\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn reserve_len_exact(&mut self, len: usize) {\n    let cur_len = self.v.len();\n    if len > cur_len {\n        self.v.reserve_exact(len - cur_len);\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 79,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.24738737249999998
+}

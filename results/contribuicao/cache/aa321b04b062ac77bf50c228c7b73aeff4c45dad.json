@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn sample_exact_with_fixed_const_term(n: u16, const_term: Scalar<E>) -> Self {\n    let mut coefficients = vec![const_term];\n    for _ in 1..=n {\n        coefficients.push(Scalar::random());\n    }\n    Polynomial::from_coefficients(coefficients)\n}\n[/CODE]",
+  "input_tokens": 1543,
+  "output_tokens": 68,
+  "usd": 0.00027225000000000003,
+  "brl": 0.0015164325000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 11,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "7f9384f623cc71e1de50ec514b082a2a5dbf3ae0"
+  }
+}

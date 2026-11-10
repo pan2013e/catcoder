@@ -1,0 +1,116 @@
+pub struct FixedVec<'a, T> {
+uninit: Uninit<'_, [T]>,
+length: usize,
+}
+fn truncate(&mut self, len: usize)
+fn as_slice(&self) -> &[T]
+fn as_mut_slice(&mut self) -> &mut [T]
+fn clear(&mut self)
+fn len(&self) -> usize
+fn set_len(&mut self, new_len: usize)
+fn capacity(&self) -> usize
+fn is_empty(&self) -> bool
+fn push(&mut self, val: T) -> Result<(), T>
+fn pop(&mut self) -> Option<T>
+fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T>
+fn split_and_shrink_to(&mut self, at: usize) -> Self
+fn fill<I: IntoIterator<Item = T>>(&mut self, iter: I) -> I::IntoIter
+fn drain<R>(&mut self, range: R) -> Drain<'_, T>
+fn head_tail_mut(&mut self) -> (Uninit<'_, [T]>, Uninit<'_, [T]>)
+fn as_ptr(&mut self) -> *const T
+fn as_mut_ptr(&mut self) -> *mut T
+fn end_mut_ptr(&mut self) -> *mut T
+fn new(uninit: Uninit<'a, [T]>) -> Self
+fn from_unaligned<U: ?Sized>(generic: Uninit<'a, U>) -> Self
+fn shrink_to_fit(&mut self) -> Uninit<'a, ()>
+pub struct Uninit<'a, T>
+where
+T: ?Sized, {
+view: UninitView<'_, T>,
+mutable: PhantomData<&mut ()>,
+}
+fn from_memory(ptr: ptr::NonNull<u8>, len: usize) -> Self
+fn split_layout(&mut self, layout: Layout) -> Option<Self>
+fn decast<T: ?Sized>(uninit: Uninit<'a, T>) -> Self
+fn split_cast<U>(&mut self) -> Option<Uninit<'a, U>>
+fn split_slice<U>(&mut self) -> Option<Uninit<'a, [U]>>
+fn invent_for_zst() -> Self
+fn from_view(view: UninitView<'a, T>) -> Self
+fn from_maybe_uninit(mem: &'a mut mem::MaybeUninit<T>) -> Self
+fn split_at_byte(&mut self, at: usize) -> Option<Uninit<'a, ()>>
+fn cast<U>(self) -> Result<Uninit<'a, U>, Self>
+fn cast_slice<U>(self) -> Result<Uninit<'a, [U]>, Self>
+fn split_to_fit(&mut self) -> Uninit<'a, ()>
+fn as_ptr(&self) -> *mut T
+fn as_non_null(&self) -> ptr::NonNull<T>
+fn as_ref(&self) -> &T
+fn as_mut(&mut self) -> &mut T
+fn into_ref(self) -> &'a T
+fn into_mut(self) -> &'a mut T
+fn init(self, val: T) -> &'a mut T
+fn into_maybe_uninit(self) -> &'a mut mem::MaybeUninit<T>
+fn read(&self) -> T
+fn into_box(self, val: T) -> Box<'a, T>
+fn empty() -> Self
+fn from_maybe_uninit_slice(mem: &'a mut [mem::MaybeUninit<T>]) -> Self
+fn as_begin_ptr(&self) -> *mut T
+fn capacity(&self) -> usize
+fn split_at(&mut self, at: usize) -> Option<Self>
+fn shrink_to_fit(&mut self) -> Uninit<'a, ()>
+fn split_first(&mut self) -> Option<Uninit<'a, T>>
+fn split_last(&mut self) -> Option<Uninit<'a, T>>
+fn into_maybe_uninit_slice(self) -> &'a mut [mem::MaybeUninit<T>]
+fn new(ptr: ptr::NonNull<T>, len: usize) -> Self
+fn byte_capacity(&self) -> usize
+fn fits(&self, layout: Layout) -> bool
+fn as_memory(self) -> Uninit<'a, ()>
+fn from_presumed_mutable_view(view: UninitView<'a, T>) -> Self
+fn borrow(&self) -> UninitView<'_, T>
+fn borrow_mut(&mut self) -> Uninit<'_, T>
+fn size(&self) -> usize
+pub struct UninitView<'a, T>
+where
+T: ?Sized, {
+ptr: NonNull<T>,
+len: usize,
+lifetime: PhantomData<&()>,
+typed: PhantomData<*mut T>,
+}
+fn from_memory(ptr: ptr::NonNull<u8>, len: usize) -> Self
+fn split_layout(&mut self, layout: Layout) -> Option<Self>
+fn decast<T: ?Sized>(view: UninitView<'a, T>) -> Self
+fn split_cast<U>(&mut self) -> Option<UninitView<'a, U>>
+fn split_slice<U>(&mut self) -> Option<UninitView<'a, [U]>>
+fn invent_for_zst() -> Self
+fn split_at_byte(&mut self, at: usize) -> Option<UninitView<'a, ()>>
+fn from_maybe_uninit(mem: &'a mem::MaybeUninit<T>) -> Self
+fn cast_slice<U>(self) -> Result<UninitView<'a, [U]>, Self>
+fn split_to_fit(&mut self) -> UninitView<'a, ()>
+fn into_maybe_uninit(self) -> &'a mem::MaybeUninit<T>
+fn new(ptr: ptr::NonNull<T>, len: usize) -> Self
+fn byte_capacity(&self) -> usize
+fn cast<U>(self) -> Result<UninitView<'a, U>, Self>
+fn as_ptr(&self) -> *const T
+fn as_non_null(&self) -> ptr::NonNull<T>
+fn as_ref(&self) -> &T
+fn into_ref(self) -> &'a T
+fn empty() -> Self
+fn from_maybe_uninit_slice(mem: &'a [mem::MaybeUninit<T>]) -> Self
+fn as_begin_ptr(&self) -> *const T
+fn capacity(&self) -> usize
+fn split_at(&mut self, at: usize) -> Option<Self>
+fn shrink_to_fit(&mut self) -> UninitView<'a, ()>
+fn split_first(&mut self) -> Option<UninitView<'a, T>>
+fn split_last(&mut self) -> Option<UninitView<'a, T>>
+fn into_maybe_uninit_slice(self) -> &'a [mem::MaybeUninit<T>]
+fn fits(&self, layout: Layout) -> bool
+fn borrow(&self) -> UninitView<'_, T>
+fn size(&self) -> usize
+pub struct PhantomData<T>
+where
+T: PointeeSized,
+pub struct NonNull<T>
+where
+T: PointeeSized, {
+pointer: {unknown},
+}

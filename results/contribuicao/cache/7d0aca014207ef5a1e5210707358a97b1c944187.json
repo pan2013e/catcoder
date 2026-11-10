@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `reserve_len_exact` está correta e funcional, pois ela verifica o comprimento atual do vetor e reserva a capacidade exata necessária para evitar realocações.\"}",
+  "input_tokens": 1713,
+  "output_tokens": 49,
+  "usd": 0.00028635,
+  "brl": 0.0015949695,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 79,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "8e731204fe792f8bbf070ab00793c8a07f4cd86f"
+  }
+}

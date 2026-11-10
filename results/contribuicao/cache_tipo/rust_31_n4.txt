@@ -1,0 +1,69 @@
+pub struct General<T> {
+pub(crate) m: usize,
+pub(crate) n: usize,
+pub(crate) data: Vec<T, Global>,
+}
+fn dec_qr(&self) -> Result<QRDec<T>, ()>
+fn dec_hessenberg(&self) -> HessenbergDec<T>
+fn h(mut self) -> Self
+fn dec_cholesky(&self) -> Result<CholeskyDec<T>, String>
+fn dec_cholesky(&self) -> Result<CholeskyDec<Complex<T>>, String>
+fn dim(&self) -> (usize, usize)
+fn nrows(&self) -> usize
+fn ncols(&self) -> usize
+fn trace(&self) -> T
+fn pinv(&self) -> Result<General<T>, ()>
+fn one(size: usize) -> Self
+fn ones(m: usize, n: usize) -> Self
+fn zero(m: usize, n: usize) -> Self
+fn new(m: usize, n: usize, data: Vec<T>) -> Self
+fn convert_to_vec(self) -> Vec<T>
+fn new_random(m: usize, n: usize) -> General<T>
+fn iter(&self) -> MatrixIterator<T>
+fn iter_mut(&mut self) -> MatrixIteratorMut<T>
+fn row_into_iter(&self) -> MatrixRowIntoIterator<T>
+fn column_into_iter(&self) -> MatrixColumnIntoIterator<T>
+fn apply_mut(mut self: General<T>, f: &dyn Fn(&T) -> T) -> General<T>
+fn apply(self: &General<T>, f: &dyn Fn(&T) -> T) -> General<T>
+fn mut_apply(self: &mut General<T>, f: &dyn Fn(&mut T) -> T)
+fn swap_rows(&mut self, i: usize, j: usize)
+fn get_column(&self, i: usize) -> Vector<T>
+fn get_row(&self, i: usize) -> Vector<T>
+fn set_column(&mut self, column: &Vector<T>, i: usize)
+fn set_row(&mut self, row: &Vector<T>, i: usize)
+fn givens(m: usize, i: usize, j: usize, c: T, s: T) -> Self
+fn givens_cosine_sine_pair(a: T, b: T) -> (T, T)
+fn householder(v: &Vector<T>, k: usize) -> Self
+fn get_slice( &self, row_s: usize, row_e: usize, column_s: usize, column_e: usize, ) -> General<T>
+fn set_slice(mut self, slice: &Self, row: usize, column: usize) -> General<T>
+fn inv_r(&self) -> Result<General<T>, ()>
+fn eigenvalue_r(&self) -> Result<Vec<T>, String>
+fn eigenvector_r(&self, values: &Vec<T>) -> General<T>
+fn norm(mut v: Vector<T>) -> Vector<T>
+fn eigen_2by2(a11: T, a12: T, a21: T, a22: T) -> (T, T)
+fn mul_scalar(mut self, s: &'b T) -> General<T>
+fn inv_r(&self) -> Result<General<T>, ()>
+fn dec_sv(&self) -> (Self, Self, Self)
+fn msweep( mut u: General<T>, mut b: General<T>, mut v: General<T>, ) -> (General<T>, General<T>, General<T>)
+fn rot(f: T, g: T) -> (T, T, T)
+fn householder_bidiag(&self) -> (Self, Self, Self)
+fn dec_cholesky(&self) -> Result<CholeskyDec<T>, String>
+fn dec_qr(&self) -> Result<QRDec<T>, ()>
+fn r(mut self) -> UpperTriangular<T>
+fn dec_lu(&self) -> Result<LUDec<T>, ()>
+fn l(mut mat: General<T>) -> UnitLowerTriangular<T>
+fn u(mut mat: General<T>) -> UpperTriangular<T>
+fn p(per: Vec<i32>) -> Self
+fn solve_vector_r(&self, y: &Vector<T>) -> Result<Vector<T>, ()>
+fn solve_matrix_r(&self, y: &General<T>) -> Result<General<T>, ()>
+fn gcd(mut m: usize, mut n: usize) -> usize
+fn gather(&self, i: usize, j: usize, b: usize) -> usize
+fn gather_sa(&self, i: usize, j: usize, a: usize) -> usize
+fn scatter_da(&self, i: usize, j: usize, b: usize) -> usize
+fn dec_lu(&self) -> Result<LUDec<T>, ()>
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}

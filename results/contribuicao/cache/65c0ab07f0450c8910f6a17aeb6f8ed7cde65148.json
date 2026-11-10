@@ -1,0 +1,17 @@
+{
+  "texto": "",
+  "input_tokens": 1816,
+  "output_tokens": 256,
+  "usd": 0.004829999999999999,
+  "brl": 0.026903099999999996,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "rust",
+    "indice": 44,
+    "rodada": "R-JF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "971e57203ffddcbf770918545ee58f0d511477bb"
+  }
+}

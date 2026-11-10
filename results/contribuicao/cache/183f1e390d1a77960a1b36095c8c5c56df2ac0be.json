@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão 0 é a mais adequada, pois não introduz a verificação de `escaped.is_empty()`, que não é necessária, já que a string `escaped` sempre será preenchida com pelo menos um caractere se houver caracteres a serem escapados.\"}",
+  "input_tokens": 3820,
+  "output_tokens": 67,
+  "usd": 0.0006131999999999999,
+  "brl": 0.0034155239999999996,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 48,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "fdf852c19873295f3e9b9ffbd0ba6e585d8f0d57"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn trace(&self) -> T \nwhere\n    T: Field + Scalar,\n{\n    let (m, n) = self.dim();\n    debug_assert_eq!(m, n, \"Trace can only be calculated for square matrices\");\n\n    let mut sum = T::zero();\n    for i in 0..m {\n        sum = sum + self[[i, i]];\n    }\n    sum\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 12019,
+  "tokens_out": 245,
+  "brl": 0.010860664499999999,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn trace(&self) -> T \nwhere\n    T: Field + Scalar,\n{\n    let (m, n) = self.dim();\n    debug_assert_eq!(m, n, \"Trace can only be calculated for square matrices\");\n\n    let mut sum = T::zero();\n    for i in 0..m {\n        sum = sum + self[[i, i]];\n    }\n    sum\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn trace(&self) -> T \nwhere\n    T: Field + Scalar,\n{\n    let (m, n) = self.dim();\n    debug_assert_eq!(m, n, \"Trace can only be calculated for square matrices\");\n\n    let mut sum = T::zero();\n    for i in 0..m {\n        sum = sum + self[[i, i]];\n    }\n    sum\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 31,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.4279765200000001
+}

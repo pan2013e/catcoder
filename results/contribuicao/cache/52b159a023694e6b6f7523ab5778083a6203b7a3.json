@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 é a mais clara e concisa, mantendo a lógica correta e a formatação adequada.\"}",
+  "input_tokens": 2399,
+  "output_tokens": 36,
+  "usd": 0.00038145,
+  "brl": 0.0021246765,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 66,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "1d86ee84d523b9c7ab5cd4235706d03d3c60c787"
+  }
+}

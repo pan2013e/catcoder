@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"A versão 0 é a mais completa e correta, utilizando a iteração com índice e garantindo a lógica de alinhamento e cálculo de tamanhos de setores livres.\"}",
+  "input_tokens": 4118,
+  "output_tokens": 47,
+  "usd": 0.0006459,
+  "brl": 0.0035976630000000005,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 26,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "9b39be6e8769f00ef34dff8936ed04d509d250d9"
+  }
+}

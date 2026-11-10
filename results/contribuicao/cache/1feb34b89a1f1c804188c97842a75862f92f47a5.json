@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `push_back` está correta e funcional, seguindo a lógica de inserção no final da lista e tratando adequadamente os casos de capacidade máxima e uso de entradas ocupadas e vagas.\"}",
+  "input_tokens": 1695,
+  "output_tokens": 55,
+  "usd": 0.00028724999999999996,
+  "brl": 0.0015999825,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 24,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "a5f5b5ed2de78575f097d1e063a74273acf80c36"
+  }
+}

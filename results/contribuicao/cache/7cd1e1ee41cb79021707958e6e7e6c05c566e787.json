@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn remove_times(&mut self, val: &K, times: usize) -> usize {\n    if let Some(count) = self.elem_counts.get_mut(val) {\n        let to_remove = (*count).min(times);\n        *count -= to_remove;\n        if *count == 0 {\n            self.elem_counts.remove(val);\n        }\n        to_remove\n    } else {\n        0\n    }\n}\n[/CODE]",
+  "input_tokens": 1678,
+  "output_tokens": 91,
+  "usd": 0.0003063,
+  "brl": 0.0017060910000000003,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 44,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "b7ed984f7b1a79009a184a77467dc978c291a902"
+  }
+}

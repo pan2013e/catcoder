@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 utiliza a função `self.y()` ao invés de `self.top()`, o que está incorreto para obter a coordenada y do canto superior direito.\"}",
+  "input_tokens": 1566,
+  "output_tokens": 49,
+  "usd": 0.0002643,
+  "brl": 0.0014721509999999999,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 59,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "8b9a788e65c9848114af1fee4b3461065101d8c4"
+  }
+}

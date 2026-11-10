@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    match self.entries.get(index.index())? {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let next_index = entry.next?;\n            let next_entry = self.entries[next_index.get()].occupied_ref();\n            Some(Index::new(next_index, next_entry.generation))\n        },\n        _ => None,\n    }\n}\n[/CODE]",
+  "input_tokens": 1639,
+  "output_tokens": 78,
+  "usd": 0.00029265,
+  "brl": 0.0016300605,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 19,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "efb2969f0374152eb163b3a997d6b99389dea89a"
+  }
+}

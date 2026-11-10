@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois utiliza o método `len_before_body` corretamente e extrai o restante do caminho a partir do índice calculado, garantindo que a fatia do caminho restante seja correta.\"}",
+  "input_tokens": 2472,
+  "output_tokens": 58,
+  "usd": 0.00040559999999999994,
+  "brl": 0.0022591919999999997,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 75,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "1926d44a18a30834928e3bb0f44c641dcdd1ec65"
+  }
+}

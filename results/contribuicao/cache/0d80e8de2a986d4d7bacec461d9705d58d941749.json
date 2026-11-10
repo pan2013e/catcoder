@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `push` está correta, pois insere o item na árvore e chama o método de balanceamento.\"}",
+  "input_tokens": 1031,
+  "output_tokens": 39,
+  "usd": 0.00017805,
+  "brl": 0.0009917385,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 67,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "47015471f0aa36a6d27c3348d9dda794170032d7"
+  }
+}

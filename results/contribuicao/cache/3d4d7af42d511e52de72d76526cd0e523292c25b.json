@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn set_slice(&mut self, rhs: &Self, s: usize) {\n    let (m, n) = self.dim();\n    debug_assert!(s < m);\n    debug_assert!(s + rhs.dim().0 <= m);\n\n    let rhs_data = rhs.convert_to_vec();\n    let self_data = self.convert_to_vec();\n\n    for (i, value) in rhs_data.iter().enumerate() {\n        self_data[s + i] = *value;\n    }\n\n    *self = Vector::new_column(self_data);\n}\n[/CODE]",
+  "input_tokens": 1769,
+  "output_tokens": 117,
+  "usd": 0.00033555,
+  "brl": 0.0018690135,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 37,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "25a766d70ed87b7c95f64fa3c9aeb6303938d8e4"
+  }
+}

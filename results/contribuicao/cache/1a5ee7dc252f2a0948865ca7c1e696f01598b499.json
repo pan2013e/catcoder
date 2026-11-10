@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois além de limpar o vetor, também redefine o contador de elementos 'n' para 0, garantindo que o estado do mapa 'other' esteja correto após a operação.\"}",
+  "input_tokens": 1845,
+  "output_tokens": 58,
+  "usd": 0.00031154999999999996,
+  "brl": 0.0017353334999999999,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 81,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "62488cce1fa3eb163e5664b8393c0dbb846f68d5"
+  }
+}

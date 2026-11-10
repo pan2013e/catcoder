@@ -1,0 +1,30 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 1,
+  "acoes": [
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn get_next_index (&self, index: Index<T>) -> Option<Index<T>> {\n    match self.entries.get(index.index())? {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let next_index = entry.next?;\n            let next_entry = self.entries[next_index.get()].occupied_ref();\n            Some(Index::new(next_index, next_entry.generation))\n        },\n        _ => None,\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 3410,
+  "tokens_out": 334,
+  "brl": 0.028219848000000002,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn get_next_index (&self, index: Index<T>) -> Option<Index<T>> {\n    match self.entries.get(index.index())? {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let next_index = entry.next?;\n            let next_entry = self.entries[next_index.get()].occupied_ref();\n            Some(Index::new(next_index, next_entry.generation))\n        },\n        _ => None,\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 19,
+  "lingua": "rust",
+  "rodada": "R-JF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 0.625807881
+}

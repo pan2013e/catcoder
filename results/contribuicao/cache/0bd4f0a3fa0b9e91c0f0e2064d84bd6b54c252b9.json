@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let mut coef_diff = Vec::with_capacity(self.degree());\n    for (i, &c) in self.coef.iter().enumerate().skip(1) {\n        coef_diff.push(c * T::from_usize(i).unwrap());\n    }\n    Polynomial::from_coef(coef_diff)\n}\n[/CODE]",
+  "input_tokens": 2052,
+  "output_tokens": 69,
+  "usd": 0.0003492,
+  "brl": 0.001945044,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 41,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "4734707fc5f494e04d37d2650bb9a294b5c22bc6"
+  }
+}

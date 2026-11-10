@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn is_normalized(&self) -> bool {\n    // Check if the URI has a valid scheme and authority\n    if self.scheme.is_empty() || self.authority.is_none() {\n        return false;\n    }\n\n    // Check if the path is normalized\n    if !self.path.is_normalized() {\n        return false;\n    }\n\n    // Check if the query is normalized (if it exists)\n    if let Some(query) = &self.query {\n        if !query.is_normalized() {\n            return false;\n        }\n    }\n\n    true\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 7972,
+  "tokens_out": 326,
+  "brl": 0.0077500979999999995,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn is_normalized(&self) -> bool {\n    // Check if the URI has a valid scheme and authority\n    if self.scheme.is_empty() || self.authority.is_none() {\n        return false;\n    }\n\n    // Check if the path is normalized\n    if !self.path.is_normalized() {\n        return false;\n    }\n\n    // Check if the query is normalized (if it exists)\n    if let Some(query) = &self.query {\n        if !query.is_normalized() {\n            return false;\n        }\n    }\n\n    true\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn is_normalized(&self) -> bool {\n    // Check if the URI has a valid scheme and authority\n    if self.scheme.is_empty() || self.authority.is_none() {\n        return false;\n    }\n\n    // Check if the path is normalized\n    if !self.path.is_normalized() {\n        return false;\n    }\n\n    // Check if the query is normalized (if it exists)\n    if let Some(query) = &self.query {\n        if !query.is_normalized() {\n            return false;\n        }\n    }\n\n    true\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 57,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.10204212150000004
+}

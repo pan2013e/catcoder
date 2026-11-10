@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação está correta e funcional, utilizando o padrão de correspondência para lidar com os casos de `Cow::Borrowed` e `Cow::Owned`.\"}",
+  "input_tokens": 2243,
+  "output_tokens": 46,
+  "usd": 0.00036405000000000004,
+  "brl": 0.0020277585000000003,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 47,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "ae064e0f1cf01a3e1735d101e8b16d47c84a6a2a"
+  }
+}

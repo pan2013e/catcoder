@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois além de preencher o BitVec corretamente, também define o campo nbits, o que é importante para manter a integridade do objeto.\"}",
+  "input_tokens": 2069,
+  "output_tokens": 51,
+  "usd": 0.00034094999999999997,
+  "brl": 0.0018990914999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 1,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "1bc55f01b0e0d1fa685623d8888a8830a3554234"
+  }
+}

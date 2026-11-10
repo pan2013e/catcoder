@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn dotp(&self, rhs: &Self) -> T {\n    let (self_m, self_n) = self.dim();\n    let (rhs_m, rhs_n) = rhs.dim();\n    \n    assert_eq!(self_n, rhs_m, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_m {\n        for j in 0..rhs_n {\n            result = result + self[i] * rhs[j];\n        }\n    }\n    result\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 15900,
+  "tokens_out": 813,
+  "brl": 0.016001495999999997,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn dotp(&self, rhs: &Self) -> T {\n    let (self_m, self_n) = self.dim();\n    let (rhs_m, rhs_n) = rhs.dim();\n    \n    assert_eq!(self_n, rhs_m, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_m {\n        for j in 0..rhs_n {\n            result = result + self[i] * rhs[j];\n        }\n    }\n    result\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn dotp(&self, rhs: &Self) -> T {\n    let (self_m, _) = self.dim();\n    let (_, rhs_n) = rhs.dim();\n    \n    assert_eq!(self_m, rhs_n, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_m {\n        result = result + self[i] * rhs[i];\n    }\n    result\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn dotp(&self, rhs: &Self) -> T {\n    let (_, self_n) = self.dim();\n    let (rhs_m, _) = rhs.dim();\n    \n    assert_eq!(self_n, rhs_m, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_n {\n        result = result + self[i] * rhs[i];\n    }\n    result\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn dotp(&self, rhs: &Self) -> T {\n    let (_, self_n) = self.dim();\n    let (rhs_m, _) = rhs.dim();\n    \n    assert_eq!(self_n, rhs_m, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_n {\n        result = result + self[i] * rhs[i];\n    }\n    result\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn dotp(&self, rhs: &Self) -> T {\n    let (self_m, _) = self.dim();\n    let (_, rhs_n) = rhs.dim();\n    \n    assert_eq!(self_m, rhs_n, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_m {\n        result = result + self[i] * rhs[i];\n    }\n    result\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 34,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.1861736295
+}

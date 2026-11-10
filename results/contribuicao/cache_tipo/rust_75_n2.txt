@@ -1,0 +1,58 @@
+pub struct Iter<'a> {
+inner: Components<'_>,
+}
+fn as_path(&self) -> &'a Path
+pub struct Path {
+inner: UnixStr,
+}
+fn from_u8_slice(s: &[u8]) -> &Path
+fn as_u8_slice(&self) -> &[u8]
+fn new<S: AsRef<UnixStr> + ?Sized>(s: &S) -> &Path
+fn as_unix_str(&self) -> &UnixStr
+fn to_str(&self) -> Option<&str>
+fn to_string_lossy(&self) -> Cow<'_, str>
+fn to_path_buf(&self) -> PathBuf
+fn is_absolute(&self) -> bool
+fn is_relative(&self) -> bool
+fn has_root(&self) -> bool
+fn parent(&self) -> Option<&Path>
+fn ancestors(&self) -> Ancestors<'_>
+fn file_name(&self) -> Option<&UnixStr>
+fn strip_prefix<P>(&self, base: P) -> Result<&Path, StripPrefixError>
+fn _strip_prefix(&self, base: &Path) -> Result<&Path, StripPrefixError>
+fn starts_with<P: AsRef<Path>>(&self, base: P) -> bool
+fn _starts_with(&self, base: &Path) -> bool
+fn ends_with<P: AsRef<Path>>(&self, child: P) -> bool
+fn _ends_with(&self, child: &Path) -> bool
+fn file_stem(&self) -> Option<&UnixStr>
+fn extension(&self) -> Option<&UnixStr>
+fn join<P: AsRef<Path>>(&self, path: P) -> PathBuf
+fn _join(&self, path: &Path) -> PathBuf
+fn with_file_name<S: AsRef<UnixStr>>(&self, file_name: S) -> PathBuf
+fn _with_file_name(&self, file_name: &UnixStr) -> PathBuf
+fn with_extension<S: AsRef<UnixStr>>(&self, extension: S) -> PathBuf
+fn _with_extension(&self, extension: &UnixStr) -> PathBuf
+fn components(&self) -> Components<'_>
+fn iter(&self) -> Iter<'_>
+fn into_path_buf(self: Box<Path>) -> PathBuf
+fn display(&self) -> Display<'_>
+pub struct Components<'a> {
+path: &[u8],
+has_physical_root: bool,
+front: State,
+back: State,
+}
+fn len_before_body(&self) -> usize
+fn finished(&self) -> bool
+fn is_sep_byte(&self, b: u8) -> bool
+fn as_path(&self) -> &'a Path
+fn has_root(&self) -> bool
+fn include_cur_dir(&self) -> bool
+fn parse_single_component<'b>(&self, comp: &'b [u8]) -> Option<Component<'b>>
+fn parse_next_component(&self) -> (usize, Option<Component<'a>>)
+fn parse_next_component_back(&self) -> (usize, Option<Component<'a>>)
+fn trim_left(&mut self)
+fn trim_right(&mut self)
+pub struct UnixStr {
+inner: Slice,
+}

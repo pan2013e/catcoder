@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn remove(&mut self, key: usize) -> Option<V> {\n    if key < self.v.len() {\n        let was = self.v[key].take();\n        if was.is_some() {\n            self.n -= 1;\n        }\n        was\n    } else {\n        None\n    }\n}\n[/CODE]",
+  "input_tokens": 1575,
+  "output_tokens": 70,
+  "usd": 0.00027825,
+  "brl": 0.0015498525000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 85,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "cf321da6cf8b121960a9b624974a8e53182e98a8"
+  }
+}

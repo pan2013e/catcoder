@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn negate (&mut self) {\n    self.ensure_invariant();\n    for w in &mut self.storage {\n        *w = !*w;\n    }\n    self.fix_last_block();\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 4740,
+  "tokens_out": 170,
+  "brl": 0.00452841,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn negate (&mut self) {\n    self.ensure_invariant();\n    for w in &mut self.storage {\n        *w = !*w;\n    }\n    self.fix_last_block();\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn negate(&mut self) {\n    self.ensure_invariant();\n    for w in &mut self.storage {\n        *w = !*w;\n    }\n    self.fix_last_block();\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 4,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.3907658565000001
+}

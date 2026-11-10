@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage.resize((new_len + 31) / 32, 0);\n    for i in self.nbits..new_len {\n        let block_index = i / 32;\n        let bit_index = i % 32;\n        if value {\n            self.storage[block_index] |= 1 << (31 - bit_index);\n        }\n    }\n    self.nbits = new_len;\n}\n[/CODE]",
+  "input_tokens": 1427,
+  "output_tokens": 109,
+  "usd": 0.00027945,
+  "brl": 0.0015565365,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 7,
+    "rodada": "R-JF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "646f7d19d73aaf8482e3ac23d3b170c7967a0ed8"
+  }
+}

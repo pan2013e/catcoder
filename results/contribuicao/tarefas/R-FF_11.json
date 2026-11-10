@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn sample_exact_with_fixed_const_term (n: u16, const_term: Scalar<E>) -> Self {\n    let mut coefficients = vec![const_term];\n    for _ in 1..=n {\n        coefficients.push(Scalar::random());\n    }\n    Polynomial::from_coefficients(coefficients)\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 6278,
+  "tokens_out": 192,
+  "brl": 0.0058869330000000004,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn sample_exact_with_fixed_const_term (n: u16, const_term: Scalar<E>) -> Self {\n    let mut coefficients = vec![const_term];\n    for _ in 1..=n {\n        coefficients.push(Scalar::random());\n    }\n    Polynomial::from_coefficients(coefficients)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn sample_exact_with_fixed_const_term(n: u16, const_term: Scalar<E>) -> Self {\n    let mut coefficients = vec![const_term];\n    for _ in 1..=n {\n        coefficients.push(Scalar::random());\n    }\n    Polynomial::from_coefficients(coefficients)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 11,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.042694885499999995
+}

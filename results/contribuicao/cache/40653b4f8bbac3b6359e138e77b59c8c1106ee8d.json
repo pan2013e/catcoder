@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"\"}",
+  "input_tokens": 1466,
+  "output_tokens": 15,
+  "usd": 0.0002289,
+  "brl": 0.0012749730000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 59,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "f67b661bfc6503c95be5c1a2898dc7bd51df232f"
+  }
+}

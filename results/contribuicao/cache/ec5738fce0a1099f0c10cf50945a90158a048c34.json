@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A implementação não atualiza corretamente o índice anterior do novo elemento e pode causar inconsistências na lista.\"}",
+  "input_tokens": 2294,
+  "output_tokens": 34,
+  "usd": 0.0003645,
+  "brl": 0.0020302650000000003,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 21,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "347f7a7e371efdfa214cf091e3400ee5ab1272f3"
+  }
+}

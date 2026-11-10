@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.y())\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 14970,
+  "tokens_out": 334,
+  "brl": 0.013623662999999998,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.top())\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.y())\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.top())\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.top())\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn top_right(&self) -> Point {\n    Point::new(self.right(), self.top())\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 59,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.45653558099999997
+}

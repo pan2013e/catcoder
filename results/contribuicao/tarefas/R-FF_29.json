@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn get_partition_byte_range(&self, partition_number: u32) -> Result<RangeInclusive<u64>> {\n    if partition_number == 0 || partition_number > self.partitions.len() as u32 {\n        return Err(Result::Err(InvalidPartitionNumber(partition_number)));\n    }\n\n    let partition = &self.partitions[partition_number as usize - 1];\n\n    if !partition.is_used() {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    if partition.ending_lba < partition.starting_lba {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    let start_byte = partition.starting_lba * self.sector_size;\n    let end_byte = partition.ending_lba * self.sector_size;\n\n    Ok(start_byte..=end_byte)\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 10415,
+  "tokens_out": 410,
+  "brl": 0.0100719525,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn get_partition_byte_range(&self, partition_number: u32) -> Result<RangeInclusive<u64>> {\n    if partition_number == 0 || partition_number > self.partitions.len() as u32 {\n        return Err(Result::Err(InvalidPartitionNumber(partition_number)));\n    }\n\n    let partition = &self.partitions[partition_number as usize - 1];\n\n    if !partition.is_used() {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    if partition.ending_lba < partition.starting_lba {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    let start_byte = partition.starting_lba * self.sector_size;\n    let end_byte = partition.ending_lba * self.sector_size;\n\n    Ok(start_byte..=end_byte)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn get_partition_byte_range(&self, partition_number: u32) -> Result<RangeInclusive<u64>> {\n    if partition_number == 0 || partition_number > self.partitions.len() as u32 {\n        return Err(Result::Err(InvalidPartitionNumber(partition_number)));\n    }\n\n    let partition = &self.partitions[partition_number as usize - 1];\n\n    if !partition.is_used() {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    if partition.ending_lba < partition.starting_lba {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    let start_byte = partition.starting_lba * self.sector_size;\n    let end_byte = partition.ending_lba * self.sector_size;\n\n    Ok(start_byte..=end_byte)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 29,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.022869306000000002
+}

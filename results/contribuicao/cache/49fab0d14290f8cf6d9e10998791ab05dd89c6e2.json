@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A implementação não está correta, pois o método `insert` não garante que as chaves sejam mantidas. Além disso, o método `clear` não é chamado corretamente, pois não remove as entradas do `other`.\"}",
+  "input_tokens": 1741,
+  "output_tokens": 59,
+  "usd": 0.00029654999999999997,
+  "brl": 0.0016517835,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 81,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "6ee5d820afdc4ea3127708a92825692c99e82be6"
+  }
+}

@@ -48,12 +48,12 @@ class TestAdapter:
         else:
             codes = [f'{line}\n' for line in self.data['focal_fn_full'].split('\n')]
         file = os.path.join(self.top_tmp, self.data['path'])
-        with open(file, 'r') as f1:
+        with open(file, 'r', encoding='utf-8', errors='replace') as f1:
             lines = f1.readlines()
         del lines[start_line-1:end_line]
         for idx, code in enumerate(codes):
             lines.insert(start_line-1+idx, code)
-        with open(file, 'w') as f2:
+        with open(file, 'w', encoding='utf-8', newline='\n') as f2:
             f2.writelines(lines)
     
     def compile(self) -> bool:

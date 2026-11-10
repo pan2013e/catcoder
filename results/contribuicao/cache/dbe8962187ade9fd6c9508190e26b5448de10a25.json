@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn read_u64(&mut self) -> Result<u64> {\n    if self.offset >= self.inner.len() {\n        return Err(Error::with_kind(ErrorKind::UnexpectedEof));\n    }\n\n    let slice = &self.inner[self.offset..];\n    if slice.len() < 8 {\n        return Err(Error::with_kind(ErrorKind::InvalidFormat));\n    }\n\n    let value = BigEndian::read_u64(&slice[..8]);\n    self.offset += 8;\n\n    Ok(value)\n}\n[/CODE]",
+  "input_tokens": 1966,
+  "output_tokens": 109,
+  "usd": 0.0003603,
+  "brl": 0.002006871,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 72,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "b9cdd1c64582c74ef1dfff492d89a7b30f5f6e90"
+  }
+}

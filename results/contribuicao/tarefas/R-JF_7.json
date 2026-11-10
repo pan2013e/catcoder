@@ -1,0 +1,30 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 1,
+  "acoes": [
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn grow (&mut self, n: usize, value: bool) {\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage.resize((new_len + 31) / 32, 0);\n    for i in self.nbits..new_len {\n        let block_index = i / 32;\n        let bit_index = i % 32;\n        if value {\n            self.storage[block_index] |= 1 << (31 - bit_index);\n        }\n    }\n    self.nbits = new_len;\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 3013,
+  "tokens_out": 365,
+  "brl": 0.0268582615,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn grow (&mut self, n: usize, value: bool) {\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage.resize((new_len + 31) / 32, 0);\n    for i in self.nbits..new_len {\n        let block_index = i / 32;\n        let bit_index = i % 32;\n        if value {\n            self.storage[block_index] |= 1 << (31 - bit_index);\n        }\n    }\n    self.nbits = new_len;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 7,
+  "lingua": "rust",
+  "rodada": "R-JF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 0.534569053
+}

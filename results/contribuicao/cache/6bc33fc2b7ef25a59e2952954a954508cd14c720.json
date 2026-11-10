@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n    if self.contains(value) {\n        self.tree.remove(value).map(|_| value.borrow().to_owned())\n    } else {\n        None\n    }\n[/CODE]",
+  "input_tokens": 2019,
+  "output_tokens": 37,
+  "usd": 0.00032504999999999996,
+  "brl": 0.0018105284999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 66,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "6921bcd52ef8bfd839cb08415f2676faa2681d11"
+  }
+}

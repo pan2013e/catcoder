@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn push_back(&mut self, value: T) -> Index<T> {\n    if self.length == usize::max_value() {\n        panic!(\"reached maximum possible length\");\n    }\n\n    let generation = self.generation;\n    let previous = self.tail;\n\n    match self.vacant_head {\n        Some(index) => {\n            self.vacant_head = self.entries[index.get()].vacant_ref().next;\n            self.entries[index.get()] = Entry::Occupied(OccupiedEntry::new(generation, previous, None, value));\n            self.tail = Some(index);\n            self.length += 1;\n            Index::new(index, generation)\n        }\n        None => {\n            self.entries.push(Entry::Occupied(OccupiedEntry::new(\n                generation,\n                previous,\n                None,\n                value,\n            )));\n            let new_index = NonMaxUsize::new(self.entries.len() - 1).unwrap();\n            self.tail = Some(new_index);\n            self.length += 1;\n            Index::new(new_index, generation)\n        }\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 6911,
+  "tokens_out": 528,
+  "brl": 0.007538716500000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn push_back(&mut self, value: T) -> Index<T> {\n    if self.length == usize::max_value() {\n        panic!(\"reached maximum possible length\");\n    }\n\n    let generation = self.generation;\n    let previous = self.tail;\n\n    match self.vacant_head {\n        Some(index) => {\n            self.vacant_head = self.entries[index.get()].vacant_ref().next;\n            self.entries[index.get()] = Entry::Occupied(OccupiedEntry::new(generation, previous, None, value));\n            self.tail = Some(index);\n            self.length += 1;\n            Index::new(index, generation)\n        }\n        None => {\n            self.entries.push(Entry::Occupied(OccupiedEntry::new(\n                generation,\n                previous,\n                None,\n                value,\n            )));\n            let new_index = NonMaxUsize::new(self.entries.len() - 1).unwrap();\n            self.tail = Some(new_index);\n            self.length += 1;\n            Index::new(new_index, generation)\n        }\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn push_back(&mut self, value: T) -> Index<T> {\n    if self.length == usize::max_value() {\n        panic!(\"reached maximum possible length\");\n    }\n\n    let generation = self.generation;\n    let previous = self.tail;\n\n    match self.vacant_head {\n        Some(index) => {\n            self.vacant_head = self.entries[index.get()].vacant_ref().next;\n            self.entries[index.get()] = Entry::Occupied(OccupiedEntry::new(generation, previous, None, value));\n            self.tail = Some(index);\n            self.length += 1;\n            Index::new(index, generation)\n        }\n        None => {\n            self.entries.push(Entry::Occupied(OccupiedEntry::new(\n                generation,\n                previous,\n                None,\n                value,\n            )));\n            let new_index = NonMaxUsize::new(self.entries.len() - 1).unwrap();\n            self.tail = Some(new_index);\n            self.length += 1;\n            Index::new(new_index, generation)\n        }\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 24,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.24098994899999998
+}
