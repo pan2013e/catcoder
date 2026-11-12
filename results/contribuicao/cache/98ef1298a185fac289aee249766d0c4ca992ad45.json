@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        if (read > 0) {\n            digest.update(buffer, 0, read);\n        }\n    }\n    return digest;\n}\n[/CODE]",
+  "input_tokens": 2401,
+  "output_tokens": 87,
+  "usd": 0.0002836,
+  "brl": 0.0015796520000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 101,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "b1d96d27771474e874b77f06c0e787cfbc21aa0e"
+  }
+}

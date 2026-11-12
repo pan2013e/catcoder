@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A implementação corresponde ao custo esperado: 1 para NOT e 2 para AND/OR.\"}",
+  "input_tokens": 4028,
+  "output_tokens": 36,
+  "usd": 0.00042080000000000004,
+  "brl": 0.0023438560000000005,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 17,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "230c67a3ea9ca7f9175e287fff48ba915221dea0"
+  }
+}

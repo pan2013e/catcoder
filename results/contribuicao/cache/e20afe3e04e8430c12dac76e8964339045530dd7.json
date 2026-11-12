@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação valida que o campo não é nulo e é estático, e então delega a leitura a readField com o parâmetro forceAccess.\"}",
+  "input_tokens": 2386,
+  "output_tokens": 48,
+  "usd": 0.00026260000000000004,
+  "brl": 0.0014626820000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 6,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "d0dc8bdb7af54389e5109e921ba9d3b5e9042fb9"
+  }
+}

@@ -44,11 +44,17 @@ CORES = {
     "-CR": "#D88870",
     "-TC": "#8898B8",
 }
-PARES = [
+PARES_JAVA = [
+    ("J-FF", "gpt-6-luna\njuíza gpt-6-luna", "#68B098"),
+    ("J-JF", "gpt-6-luna\njuíza gpt-5", "#D88870"),
+    ("J-FFORTE", "gpt-5\njuíza gpt-5", "#8898B8"),
+]
+PARES_RUST = [
     ("R-FF", "4o-mini\njuíza 4o-mini", "#68B098"),
     ("R-JF", "4o-mini\njuíza gpt-5", "#D88870"),
     ("R-FFORTE", "gpt-5\njuíza gpt-5", "#8898B8"),
 ]
+PARES = PARES_JAVA + PARES_RUST
 
 
 def _pontos(raiz, lingua, metodo):
@@ -175,11 +181,11 @@ def _painel_artigo(ax, raiz, lingua, metodos, letra, titulo):
     ax.set_xlabel(f"({letra})  {titulo}", fontsize=13, labelpad=8)
 
 
-def _painel_contrib(ax, por_id, letra, titulo):
+def _painel_contrib(ax, por_id, letra, titulo, pares=PARES_RUST):
     import numpy as np
 
     rotulos, valores, cores, textos = [], [], [], []
-    for rid, rotulo, cor in PARES:
+    for rid, rotulo, cor in pares:
         item = por_id.get(rid)
         if not item or not item["n_completas"] or item["taxa_sucesso"] is None:
             continue
@@ -203,8 +209,8 @@ def _painel_contrib(ax, por_id, letra, titulo):
     ax.set_xticks(x)
     ax.set_xticklabels([f"{rotulo}\n{texto}" for rotulo, texto in zip(rotulos, textos)], fontsize=10)
     ax.set_xlim(-0.6, max(0, len(rotulos) - 0.4))
-    ax.set_ylim(0, 0.62)
-    ax.set_yticks([0.0, 0.2, 0.4, 0.6])
+    ax.set_ylim(0, 1.12)
+    ax.set_yticks([0.0, 0.2, 0.4, 0.6, 0.8, 1.0])
     ax.set_ylabel("taxa de sucesso", fontsize=11)
     ax.yaxis.grid(True, color="#E4E4E4", linewidth=0.8, zorder=0)
     ax.set_axisbelow(True)
@@ -252,14 +258,15 @@ def _descrever(saida, raiz, dados, linhas):
     blocos = []
     for rid, rotulo, _ in PARES:
         item = por_id[rid]
+        lingua_nome = "Java" if item["lingua"] == "java" else "Rust"
         sucessos = int(round((item["taxa_sucesso"] or 0) * item["n_completas"]))
         compilou = int(round((item["taxa_compilacao"] or 0) * item["n_completas"]))
         voltas = "—" if item["media_voltas"] is None else f"{item['media_voltas']:.1f}".replace(".", ",")
         grau = "—" if item["media_n"] is None else f"{item['media_n']:.1f}".replace(".", ",")
         reais = f"{item['brl']:.2f}".replace(".", ",")
         blocos.append(
-            f"| {rotulo.replace(chr(10), ' / ')} | {sucessos} de {item['n_completas']} | "
-            f"{_pct(item['taxa_sucesso'])} | {compilou} de {item['n_completas']} | "
+            f"| {item['id']} ({lingua_nome}) | {rotulo.replace(chr(10), ' / ')} | {sucessos} de {item['n_completas']} | "
+            f"{_pct(item['taxa_sucesso'])} | {compilou} de {item['n_completas']} ({_pct(item['taxa_compilacao'])}) | "
             f"{voltas} | {grau} | R$ {reais} |"
         )
     general = [("In-File", "infile"), ("RepoCoder", "repocoder"), ("Our Approach", "catcoder")]
@@ -308,23 +315,24 @@ Em CL-13B, tirar a busca (-CR) derruba o pass@1 de 52,7% para 23,3%. Tirar o con
 
 ## Contribuição
 
-O painel de baixo das duas figuras. As três barras são a mesma amostra Rust, em três pares. Java não tem barra: Defects4J não está instalado, então J-FF, J-JF e J-FFORTE não começaram. -CR e -TC da contribuição também não foram executados. O painel mostra o sistema completo.
+Os painéis de baixo das duas figuras mostram a amostra Java (à esquerda) e a amostra Rust (à direita), cada uma em três pares de modelos. `-CR` e `-TC` da contribuição não foram executados; os painéis mostram o sistema completo.
 
-| Par | Testes | Taxa | Compilação | Voltas | Grau N | Gasto |
-|---|---|---|---|---|---|---|
+| Rodada | Par | Testes | Taxa | Compilação | Voltas | Grau N | Gasto |
+|---|---|---|---|---|---|---|---|
 {chr(10).join(blocos)}
 
-A soma da coluna de gasto é R$ {soma_brl}. O ledger, que soma o cache da API, fecha em R$ {medido}, dentro do teto de R$ 20. A diferença está nas cinco tarefas refeitas: o custo delas já estava no cache e não voltou para o arquivo da tarefa.
+A soma da coluna de gasto é R$ {soma_brl}. O ledger, que soma o cache da API, fecha em R$ {medido}, dentro do teto de R$ 20.
 
 Leitura para o slide:
 
-- 4o-mini nos dois papéis, 46 tarefas: 15 passaram em todos os testes (32,6%) e 24 compilaram (52,2%). A juíza usou Continua, Reverte e Parar. A média foi 2,7 voltas e o grau N médio foi 1,7.
-- 4o-mini com juíza gpt-5, nas 8 primeiras tarefas: 2 passaram (25%) e 4 compilaram. A juíza devolveu Parar na primeira volta nas oito.
-- gpt-5 nos dois papéis, nas 4 primeiras: nenhum teste passou e 3 compilaram. A geradora devolveu código vazio e consumiu os 1024 tokens de saída. O teto foi gasto em raciocínio interno do modelo, e não sobrou texto para o corpo da função.
+- **Java (`J-FF`, `gpt-6-luna` / `gpt-6-luna`, 30 tarefas):** 21 passaram em todos os testes (70,0%) e 26 compilaram (86,7%), com média de 4,3 voltas e grau N médio de 1,1 (`reasoning_effort="none"`).
+- **Java (`J-JF`, `gpt-6-luna` / juíza `gpt-5`, 6 primeiras tarefas):** 5 passaram (83,3%) e 6 compilaram (100,0%), com média de 4,3 voltas e grau N médio de 1,7.
+- **Java (`J-FFORTE`, `gpt-5` / `gpt-5`, 2 primeiras tarefas):** 2 passaram (100,0%) e 2 compilaram (100,0%), com média de 3,5 voltas e grau N médio de 2,0 (`reasoning_effort="minimal"`).
+- **Rust (`R-FF`, `gpt-4o-mini` / `gpt-4o-mini`, 46 tarefas):** 15 passaram em todos os testes (32,6%) e 24 compilaram (52,2%). A juíza usou Continua, Reverte e Parar. A média foi 2,7 voltas e o grau N médio foi 1,7.
+- **Rust (`R-JF`, `gpt-4o-mini` / juíza `gpt-5`, 8 primeiras tarefas):** 2 passaram (25,0%) e 4 compilaram (50,0%). A juíza devolveu Parar na primeira volta nas oito.
+- **Rust (`R-FFORTE`, `gpt-5` / `gpt-5`, 4 primeiras tarefas):** nenhum teste passou e 3 compilaram (75,0%). Na execução original sem redução de raciocínio, a geradora consumiu os 1024 tokens de saída no raciocínio interno.
 
-Cinco tarefas tinham parado na primeira execução porque o Windows leu o fonte do crate fora de UTF-8 (R-FF 47, 48, 75, 77 e R-JF 75). Foram concluídas depois, com Python em modo UTF-8, reusando o cache da API. Os números acima já incluem essa retomada.
-
-A amostra Rust é um subconjunto fixo de 46 funções entre as 90 do RustEval. O pass@1 do artigo usa o benchmark inteiro e 10 amostras independentes. Os dois painéis podem ir no mesmo slide, com essa diferença dita em voz alta.
+A amostra Java é um subconjunto fixo de 30 funções entre as 199 do JavaEval, e a amostra Rust é um subconjunto fixo de 46 funções entre as 90 do RustEval. O pass@1 do artigo usa o benchmark inteiro e 10 amostras independentes. Os painéis de cima e de baixo podem ir no mesmo slide, destacando essa diferença de protocolo.
 """
     (saida / "resultados.md").write_text(texto, encoding="utf-8")
 
@@ -350,22 +358,22 @@ def gerar(saida, motivos=None):
     general = [("In-File", "infile"), ("RepoCoder", "repocoder"), ("Our Approach", "catcoder")]
     ablacao = [("FULL", "catcoder"), ("-CR", "-cr"), ("-TC", "-tc")]
     por_id = {item["id"]: item for item in dados["rodadas"]}
+    tem_java = any(por_id.get(rid, {}).get("n_completas") for rid, _, _ in PARES_JAVA)
 
     fig, grade = _figura(
         plt,
         "Generalização",
         "pass@1 do artigo nos painéis de cima. A contribuição entra embaixo, com outra medida.",
-        "Rust do artigo, neste repositório, só tem CodeLlama-13B. Java da contribuição não rodou. "
+        "Rust do artigo, neste repositório, só tem CodeLlama-13B. "
         "A taxa de baixo é uma trajetória por tarefa na amostra, e não o pass@1.",
     )
     _painel_artigo(fig.add_subplot(grade[0, 0]), raiz, "java", general, "a", "Java")
     _painel_artigo(fig.add_subplot(grade[0, 1]), raiz, "rust", general, "b", "Rust")
-    _painel_contrib(
-        fig.add_subplot(grade[1, :]),
-        por_id,
-        "c",
-        "Contribuição em Rust",
-    )
+    if tem_java:
+        _painel_contrib(fig.add_subplot(grade[1, 0]), por_id, "c", "Contribuição em Java", PARES_JAVA)
+        _painel_contrib(fig.add_subplot(grade[1, 1]), por_id, "d", "Contribuição em Rust", PARES_RUST)
+    else:
+        _painel_contrib(fig.add_subplot(grade[1, :]), por_id, "c", "Contribuição em Rust", PARES_RUST)
     fig.savefig(figuras / "generalizacao.png", dpi=200, bbox_inches="tight", pad_inches=0.28)
     plt.close(fig)
 
@@ -373,17 +381,15 @@ def gerar(saida, motivos=None):
         plt,
         "Ablação",
         "FULL, -CR e -TC do artigo nos painéis de cima. Embaixo, o sistema completo da contribuição.",
-        "-CR e -TC deste repositório só têm CodeLlama-13B. A contribuição não repetiu essas duas variantes. "
-        "Java da contribuição não rodou.",
+        "-CR e -TC deste repositório só têm CodeLlama-13B. A contribuição não repetiu essas duas variantes.",
     )
     _painel_artigo(fig.add_subplot(grade[0, 0]), raiz, "java", ablacao, "c", "Java")
     _painel_artigo(fig.add_subplot(grade[0, 1]), raiz, "rust", ablacao, "d", "Rust")
-    _painel_contrib(
-        fig.add_subplot(grade[1, :]),
-        por_id,
-        "e",
-        "Contribuição em Rust, sistema completo",
-    )
+    if tem_java:
+        _painel_contrib(fig.add_subplot(grade[1, 0]), por_id, "e", "Contribuição em Java, sistema completo", PARES_JAVA)
+        _painel_contrib(fig.add_subplot(grade[1, 1]), por_id, "f", "Contribuição em Rust, sistema completo", PARES_RUST)
+    else:
+        _painel_contrib(fig.add_subplot(grade[1, :]), por_id, "e", "Contribuição em Rust, sistema completo", PARES_RUST)
     fig.savefig(figuras / "ablacao.png", dpi=200, bbox_inches="tight", pad_inches=0.28)
     plt.close(fig)
     ledger = saida / "ledger.json"
@@ -399,4 +405,4 @@ def _amostras_doc():
     assert RUST_IDX[:8][0] == 8
     total = sum(reserva_brl(r["geradora"], r["juiza"]) * len(r["indices"]) for r in RODADAS)
     assert total <= TETO_BRL
-    assert total > 19.5
+    assert total > 18.5

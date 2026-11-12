@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":1,\"feedback\":\"A versão 1 converte corretamente o índice para as dimensões: processa apenas os offsets não nulos e atribui o resto à última dimensão. A versão 0 divide por uniCounterOffset[last], que é zero.\"}",
+  "input_tokens": 2036,
+  "output_tokens": 63,
+  "usd": 0.00023510000000000002,
+  "brl": 0.0013095070000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 99,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "52a79e252acad68975c5b9b3029b9024d4580958"
+  }
+}

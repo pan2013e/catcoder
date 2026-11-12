@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        digest.update(buffer, 0, read);\n    }\n    return digest;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 24870,
+  "tokens_out": 691,
+  "brl": 0.015816015000000003,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        digest.update(buffer, 0, read);\n    }\n    return digest;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        digest.update(buffer, 0, read);\n    }\n    return digest;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        if (read > 0) {\n            digest.update(buffer, 0, read);\n        }\n    }\n    return digest;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        if (read > 0) {\n            digest.update(buffer, 0, read);\n        }\n    }\n    return digest;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public static MessageDigest updateDigest(final MessageDigest digest, final InputStream data) throws IOException {\n    final byte[] buffer = new byte[STREAM_BUFFER_LENGTH];\n    int read;\n    while ((read = data.read(buffer)) != -1) {\n        if (read > 0) {\n            digest.update(buffer, 0, read);\n        }\n    }\n    return digest;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 101,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.4333590135000012
+}

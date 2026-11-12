@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "private List<Integer> getNanPositions(IntDoublePair[] ranks) {\n    List<Integer> nanPositions = new ArrayList<Integer>();\n    for (int i = 0; i < ranks.length; i++) {\n        if (Double.isNaN(ranks[i].getValue())) {\n            nanPositions.add(ranks[i].getPosition());\n        }\n    }\n    return nanPositions;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 9693,
+  "tokens_out": 304,
+  "brl": 0.0449473935,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private List<Integer> getNanPositions(IntDoublePair[] ranks) {\n    List<Integer> nanPositions = new ArrayList<Integer>();\n    for (int i = 0; i < ranks.length; i++) {\n        if (Double.isNaN(ranks[i].getValue())) {\n            nanPositions.add(ranks[i].getPosition());\n        }\n    }\n    return nanPositions;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private List<Integer> getNanPositions(IntDoublePair[] ranks) {\n    List<Integer> nanPositions = new ArrayList<Integer>();\n    for (int i = 0; i < ranks.length; i++) {\n        if (Double.isNaN(ranks[i].getValue())) {\n            nanPositions.add(ranks[i].getPosition());\n        }\n    }\n    return nanPositions;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 137,
+  "lingua": "java",
+  "rodada": "J-JF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 1.9636848405000018
+}

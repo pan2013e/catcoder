@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde ao padrão esperado: verifica a permissão, ignora null e adiciona o conversor, retornando o substituído.\"}",
+  "input_tokens": 1518,
+  "output_tokens": 45,
+  "usd": 0.0001743,
+  "brl": 0.0009708510000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "8535399da0e9cb5b0ca0e1f742127159abf23189"
+  }
+}

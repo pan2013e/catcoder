@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação converte corretamente o índice unidimensional em coordenadas, valida os limites e trata a última dimensão separadamente, cujo deslocamento é zero.\"}",
+  "input_tokens": 1802,
+  "output_tokens": 48,
+  "usd": 0.00020420000000000003,
+  "brl": 0.0011373940000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 99,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "46c08cd24b654d35bdd024873b35d6feadff9971"
+  }
+}

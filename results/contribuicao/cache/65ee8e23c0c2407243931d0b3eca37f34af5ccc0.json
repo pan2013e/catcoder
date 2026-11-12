@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Todas as versões são idênticas e implementam corretamente a comparação dos arrays, incluindo valores nulos e elementos comparados com ShapeUtilities.equal.\"}",
+  "input_tokens": 2439,
+  "output_tokens": 46,
+  "usd": 0.00026690000000000004,
+  "brl": 0.0014866330000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 157,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "b509d52231934b711fc76d0a838d8dc71478001b"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: verifica null, checa permissão via checkAlterPartialConverters(), usa o ConverterSet.add com array de removidos tipado e retorna o substituído. Alinha com o padrão mostrado em getDurationConverter e com a API do ConverterSet.\"}",
+  "input_tokens": 1299,
+  "output_tokens": 76,
+  "usd": 0.00238375,
+  "brl": 0.0132774875,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "1d992bc6e2f30a2ca758783444b24926ed8057e9"
+  }
+}

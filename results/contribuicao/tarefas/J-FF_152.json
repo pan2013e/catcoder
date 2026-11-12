@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "protected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 48126,
+  "tokens_out": 480,
+  "brl": 0.028193669000000005,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "protected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "protected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "protected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "protected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "protected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 152,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.5540522800000012
+}

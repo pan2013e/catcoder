@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprotected Comparable getSectionKey(int section) {\n    if (this.dataset != null && section >= 0\n            && section < this.dataset.getItemCount()) {\n        return this.dataset.getKey(section);\n    }\n    return Integer.valueOf(section);\n}\n[/CODE]",
+  "input_tokens": 4735,
+  "output_tokens": 60,
+  "usd": 0.0005034999999999999,
+  "brl": 0.0028044949999999997,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 152,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "891f858fe9c495f1b1e679ba6d320954af0a74cd"
+  }
+}

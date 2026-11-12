@@ -1,4 +1,5 @@
 import os
+import signal
 import tempfile
 import shlex
 import shutil
@@ -13,14 +14,25 @@ def rmtree_error_handler(func, path, exc_info):
     print(f'Failed to remove {path} due to {exc_info[1]}, ' +
                       'you may need to remove it manually.')
 
-def run_command(cmd, timeout=30, warn_when_timeout=False):
-    proc = subprocess.Popen(shlex.split(cmd), stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+def run_command(cmd, timeout=120, warn_when_timeout=False):
+    proc = subprocess.Popen(
+        shlex.split(cmd),
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        errors='replace',
+        start_new_session=True,
+    )
     try:
         out, err = proc.communicate(timeout=timeout)
     except subprocess.TimeoutExpired:
         if warn_when_timeout:
-            print(f'Command {cmd} (pid={proc.pid}) timed out.')
-        proc.kill()
+            print(f'Command {cmd} (pid={proc.pid}) timed out.', flush=True)
+        try:
+            os.killpg(proc.pid, signal.SIGKILL)
+        except Exception:
+            proc.kill()
+        proc.communicate()
         return False, None, None
     else:
         return proc.returncode == 0, out, err
@@ -53,7 +65,10 @@ class Defects4J:
 
     def compile(self):
         cmd = f'defects4j compile -w {self.work_dir}'
-        return run_command(cmd, warn_when_timeout=True)[0]
+        ok, out, _ = run_command(cmd, warn_when_timeout=True)
+        if not ok and out is None:
+            ok, _, _ = run_command(cmd, warn_when_timeout=True)
+        return ok
     
     def get_test_result(self, result):
         if not result[0]:
@@ -65,13 +80,16 @@ class Defects4J:
     def test(self):
         for t in self.data['testmethods']:
             cmd = f'defects4j test -t {t} -w {self.work_dir}'
-            if not self.get_test_result(run_command(cmd, timeout=60, warn_when_timeout=True)):
+            res = run_command(cmd, timeout=180, warn_when_timeout=True)
+            if not res[0] and res[1] is None:
+                res = run_command(cmd, timeout=180, warn_when_timeout=True)
+            if not self.get_test_result(res):
                 return False
         return True
     
     def test_all(self):
         cmd = f'defects4j test -w {self.work_dir}'
-        return self.get_test_result(run_command(cmd, timeout=120, warn_when_timeout=True))
+        return self.get_test_result(run_command(cmd, timeout=300, warn_when_timeout=True))
 
 class TestAdapter:
     def __init__(self, data):

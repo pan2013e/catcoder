@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"\"}",
+  "input_tokens": 1964,
+  "output_tokens": 17,
+  "usd": 0.0002049,
+  "brl": 0.001141293,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 100,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "aeafaaddfdaa8a49d94da351cb5bc483500450df"
+  }
+}

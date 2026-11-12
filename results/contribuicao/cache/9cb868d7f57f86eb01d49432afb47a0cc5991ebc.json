@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As versões são idênticas e implementam corretamente a verificação de efeitos colaterais nos argumentos da chamada.\"}",
+  "input_tokens": 4161,
+  "output_tokens": 40,
+  "usd": 0.0004361,
+  "brl": 0.002429077,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 94,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "fa6e5f8662a9e6f70c761d25792258d01f5a5748"
+  }
+}

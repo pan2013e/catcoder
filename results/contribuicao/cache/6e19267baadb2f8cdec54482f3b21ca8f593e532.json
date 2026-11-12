@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 ignora caracteres antes do primeiro delimitador de abertura e só inicia a contagem de profundidade ao encontrá-lo. Também trata corretamente escapes, aspas e delimitadores aninhados, retornando o conteúdo sem os delimitadores externos.\"}",
+  "input_tokens": 2259,
+  "output_tokens": 69,
+  "usd": 0.00026040000000000004,
+  "brl": 0.0014504280000000004,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 119,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "dd05cac7c2a31def276c4633ab08ffb326575759"
+  }
+}

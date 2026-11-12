@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprivate double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}\n[/CODE]",
+  "input_tokens": 1408,
+  "output_tokens": 33,
+  "usd": 0.0001573,
+  "brl": 0.0008761610000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 166,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "33f69a0035e29e0291c6c94c82560983bcb898b0"
+  }
+}

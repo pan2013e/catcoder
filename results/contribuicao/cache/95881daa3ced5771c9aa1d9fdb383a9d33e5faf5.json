@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 calcula cada covariância pelo método existente, que aplica corretamente a correção de viés, e preenche simetricamente a matriz. As versões 2 e 3 são equivalentes; a versão 0 inclui uma variável desnecessária.\"}",
+  "input_tokens": 3506,
+  "output_tokens": 71,
+  "usd": 0.0003861,
+  "brl": 0.0021505770000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 104,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "8d8497391655cb23fd7c2a0a02d27cf0019507d3"
+  }
+}

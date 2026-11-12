@@ -128,6 +128,16 @@ def executar(cliente, cache, rust_ok, java_ok):
     pulou = set()
     for rodada in RODADAS:
         lingua = rodada["lingua"]
+        pendentes = []
+        for indice in rodada["indices"]:
+            destino = TAREFAS / f"{rodada['id']}_{indice}.json"
+            if destino.exists():
+                anterior = json.loads(destino.read_text(encoding="utf-8"))
+                if anterior.get("completo"):
+                    continue
+            pendentes.append(indice)
+        if not pendentes:
+            continue
         if lingua == "rust" and not rust_ok:
             if "rust" not in pulou:
                 motivos.append("Rust não rodou: cargo ou rust-analyzer ausente.")
@@ -142,13 +152,9 @@ def executar(cliente, cache, rust_ok, java_ok):
             bases[lingua] = _dataset(lingua)
         base = bases[lingua]
         reserva = reserva_brl(rodada["geradora"], rodada["juiza"])
-        for indice in rodada["indices"]:
+        for indice in pendentes:
             destino = TAREFAS / f"{rodada['id']}_{indice}.json"
-            if destino.exists():
-                anterior = json.loads(destino.read_text(encoding="utf-8"))
-                if anterior.get("completo"):
-                    continue
-            elif not pode_comecar(cache.medido_brl(), reserva):
+            if not pode_comecar(cache.medido_brl(), reserva):
                 motivos.append(
                     f"Parou antes de {rodada['id']} índice {indice}: teto de R$ {TETO_BRL:.2f}."
                 )
@@ -212,7 +218,8 @@ def executar(cliente, cache, rust_ok, java_ok):
             })
             destino.write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
             print(
-                f"{rodada['id']} #{indice} passou={resultado['passou']} "
-                f"R$={resultado['medido_brl']:.4f} {resultado.get('erro', '')}"
+                f"{rodada['id']} #{indice} compilou={resultado['compilou']} passou={resultado['passou']} "
+                f"voltas={resultado['voltas']} R$={resultado['medido_brl']:.4f} {resultado.get('erro', '')}",
+                flush=True,
             )
     return motivos

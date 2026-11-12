@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprivate List<Integer> getNanPositions(IntDoublePair[] ranks) {\n    List<Integer> nanPositions = new ArrayList<Integer>();\n    for (int i = 0; i < ranks.length; i++) {\n        if (Double.isNaN(ranks[i].getValue())) {\n            nanPositions.add(ranks[i].getPosition());\n        }\n    }\n    return nanPositions;\n}\n[/CODE]",
+  "input_tokens": 2422,
+  "output_tokens": 88,
+  "usd": 0.0002862,
+  "brl": 0.001594134,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 137,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "eaa5bb40c812aca37859b21036c5845630e2b7f8"
+  }
+}

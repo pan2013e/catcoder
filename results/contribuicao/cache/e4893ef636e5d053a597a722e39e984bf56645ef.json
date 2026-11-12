@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: consome tokens true/false, atualiza o índice do caminho e lança IllegalStateException para outros tokens.\"}",
+  "input_tokens": 3395,
+  "output_tokens": 43,
+  "usd": 0.000361,
+  "brl": 0.0020107700000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "d69fba800e76407bfc9c98caab96704d4435c568"
+  }
+}

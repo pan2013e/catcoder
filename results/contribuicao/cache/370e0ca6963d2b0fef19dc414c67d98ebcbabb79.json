@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":4,\"feedback\":\"A versão 4 decrementa a profundidade apenas ao encontrar o delimitador de fechamento, evitando a decrementação indevida das outras versões. Contudo, todas as versões deixam de fora o delimitador de abertura inicial e consomem até o fim se não houver fechamento; a implementação correta deve seguir o comportamento documentado para entradas balanceadas e não balanceadas.\"}",
+  "input_tokens": 2951,
+  "output_tokens": 89,
+  "usd": 0.0003396,
+  "brl": 0.0018915720000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 119,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "bccb11a30833d4f067b082e30814d3075ff4b429"
+  }
+}

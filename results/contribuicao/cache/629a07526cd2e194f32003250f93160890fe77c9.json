@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde ao comportamento esperado de nextDouble: aceita tokens numéricos e strings, rejeita valores não finitos em modo estrito e atualiza o estado do leitor.\"}",
+  "input_tokens": 3434,
+  "output_tokens": 53,
+  "usd": 0.0003699,
+  "brl": 0.002060343,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 159,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "ea3937fc30a71c891eb654215ef0f80d21448834"
+  }
+}

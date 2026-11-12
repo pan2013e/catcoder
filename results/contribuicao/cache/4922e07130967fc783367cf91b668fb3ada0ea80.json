@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n/**\n   * Returns the {@link com.google.gson.stream.JsonToken#BOOLEAN boolean} value of the next token,\n   * consuming it.\n   *\n   * @throws IllegalStateException if the next token is not a boolean or if\n   *     this reader is closed.\n   */\npublic boolean nextBoolean() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n  if (p == PEEKED_TRUE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return true;\n  } else if (p == PEEKED_FALSE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return false;\n  } else {\n    throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n  }\n}\n[/CODE]",
+  "input_tokens": 3050,
+  "output_tokens": 205,
+  "usd": 0.0058625,
+  "brl": 0.032654125,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FFORTE",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "3194323375d89887b72a14fd16ccd925fd84d4c4"
+  }
+}

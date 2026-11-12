@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Ambas as versões são idênticas e corretas. Escolhi a 0. A implementação segue o padrão do restante da classe: avalia peeked, chama doPeek() se necessário, lida com PEEKED_TRUE/PEEKED_FALSE, atualiza peeked e pathIndices, e lança IllegalStateException caso contrário.\"}",
+  "input_tokens": 3117,
+  "output_tokens": 92,
+  "usd": 0.00481625,
+  "brl": 0.026826512500000003,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "4d14ed77e398cb9d617507fe33d15af723ae24f9"
+  }
+}

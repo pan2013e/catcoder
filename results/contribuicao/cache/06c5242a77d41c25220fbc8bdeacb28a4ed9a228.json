@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}\n[/CODE]",
+  "input_tokens": 3803,
+  "output_tokens": 121,
+  "usd": 0.00044080000000000004,
+  "brl": 0.0024552560000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 106,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "623d54198b79ce139178c496f2e80dacf610991c"
+  }
+}

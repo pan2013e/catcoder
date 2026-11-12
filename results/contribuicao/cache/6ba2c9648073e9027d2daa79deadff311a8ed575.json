@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Todas as versões são idênticas e corretas: dobram a capacidade, garantem ser ao menos a solicitada e copiam o conteúdo preservando size. Pode seguir com a versão 0.\"}",
+  "input_tokens": 3786,
+  "output_tokens": 64,
+  "usd": 0.0053725,
+  "brl": 0.029924825,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-5",
+    "prompt": "a179b76c28200e93046be3ca52486f170fba1378"
+  }
+}

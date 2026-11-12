@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}\n[/CODE]",
+  "input_tokens": 2160,
+  "output_tokens": 80,
+  "usd": 0.00025600000000000004,
+  "brl": 0.0014259200000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 6,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "e1efd2a7e6f0344a3430a7186664df433239d035"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public double integrate(UnivariateFunction f) {\n    double s = 0;\n    double c = 0;\n    for (int i = 0; i < points.length; i++) {\n        double y = weights[i] * f.value(points[i]) - c;\n        double t = s + y;\n        c = (t - s) - y;\n        s = t;\n    }\n    return s;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 6246,
+  "tokens_out": 282,
+  "brl": 0.0043044960000000005,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public double integrate(UnivariateFunction f) {\n    double s = 0;\n    double c = 0;\n    for (int i = 0; i < points.length; i++) {\n        double y = weights[i] * f.value(points[i]) - c;\n        double t = s + y;\n        c = (t - s) - y;\n        s = t;\n    }\n    return s;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public double integrate(UnivariateFunction f) {\n    double sum = 0;\n    double compensation = 0;\n    for (int i = 0; i < points.length; i++) {\n        double adjusted = weights[i] * f.value(points[i]) - compensation;\n        double next = sum + adjusted;\n        compensation = (next - sum) - adjusted;\n        sum = next;\n    }\n    return sum;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 138,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.1982629600000008
+}

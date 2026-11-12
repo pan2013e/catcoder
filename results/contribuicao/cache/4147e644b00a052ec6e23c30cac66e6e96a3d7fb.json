@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic double integrate(UnivariateFunction f) {\n    double s = 0;\n    double c = 0;\n    for (int i = 0; i < points.length; i++) {\n        double y = weights[i] * f.value(points[i]) - c;\n        double t = s + y;\n        c = (t - s) - y;\n        s = t;\n    }\n    return s;\n}\n[/CODE]",
+  "input_tokens": 1404,
+  "output_tokens": 96,
+  "usd": 0.00018840000000000003,
+  "brl": 0.0010493880000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 138,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "cc85977336d3ec4bafb7e88bd2947e8533e2ce4e"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 converte o BigInteger para exatamente oito bytes em ordem big-endian, preservando a representação em complemento de dois.\"}",
+  "input_tokens": 1969,
+  "output_tokens": 45,
+  "usd": 0.0002194,
+  "brl": 0.001222058,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 22,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "8de59d4c45b28ec500f06de8ef91ab900200055f"
+  }
+}

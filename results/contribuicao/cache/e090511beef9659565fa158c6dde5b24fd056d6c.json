@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":1,\"feedback\":\"As versões 1 a 4 são idênticas e implementam a estimativa esperada: 1 para NOT e 2 para AND/OR. A versão 0 é equivalente.\"}",
+  "input_tokens": 4084,
+  "output_tokens": 56,
+  "usd": 0.0004364,
+  "brl": 0.002430748,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 17,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "d70e1293701428955ef0c2835fe5c32b31a75437"
+  }
+}

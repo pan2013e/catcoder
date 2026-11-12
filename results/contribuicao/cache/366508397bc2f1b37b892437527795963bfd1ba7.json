@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":3,\"feedback\":\"Implementação correta, limpa e sem duplicação de assinatura/comentários. Atualiza estado (peeked e pathIndices) e valida tokens TRUE/FALSE conforme o contexto.\"}",
+  "input_tokens": 3661,
+  "output_tokens": 58,
+  "usd": 0.00515625,
+  "brl": 0.028720312500000005,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FFORTE",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-5",
+    "prompt": "79411cad8cef3b62ca97cf03ae836c5d1fbe9ac8"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 0 divide por uniCounterOffset[last], que é inicializado como 0, causando divisão por zero. A versão 1 percorre apenas as dimensões anteriores à última e atribui o resto à última dimensão.\"}",
+  "input_tokens": 1919,
+  "output_tokens": 63,
+  "usd": 0.0002234,
+  "brl": 0.0012443380000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 99,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "c1fa9ed7ac02ee64c13c012da142dbc3ab738b8b"
+  }
+}

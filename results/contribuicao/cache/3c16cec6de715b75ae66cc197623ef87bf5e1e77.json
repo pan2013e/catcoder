@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"Inclui verificações de null para os DurationField (range e duration), evitando NullPointerException em parciais cujos campos não possuam duração ou duração de faixa. Mantém a lógica de contiguidade correta comparando range do campo anterior com a duração do próximo.\"}",
+  "input_tokens": 2600,
+  "output_tokens": 79,
+  "usd": 0.00404,
+  "brl": 0.022502800000000003,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 58,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "5e496203bbbc8a1848dd6d953f628d5e1647f324"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public double nextDouble() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n\n  if (p == PEEKED_LONG) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return (double) peekedLong;\n  }\n\n  if (p == PEEKED_NUMBER) {\n    peekedString = new String(buffer, pos, peekedNumberLength);\n    pos += peekedNumberLength;\n  } else if (p == PEEKED_SINGLE_QUOTED) {\n    peekedString = nextQuotedValue('\\'');\n  } else if (p == PEEKED_DOUBLE_QUOTED) {\n    peekedString = nextQuotedValue('\"');\n  } else if (p == PEEKED_UNQUOTED) {\n    peekedString = nextUnquotedValue();\n  } else if (p != PEEKED_BUFFERED) {\n    throw new IllegalStateException(\"Expected a double but was \" + peek() + locationString());\n  }\n\n  peeked = PEEKED_BUFFERED;\n  double result = Double.parseDouble(peekedString);\n  if (!lenient && (Double.isNaN(result) || Double.isInfinite(result))) {\n    throw new NumberFormatException(\"JSON forbids NaN and infinities: \" + result);\n  }\n  peekedString = null;\n  peeked = PEEKED_NONE;\n  pathIndices[stackSize - 1]++;\n  return result;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 30848,
+  "tokens_out": 1830,
+  "brl": 0.022321217999999997,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public double nextDouble() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n\n  if (p == PEEKED_LONG) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return (double) peekedLong;\n  }\n\n  if (p == PEEKED_NUMBER) {\n    peekedString = new String(buffer, pos, peekedNumberLength);\n    pos += peekedNumberLength;\n  } else if (p == PEEKED_SINGLE_QUOTED) {\n    peekedString = nextQuotedValue('\\'');\n  } else if (p == PEEKED_DOUBLE_QUOTED) {\n    peekedString = nextQuotedValue('\"');\n  } else if (p == PEEKED_UNQUOTED) {\n    peekedString = nextUnquotedValue();\n  } else if (p != PEEKED_BUFFERED) {\n    throw new IllegalStateException(\"Expected a double but was \" + peek() + locationString());\n  }\n\n  peeked = PEEKED_BUFFERED;\n  double result = Double.parseDouble(peekedString);\n  if (!lenient && (Double.isNaN(result) || Double.isInfinite(result))) {\n    throw new NumberFormatException(\"JSON forbids NaN and infinities: \" + result);\n  }\n  peekedString = null;\n  peeked = PEEKED_NONE;\n  pathIndices[stackSize - 1]++;\n  return result;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public double nextDouble() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n\n  if (p == PEEKED_LONG) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return (double) peekedLong;\n  }\n\n  if (p == PEEKED_NUMBER) {\n    peekedString = new String(buffer, pos, peekedNumberLength);\n    pos += peekedNumberLength;\n  } else if (p == PEEKED_SINGLE_QUOTED) {\n    peekedString = nextQuotedValue('\\'');\n  } else if (p == PEEKED_DOUBLE_QUOTED) {\n    peekedString = nextQuotedValue('\"');\n  } else if (p == PEEKED_UNQUOTED) {\n    peekedString = nextUnquotedValue();\n  } else if (p != PEEKED_BUFFERED) {\n    throw new IllegalStateException(\"Expected a double but was \" + peek() + locationString());\n  }\n\n  peeked = PEEKED_BUFFERED;\n  double result = Double.parseDouble(peekedString);\n  if (!lenient && (Double.isNaN(result) || Double.isInfinite(result))) {\n    throw new NumberFormatException(\"JSON forbids NaN and infinities: \" + result);\n  }\n  peekedString = null;\n  peeked = PEEKED_NONE;\n  pathIndices[stackSize - 1]++;\n  return result;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public double nextDouble() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n\n  if (p == PEEKED_LONG) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return (double) peekedLong;\n  }\n\n  if (p == PEEKED_NUMBER) {\n    peekedString = new String(buffer, pos, peekedNumberLength);\n    pos += peekedNumberLength;\n  } else if (p == PEEKED_SINGLE_QUOTED) {\n    peekedString = nextQuotedValue('\\'');\n  } else if (p == PEEKED_DOUBLE_QUOTED) {\n    peekedString = nextQuotedValue('\"');\n  } else if (p == PEEKED_UNQUOTED) {\n    peekedString = nextUnquotedValue();\n  } else if (p != PEEKED_BUFFERED) {\n    throw new IllegalStateException(\"Expected a double but was \" + peek() + locationString());\n  }\n\n  peeked = PEEKED_BUFFERED;\n  double result = Double.parseDouble(peekedString);\n  if (!lenient && (Double.isNaN(result) || Double.isInfinite(result))) {\n    throw new NumberFormatException(\"JSON forbids NaN and infinities: \" + result);\n  }\n  peekedString = null;\n  peeked = PEEKED_NONE;\n  pathIndices[stackSize - 1]++;\n  return result;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public double nextDouble() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n\n  if (p == PEEKED_LONG) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return (double) peekedLong;\n  }\n\n  if (p == PEEKED_NUMBER) {\n    peekedString = new String(buffer, pos, peekedNumberLength);\n    pos += peekedNumberLength;\n  } else if (p == PEEKED_SINGLE_QUOTED) {\n    peekedString = nextQuotedValue('\\'');\n  } else if (p == PEEKED_DOUBLE_QUOTED) {\n    peekedString = nextQuotedValue('\"');\n  } else if (p == PEEKED_UNQUOTED) {\n    peekedString = nextUnquotedValue();\n  } else if (p != PEEKED_BUFFERED) {\n    throw new IllegalStateException(\"Expected a double but was \" + peek() + locationString());\n  }\n\n  peeked = PEEKED_BUFFERED;\n  double result = Double.parseDouble(peekedString);\n  if (!lenient && (Double.isNaN(result) || Double.isInfinite(result))) {\n    throw new NumberFormatException(\"JSON forbids NaN and infinities: \" + result);\n  }\n  peekedString = null;\n  peeked = PEEKED_NONE;\n  pathIndices[stackSize - 1]++;\n  return result;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public double nextDouble() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n\n  if (p == PEEKED_LONG) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return (double) peekedLong;\n  }\n\n  if (p == PEEKED_NUMBER) {\n    peekedString = new String(buffer, pos, peekedNumberLength);\n    pos += peekedNumberLength;\n  } else if (p == PEEKED_SINGLE_QUOTED) {\n    peekedString = nextQuotedValue('\\'');\n  } else if (p == PEEKED_DOUBLE_QUOTED) {\n    peekedString = nextQuotedValue('\"');\n  } else if (p == PEEKED_UNQUOTED) {\n    peekedString = nextUnquotedValue();\n  } else if (p != PEEKED_BUFFERED) {\n    throw new IllegalStateException(\"Expected a double but was \" + peek() + locationString());\n  }\n\n  peeked = PEEKED_BUFFERED;\n  double result = Double.parseDouble(peekedString);\n  if (!lenient && (Double.isNaN(result) || Double.isInfinite(result))) {\n    throw new NumberFormatException(\"JSON forbids NaN and infinities: \" + result);\n  }\n  peekedString = null;\n  peeked = PEEKED_NONE;\n  pathIndices[stackSize - 1]++;\n  return result;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 159,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.220584178
+}

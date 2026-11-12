@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic boolean nextBoolean() throws IOException {\n    int p = peeked;\n    if (p == PEEKED_NONE) {\n      p = doPeek();\n    }\n    if (p == PEEKED_TRUE) {\n      peeked = PEEKED_NONE;\n      pathIndices[stackSize - 1]++;\n      return true;\n    } else if (p == PEEKED_FALSE) {\n      peeked = PEEKED_NONE;\n      pathIndices[stackSize - 1]++;\n      return false;\n    }\n    throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n  }\n[/CODE]",
+  "input_tokens": 2816,
+  "output_tokens": 137,
+  "usd": 0.0003501,
+  "brl": 0.001950057,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-JF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "7c5d73e64290334f3b273c76eb49a13cbda69595"
+  }
+}

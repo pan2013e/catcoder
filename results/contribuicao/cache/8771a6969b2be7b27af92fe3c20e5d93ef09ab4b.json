@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação identifica corretamente os valores NaN e registra suas posições originais.\"}",
+  "input_tokens": 2426,
+  "output_tokens": 32,
+  "usd": 0.00025860000000000005,
+  "brl": 0.0014404020000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 137,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "a3c6c5fd6fe8cf3c6cb3186911daf13f9e302da1"
+  }
+}

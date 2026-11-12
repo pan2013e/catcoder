@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 gera os oito bytes em ordem big-endian, preenchendo do último índice ao primeiro.\"}",
+  "input_tokens": 2127,
+  "output_tokens": 39,
+  "usd": 0.0002322,
+  "brl": 0.001293354,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 22,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "e6ec2e2fd6450986087f6c23ee899b06be2a0838"
+  }
+}

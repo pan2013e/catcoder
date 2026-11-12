@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public boolean nextBoolean() throws IOException {\n    int p = peeked;\n    if (p == PEEKED_NONE) {\n      p = doPeek();\n    }\n    if (p == PEEKED_TRUE) {\n      peeked = PEEKED_NONE;\n      pathIndices[stackSize - 1]++;\n      return true;\n    } else if (p == PEEKED_FALSE) {\n      peeked = PEEKED_NONE;\n      pathIndices[stackSize - 1]++;\n      return false;\n    } else {\n      throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n    }\n  }",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 31132,
+  "tokens_out": 921,
+  "brl": 0.019933637500000004,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public boolean nextBoolean() throws IOException {\n    int p = peeked;\n    if (p == PEEKED_NONE) {\n      p = doPeek();\n    }\n    if (p == PEEKED_TRUE) {\n      peeked = PEEKED_NONE;\n      pathIndices[stackSize - 1]++;\n      return true;\n    } else if (p == PEEKED_FALSE) {\n      peeked = PEEKED_NONE;\n      pathIndices[stackSize - 1]++;\n      return false;\n    } else {\n      throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n    }\n  }"
+    },
+    {
+      "id": 1,
+      "codigo": "public boolean nextBoolean() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n  if (p == PEEKED_TRUE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return true;\n  } else if (p == PEEKED_FALSE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return false;\n  } else {\n    throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n  }\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public boolean nextBoolean() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n  if (p == PEEKED_TRUE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return true;\n  } else if (p == PEEKED_FALSE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return false;\n  } else {\n    throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n  }\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public boolean nextBoolean() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n  if (p == PEEKED_TRUE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return true;\n  } else if (p == PEEKED_FALSE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return false;\n  } else {\n    throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n  }\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public boolean nextBoolean() throws IOException {\n  int p = peeked;\n  if (p == PEEKED_NONE) {\n    p = doPeek();\n  }\n  if (p == PEEKED_TRUE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return true;\n  } else if (p == PEEKED_FALSE) {\n    peeked = PEEKED_NONE;\n    pathIndices[stackSize - 1]++;\n    return false;\n  } else {\n    throw new IllegalStateException(\"Expected a boolean but was \" + peek() + locationString());\n  }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 92,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.1262509365000009
+}

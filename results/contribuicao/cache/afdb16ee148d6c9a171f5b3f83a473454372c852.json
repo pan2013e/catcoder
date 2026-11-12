@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e corretas. Escolhi a versão 0. Ela aumenta a capacidade dobrando o tamanho atual e garantindo pelo menos a capacidade solicitada, copiando o conteúdo existente e retornando this, conforme esperado.\"}",
+  "input_tokens": 3608,
+  "output_tokens": 72,
+  "usd": 0.00523,
+  "brl": 0.029131100000000004,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "8939f78915199af517dcd23eab9fcf1f4bc94a0d"
+  }
+}

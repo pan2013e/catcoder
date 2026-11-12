@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação usa a cronologia ISO em UTC, analisa o texto integralmente e converte para UTC quando o parser fornece um fuso, conforme especificado.\"}",
+  "input_tokens": 2730,
+  "output_tokens": 50,
+  "usd": 0.000298,
+  "brl": 0.00165986,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 170,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "44c4bc7993125c5132972f0386f843f53c149ef2"
+  }
+}

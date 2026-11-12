@@ -60,22 +60,26 @@ Em CL-13B, tirar a busca (-CR) derruba o pass@1 de 52,7% para 23,3%. Tirar o con
 
 ## Contribuição
 
-O painel de baixo das duas figuras. As três barras são a mesma amostra Rust, em três pares. Java não tem barra: Defects4J não está instalado, então J-FF, J-JF e J-FFORTE não começaram. -CR e -TC da contribuição também não foram executados. O painel mostra o sistema completo.
+Os painéis de baixo das duas figuras mostram a amostra Java (à esquerda) e a amostra Rust (à direita), cada uma em três pares de modelos. `-CR` e `-TC` da contribuição não foram executados; os painéis mostram o sistema completo.
 
-| Par | Testes | Taxa | Compilação | Voltas | Grau N | Gasto |
-|---|---|---|---|---|---|---|
-| 4o-mini / juíza 4o-mini | 15 de 46 | 32,6% | 24 de 46 | 2,7 | 1,7 | R$ 0,40 |
-| 4o-mini / juíza gpt-5 | 2 de 8 | 25,0% | 4 de 8 | 1,0 | 2,2 | R$ 0,21 |
-| gpt-5 / juíza gpt-5 | 0 de 4 | 0,0% | 3 de 4 | 1,0 | 2,5 | R$ 0,38 |
+| Rodada | Par | Testes | Taxa | Compilação | Voltas | Grau N | Gasto |
+|---|---|---|---|---|---|---|---|
+| J-FF (Java) | gpt-6-luna / juíza gpt-6-luna | 21 de 30 | 70,0% | 26 de 30 (86,7%) | 4,3 | 1,1 | R$ 0,45 |
+| J-JF (Java) | gpt-6-luna / juíza gpt-5 | 5 de 6 | 83,3% | 6 de 6 (100,0%) | 4,3 | 1,7 | R$ 0,68 |
+| J-FFORTE (Java) | gpt-5 / juíza gpt-5 | 2 de 2 | 100,0% | 2 de 2 (100,0%) | 3,5 | 2,0 | R$ 0,40 |
+| R-FF (Rust) | 4o-mini / juíza 4o-mini | 15 de 46 | 32,6% | 24 de 46 (52,2%) | 2,7 | 1,7 | R$ 0,40 |
+| R-JF (Rust) | 4o-mini / juíza gpt-5 | 2 de 8 | 25,0% | 4 de 8 (50,0%) | 1,0 | 2,2 | R$ 0,21 |
+| R-FFORTE (Rust) | gpt-5 / juíza gpt-5 | 0 de 4 | 0,0% | 3 de 4 (75,0%) | 1,0 | 2,5 | R$ 0,38 |
 
-A soma da coluna de gasto é R$ 0,99. O ledger, que soma o cache da API, fecha em R$ 1,11, dentro do teto de R$ 20. A diferença está nas cinco tarefas refeitas: o custo delas já estava no cache e não voltou para o arquivo da tarefa.
+A soma da coluna de gasto é R$ 2,51. O ledger, que soma o cache da API, fecha em R$ 2,65, dentro do teto de R$ 20.
 
 Leitura para o slide:
 
-- 4o-mini nos dois papéis, 46 tarefas: 15 passaram em todos os testes (32,6%) e 24 compilaram (52,2%). A juíza usou Continua, Reverte e Parar. A média foi 2,7 voltas e o grau N médio foi 1,7.
-- 4o-mini com juíza gpt-5, nas 8 primeiras tarefas: 2 passaram (25%) e 4 compilaram. A juíza devolveu Parar na primeira volta nas oito.
-- gpt-5 nos dois papéis, nas 4 primeiras: nenhum teste passou e 3 compilaram. A geradora devolveu código vazio e consumiu os 1024 tokens de saída. O teto foi gasto em raciocínio interno do modelo, e não sobrou texto para o corpo da função.
+- **Java (`J-FF`, `gpt-6-luna` / `gpt-6-luna`, 30 tarefas):** 21 passaram em todos os testes (70,0%) e 26 compilaram (86,7%), com média de 4,3 voltas e grau N médio de 1,1 (`reasoning_effort="none"`).
+- **Java (`J-JF`, `gpt-6-luna` / juíza `gpt-5`, 6 primeiras tarefas):** 5 passaram (83,3%) e 6 compilaram (100,0%), com média de 4,3 voltas e grau N médio de 1,7.
+- **Java (`J-FFORTE`, `gpt-5` / `gpt-5`, 2 primeiras tarefas):** 2 passaram (100,0%) e 2 compilaram (100,0%), com média de 3,5 voltas e grau N médio de 2,0 (`reasoning_effort="minimal"`).
+- **Rust (`R-FF`, `gpt-4o-mini` / `gpt-4o-mini`, 46 tarefas):** 15 passaram em todos os testes (32,6%) e 24 compilaram (52,2%). A juíza usou Continua, Reverte e Parar. A média foi 2,7 voltas e o grau N médio foi 1,7.
+- **Rust (`R-JF`, `gpt-4o-mini` / juíza `gpt-5`, 8 primeiras tarefas):** 2 passaram (25,0%) e 4 compilaram (50,0%). A juíza devolveu Parar na primeira volta nas oito.
+- **Rust (`R-FFORTE`, `gpt-5` / `gpt-5`, 4 primeiras tarefas):** nenhum teste passou e 3 compilaram (75,0%). Na execução original sem redução de raciocínio, a geradora consumiu os 1024 tokens de saída no raciocínio interno.
 
-Cinco tarefas tinham parado na primeira execução porque o Windows leu o fonte do crate fora de UTF-8 (R-FF 47, 48, 75, 77 e R-JF 75). Foram concluídas depois, com Python em modo UTF-8, reusando o cache da API. Os números acima já incluem essa retomada.
-
-A amostra Rust é um subconjunto fixo de 46 funções entre as 90 do RustEval. O pass@1 do artigo usa o benchmark inteiro e 10 amostras independentes. Os dois painéis podem ir no mesmo slide, com essa diferença dita em voz alta.
+A amostra Java é um subconjunto fixo de 30 funções entre as 199 do JavaEval, e a amostra Rust é um subconjunto fixo de 46 funções entre as 90 do RustEval. O pass@1 do artigo usa o benchmark inteiro e 10 amostras independentes. Os painéis de cima e de baixo podem ir no mesmo slide, destacando essa diferença de protocolo.

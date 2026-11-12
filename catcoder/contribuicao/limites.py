@@ -17,12 +17,14 @@ MAX_OUT_GERADORA = 1024
 MAX_OUT_JUIZA = 256
 
 MODELO_FRACO = "gpt-4o-mini"
+MODELO_LUNA = "gpt-6-luna"
 MODELO_FORTE = "gpt-5"
 MODELO_N = MODELO_FRACO
 
-# USD por 1 milhão de tokens, tabela da OpenAI em 10 nov 2026.
+# USD por 1 milhão de tokens, tabela da OpenAI em nov 2026.
 PRECO = {
     MODELO_FRACO: (0.15, 0.60),
+    MODELO_LUNA: (0.10, 0.50),
     MODELO_FORTE: (1.25, 10.00),
 }
 
@@ -65,7 +67,7 @@ RODADAS = [
     {"id": "R-FF", "lingua": "rust", "geradora": MODELO_FRACO, "juiza": MODELO_FRACO, "indices": RUST_IDX[:46]},
     {"id": "R-JF", "lingua": "rust", "geradora": MODELO_FRACO, "juiza": MODELO_FORTE, "indices": RUST_IDX[:8]},
     {"id": "R-FFORTE", "lingua": "rust", "geradora": MODELO_FORTE, "juiza": MODELO_FORTE, "indices": RUST_IDX[:4]},
-    {"id": "J-FF", "lingua": "java", "geradora": MODELO_FRACO, "juiza": MODELO_FRACO, "indices": JAVA_IDX[:30]},
-    {"id": "J-JF", "lingua": "java", "geradora": MODELO_FRACO, "juiza": MODELO_FORTE, "indices": JAVA_IDX[:6]},
+    {"id": "J-FF", "lingua": "java", "geradora": MODELO_LUNA, "juiza": MODELO_LUNA, "indices": JAVA_IDX[:30]},
+    {"id": "J-JF", "lingua": "java", "geradora": MODELO_LUNA, "juiza": MODELO_FORTE, "indices": JAVA_IDX[:6]},
     {"id": "J-FFORTE", "lingua": "java", "geradora": MODELO_FORTE, "juiza": MODELO_FORTE, "indices": JAVA_IDX[:2]},
 ]

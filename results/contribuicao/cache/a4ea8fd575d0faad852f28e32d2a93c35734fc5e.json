@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação normaliza cada restrição e retorna a lista resultante, conforme solicitado.\"}",
+  "input_tokens": 3088,
+  "output_tokens": 34,
+  "usd": 0.0003258,
+  "brl": 0.0018147060000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 167,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "d0706c65e531e299f4198df7f8b251e4753f4d76"
+  }
+}

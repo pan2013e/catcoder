@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação valida segmentos numéricos sem zeros à esquerda, rejeita caracteres não numéricos e evita índices que transbordem para valores negativos.\"}",
+  "input_tokens": 1862,
+  "output_tokens": 47,
+  "usd": 0.0002097,
+  "brl": 0.0011680290000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 109,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "87a90cfaf66aab4864f28314b05d0fd1afc53c49"
+  }
+}

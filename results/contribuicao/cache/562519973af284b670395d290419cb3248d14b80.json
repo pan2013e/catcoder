@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static byte[] getBytes(final BigInteger value) {\n    final byte[] result = new byte[8];\n    BigInteger remaining = value;\n    for (int i = result.length - 1; i >= 0; i--) {\n        result[i] = remaining.byteValue();\n        remaining = remaining.shiftRight(8);\n    }\n    return result;\n}\n[/CODE]",
+  "input_tokens": 1837,
+  "output_tokens": 84,
+  "usd": 0.0002257,
+  "brl": 0.0012571490000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 22,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "387741207623550cc87bdf4e5ebde061a7617a75"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A versão 0 implementa corretamente a leitura em blocos do InputStream, atualiza o digest com os bytes lidos e retorna o mesmo MessageDigest. A versão 1 é idêntica; a versão 2 também funciona, mas a verificação adicional é desnecessária.\"}",
+  "input_tokens": 2562,
+  "output_tokens": 75,
+  "usd": 0.0002937,
+  "brl": 0.001635909,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 101,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "945e6bb557d925ec8d5ce3eab8ee5055fb855b28"
+  }
+}

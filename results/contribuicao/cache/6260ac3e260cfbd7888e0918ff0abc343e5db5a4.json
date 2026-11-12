@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic double integrate(UnivariateFunction f) {\n    double sum = 0;\n    double compensation = 0;\n    for (int i = 0; i < points.length; i++) {\n        double adjusted = weights[i] * f.value(points[i]) - compensation;\n        double next = sum + adjusted;\n        compensation = (next - sum) - adjusted;\n        sum = next;\n    }\n    return sum;\n}\n[/CODE]",
+  "input_tokens": 1543,
+  "output_tokens": 96,
+  "usd": 0.0002023,
+  "brl": 0.0011268110000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 138,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "9895790fba6996850e5413d0609416e4bdbcb31b"
+  }
+}

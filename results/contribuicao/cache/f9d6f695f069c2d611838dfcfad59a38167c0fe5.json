@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação verifica a permissão, ignora null e delega a adição ao ConverterSet, retornando o conversor substituído conforme esperado.\"}",
+  "input_tokens": 1299,
+  "output_tokens": 47,
+  "usd": 0.00015340000000000002,
+  "brl": 0.0008544380000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "bbb44ea9e1c397906597cd81475cd7750074ca7d"
+  }
+}

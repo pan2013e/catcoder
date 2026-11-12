@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "private boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 21093,
+  "tokens_out": 746,
+  "brl": 0.013858717,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "private boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "private boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 157,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.275370141000001
+}

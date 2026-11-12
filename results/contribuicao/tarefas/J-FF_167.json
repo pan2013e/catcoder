@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public List<LinearConstraint> normalizeConstraints(Collection<LinearConstraint> originalConstraints) {\n    final List<LinearConstraint> normalized = new ArrayList<LinearConstraint>(originalConstraints.size());\n    for (final LinearConstraint constraint : originalConstraints) {\n        normalized.add(normalize(constraint));\n    }\n    return normalized;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 12403,
+  "tokens_out": 217,
+  "brl": 0.007538716500000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public List<LinearConstraint> normalizeConstraints(Collection<LinearConstraint> originalConstraints) {\n    final List<LinearConstraint> normalized = new ArrayList<LinearConstraint>(originalConstraints.size());\n    for (final LinearConstraint constraint : originalConstraints) {\n        normalized.add(normalize(constraint));\n    }\n    return normalized;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public List<LinearConstraint> normalizeConstraints(Collection<LinearConstraint> originalConstraints) {\n    final List<LinearConstraint> normalized = new ArrayList<LinearConstraint>(originalConstraints.size());\n    for (final LinearConstraint constraint : originalConstraints) {\n        normalized.add(normalize(constraint));\n    }\n    return normalized;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 167,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.316114691000001
+}

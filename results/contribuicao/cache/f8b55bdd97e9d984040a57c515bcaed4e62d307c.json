@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As três versões são idênticas e corretas: utilizam SetOperationCardinalityHelper para iterar pelos elementos e definir a cardinalidade como o máximo entre as coleções, retornando helper.list(). Prosseguir com a versão 0.\"}",
+  "input_tokens": 3381,
+  "output_tokens": 72,
+  "usd": 0.00494625,
+  "brl": 0.027550612500000002,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "4990ddf9b1c5b6e3e969889e8b986f1b9430ba9b"
+  }
+}

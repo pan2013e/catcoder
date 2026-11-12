@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"Todas as versões são idênticas e corretas para a função union: usam SetOperationCardinalityHelper, iteram pelos elementos e definem a cardinalidade como o máximo, retornando a lista. Pode escolher qualquer uma; selecionando a id=0.\"}",
+  "input_tokens": 3463,
+  "output_tokens": 76,
+  "usd": 0.00508875,
+  "brl": 0.028344337500000004,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-5",
+    "prompt": "32bb94811b77876921c0508b7067d591183cf466"
+  }
+}

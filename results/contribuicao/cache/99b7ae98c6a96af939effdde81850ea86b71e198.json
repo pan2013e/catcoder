@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação formata corretamente o sinal, horas e minutos, incluindo segundos e frações de segundo quando necessários.\"}",
+  "input_tokens": 2692,
+  "output_tokens": 39,
+  "usd": 0.00028869999999999997,
+  "brl": 0.001608059,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 121,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "b2ca5270a360328b9f41499a336ce849615b5720"
+  }
+}

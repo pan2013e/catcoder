@@ -1,0 +1,16 @@
+{
+  "texto": "2",
+  "input_tokens": 180,
+  "output_tokens": 1,
+  "usd": 2.7600000000000003e-05,
+  "brl": 0.00015373200000000004,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "java",
+    "indice": 152,
+    "papel": "n",
+    "modelo": "gpt-4o-mini",
+    "volta": 0,
+    "prompt": "237f6ab51668c0af3386fb4f079aa2ad1ba07df5"
+  }
+}

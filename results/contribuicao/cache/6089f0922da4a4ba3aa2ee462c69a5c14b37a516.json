@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão 0 está correta e concisa. A versão 1 duplica a assinatura e o comentário do método dentro dele, causando erro de compilação. A 0 segue o padrão do restante da classe: verifica peeked, chama doPeek se necessário, trata PEEKED_TRUE/PEEKED_FALSE, atualiza peeked e pathIndices, e lança IllegalStateException caso contrário.\"}",
+  "input_tokens": 3190,
+  "output_tokens": 103,
+  "usd": 0.005017499999999999,
+  "brl": 0.027947475,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FFORTE",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "204bb3d12d4ba5414c6c37dc62dbd5a17fb0a8b5"
+  }
+}

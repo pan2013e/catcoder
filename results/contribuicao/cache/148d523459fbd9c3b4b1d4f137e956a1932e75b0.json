@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: valida campo nulo e modificador static, então delega a leitura respeitando forceAccess. As versões são idênticas.\"}",
+  "input_tokens": 2574,
+  "output_tokens": 47,
+  "usd": 0.0002809,
+  "brl": 0.001564613,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 6,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "aa1ce20f2a89d52aa3563a47db2729163123e276"
+  }
+}

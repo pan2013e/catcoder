@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 é correta e robusta: valida null, lida com casos de tamanho < 2 como contíguos e compara DurationField de forma segura checando null para range e duration antes de equals. A versão 0 pode lançar NullPointerException ao chamar equals se algum DurationField for null. A versão 2 é idêntica à 1; manter a 1.\"}",
+  "input_tokens": 2760,
+  "output_tokens": 104,
+  "usd": 0.00449,
+  "brl": 0.0250093,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 58,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "046ef076483aaee3942d3a1ac1a6d5dfcac38066"
+  }
+}

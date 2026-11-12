@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 grava diretamente os bytes menos significativos do BigInteger do fim para o início, produzindo a representação little-endian esperada pelo formato ZIP.\"}",
+  "input_tokens": 1890,
+  "output_tokens": 50,
+  "usd": 0.00021400000000000002,
+  "brl": 0.0011919800000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 22,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "18e520eda537eac3c1eb7b7acfc6bcde551acd7b"
+  }
+}

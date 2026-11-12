@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação verifica comprimentos iguais e amostras não vazias, soma as diferenças pareadas e retorna o resultado conforme especificado.\"}",
+  "input_tokens": 3519,
+  "output_tokens": 44,
+  "usd": 0.00037390000000000004,
+  "brl": 0.0020826230000000005,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 26,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "7a5b81da7191794fa71abbf7bc7e65fbe53db2b5"
+  }
+}

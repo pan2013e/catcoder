@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic JsonPointer last() {\n    JsonPointer current = this;\n    while (current._nextSegment != null) {\n        current = current._nextSegment;\n    }\n    return current;\n}\n[/CODE]",
+  "input_tokens": 1840,
+  "output_tokens": 48,
+  "usd": 0.00020800000000000001,
+  "brl": 0.00115856,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 100,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "dc4ad6de2ff403892af1918389280817ede50ff5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprotected RealMatrix computeCovarianceMatrix(RealMatrix matrix, boolean biasCorrected)\n    throws MathIllegalArgumentException {\n    checkSufficientData(matrix);\n\n    final int nRows = matrix.getRowDimension();\n    final int nCols = matrix.getColumnDimension();\n    final RealMatrix covariance = matrix.createMatrix(nCols, nCols);\n\n    for (int i = 0; i < nCols; i++) {\n        final double[] x = matrix.getColumn(i);\n        for (int j = i; j < nCols; j++) {\n            final double value = covariance(x, matrix.getColumn(j), biasCorrected);\n            covariance.setEntry(i, j, value);\n            covariance.setEntry(j, i, value);\n        }\n    }\n\n    return covariance;\n}\n[/CODE]",
+  "input_tokens": 3048,
+  "output_tokens": 167,
+  "usd": 0.00038830000000000006,
+  "brl": 0.0021628310000000005,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 104,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "e1b517f41b3a8055f20538c669e85f597dc826c3"
+  }
+}

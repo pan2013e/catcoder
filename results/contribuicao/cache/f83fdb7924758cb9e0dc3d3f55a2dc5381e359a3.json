@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação retorna a chave do dataset quando o índice é válido e usa o índice como chave de compatibilidade nos demais casos.\"}",
+  "input_tokens": 4754,
+  "output_tokens": 42,
+  "usd": 0.0004964,
+  "brl": 0.002764948,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 152,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "f9ed39a000f43504f0fc490f9567b49f77f7de3b"
+  }
+}

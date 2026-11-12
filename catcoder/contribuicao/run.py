@@ -40,8 +40,8 @@ def main():
         "medido_brl": cache.medido_brl(),
         "teto_brl": TETO_BRL,
         "motivos": motivos,
-        "rust": rust_ok,
-        "java": java_ok,
+        "rust": rust_ok or any((SAIDA / "tarefas").glob("R-*.json")),
+        "java": java_ok or any((SAIDA / "tarefas").glob("J-*.json")),
     }
     SAIDA.mkdir(parents=True, exist_ok=True)
     (SAIDA / "ledger.json").write_text(

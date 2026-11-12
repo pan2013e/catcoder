@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 implementa corretamente a validação de parsing completo e trata a posição negativa antes de construir a mensagem de erro.\"}",
+  "input_tokens": 2933,
+  "output_tokens": 43,
+  "usd": 0.0003148,
+  "brl": 0.0017534360000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 170,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "76d7aa270ab38bcb85edbdfab497e65f1d396a10"
+  }
+}

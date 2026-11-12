@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação está correta e eficiente: dobra a capacidade e garante no mínimo a solicitada, copiando o conteúdo existente. As versões 1 e 2 são idênticas à 0; qualquer uma serviria.\"}",
+  "input_tokens": 3697,
+  "output_tokens": 67,
+  "usd": 0.005291250000000001,
+  "brl": 0.029472262500000006,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "5ec1517354d34f12ebd030e6fa156b1e2eeb7715"
+  }
+}

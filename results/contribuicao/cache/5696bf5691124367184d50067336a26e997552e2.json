@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: aumenta a capacidade apenas quando necessário, dobra a capacidade atual e garante no mínimo a solicitada, copiando o conteúdo existente. Compatível com os campos buffer e size do contexto.\"}",
+  "input_tokens": 3519,
+  "output_tokens": 63,
+  "usd": 0.00502875,
+  "brl": 0.028010137500000004,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "a36b6c9fbd29be82ba167d8d20ba5bfcb0df27f2"
+  }
+}

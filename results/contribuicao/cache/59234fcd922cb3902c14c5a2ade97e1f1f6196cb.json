@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação percorre o array, verifica Double.isNaN no valor e coleta as posições originais com getPosition(), retornando a lista. Está alinhada com o restante do contexto (restoreNaNs espera índices originais).\"}",
+  "input_tokens": 2426,
+  "output_tokens": 69,
+  "usd": 0.0037225000000000005,
+  "brl": 0.020734325000000005,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 137,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "a3c6c5fd6fe8cf3c6cb3186911daf13f9e302da1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprivate boolean equalShapes(Shape[] s1, Shape[] s2) {\n    if (s1 == null) {\n        return s2 == null;\n    }\n    if (s2 == null || s1.length != s2.length) {\n        return false;\n    }\n    for (int i = 0; i < s1.length; i++) {\n        if (!ShapeUtilities.equal(s1[i], s2[i])) {\n            return false;\n        }\n    }\n    return true;\n}\n[/CODE]",
+  "input_tokens": 1992,
+  "output_tokens": 112,
+  "usd": 0.00025519999999999997,
+  "brl": 0.0014214639999999999,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 157,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "cfbb6579daf19142740c5c047b69a849e2f347f8"
+  }
+}

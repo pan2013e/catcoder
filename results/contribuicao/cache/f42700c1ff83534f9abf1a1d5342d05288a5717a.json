@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"Todas as versões são idênticas e implementam corretamente last(), percorrendo os segmentos até o último.\"}",
+  "input_tokens": 2050,
+  "output_tokens": 39,
+  "usd": 0.00022450000000000004,
+  "brl": 0.0012504650000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 100,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "7eaf39c03872ca2a96c5b87143c04e43c864638b"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde à cardinalidade máxima especificada para a união.\"}",
+  "input_tokens": 3545,
+  "output_tokens": 30,
+  "usd": 0.0003695,
+  "brl": 0.002058115,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "b61ec296bbc27f255e4afcff233d44842f9f4ab9"
+  }
+}

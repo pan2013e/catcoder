@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: lê o fluxo em blocos, atualiza o digest com os bytes lidos e retorna o digest. A versão 1 é idêntica.\"}",
+  "input_tokens": 2644,
+  "output_tokens": 51,
+  "usd": 0.00028990000000000005,
+  "brl": 0.0016147430000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 101,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "d81a0f22423267e3c7f006449e53797a15d58c54"
+  }
+}

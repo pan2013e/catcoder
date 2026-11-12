@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static final boolean isContiguous(ReadablePartial partial) {\n    if (partial == null) {\n        throw new IllegalArgumentException(\"Partial cannot be null\");\n    }\n    Chronology chrono = getChronology(partial.getChronology());\n    int size = partial.size();\n    if (size < 2) {\n        return true;\n    }\n    DurationField lastUnit = null;\n    for (int i = size - 1; i >= 0; i--) {\n        DateTimeField field = chrono.getField(partial.getFieldType(i));\n        DurationField range = field.getRangeDurationField();\n        if (lastUnit != null && (range == null || !range.equals(lastUnit))) {\n            return false;\n        }\n        lastUnit = field.getDurationField();\n    }\n    return true;\n}\n[/CODE]",
+  "input_tokens": 2496,
+  "output_tokens": 176,
+  "usd": 0.00033759999999999997,
+  "brl": 0.0018804319999999998,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 58,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "6347c619e7d3171081ad1b8fdb73204d4da2883c"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"Inclui verificações nulas para DurationField e compara range/duration adjacentes corretamente. As versões 2 e 3 são idênticas à 1; a 0 não trata nulos em getRangeDurationField/getDurationField.\"}",
+  "input_tokens": 2920,
+  "output_tokens": 73,
+  "usd": 0.004379999999999999,
+  "brl": 0.024396599999999997,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 58,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-5",
+    "prompt": "089aa40e9b1eeac180249ebabd141007fa8aa806"
+  }
+}

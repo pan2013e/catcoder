@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As versões são idênticas e implementam corretamente a validação de campo nulo e estático, delegando a leitura a readField.\"}",
+  "input_tokens": 2668,
+  "output_tokens": 46,
+  "usd": 0.0002898,
+  "brl": 0.001614186,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 6,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "f911c2f5dca6ea90470aff7eb33f8e266172e6a3"
+  }
+}

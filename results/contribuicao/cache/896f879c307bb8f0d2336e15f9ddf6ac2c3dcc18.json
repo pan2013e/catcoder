@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As duas versões implementam corretamente a soma ponderada com compensação de Kahan; diferem apenas nos nomes das variáveis.\"}",
+  "input_tokens": 1624,
+  "output_tokens": 43,
+  "usd": 0.00018390000000000002,
+  "brl": 0.0010243230000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 138,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "e5d23d19b65b765ed1961640fda464abe21ca283"
+  }
+}

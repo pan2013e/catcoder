@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A versão 0 implementa corretamente o cache concorrente: usa o valor existente quando outra thread insere a estratégia primeiro e, caso contrário, retorna a recém-criada.\"}",
+  "input_tokens": 2683,
+  "output_tokens": 52,
+  "usd": 0.0002943,
+  "brl": 0.001639251,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 68,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "58c997687bf28e0b56f8655eeb75fea0e3b0a377"
+  }
+}

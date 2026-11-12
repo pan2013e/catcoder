@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic List<LinearConstraint> normalizeConstraints(Collection<LinearConstraint> originalConstraints) {\n    final List<LinearConstraint> normalized = new ArrayList<LinearConstraint>(originalConstraints.size());\n    for (final LinearConstraint constraint : originalConstraints) {\n        normalized.add(normalize(constraint));\n    }\n    return normalized;\n}\n[/CODE]",
+  "input_tokens": 2982,
+  "output_tokens": 73,
+  "usd": 0.0003347,
+  "brl": 0.0018642790000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 167,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "2f39c8fe1fd12725a1115ddf0e811106d536ccbf"
+  }
+}

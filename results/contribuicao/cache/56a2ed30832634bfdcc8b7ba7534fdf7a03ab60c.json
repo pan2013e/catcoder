@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 implementa corretamente o parse completo, converte a posição de erro negativa e trata o fuso horário parseado.\"}",
+  "input_tokens": 3136,
+  "output_tokens": 44,
+  "usd": 0.0003356,
+  "brl": 0.0018692920000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 170,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "5f76c64fb5dd70bf15dc8aaac78af3d42019414e"
+  }
+}

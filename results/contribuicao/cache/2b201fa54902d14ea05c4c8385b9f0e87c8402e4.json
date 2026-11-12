@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde ao contrato: retorna a chave do dataset quando o índice é válido e usa o índice como chave substituta caso contrário.\"}",
+  "input_tokens": 4974,
+  "output_tokens": 44,
+  "usd": 0.0005194,
+  "brl": 0.0028930580000000004,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 152,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "91a59018e67d8e5533358d9fd42510a321d210a7"
+  }
+}

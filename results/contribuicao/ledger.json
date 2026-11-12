@@ -1,9 +1,7 @@
 {
-  "medido_brl": 1.106317299000001,
+  "medido_brl": 2.6544584164999994,
   "teto_brl": 20.0,
-  "motivos": [
-    "Java não rodou: defects4j não respondeu."
-  ],
+  "motivos": [],
   "rust": true,
-  "java": false
+  "java": true
 }

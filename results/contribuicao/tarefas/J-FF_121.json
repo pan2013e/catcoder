@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "reverte",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "private static String printOffset(int offset) {\n    long absOffset = Math.abs((long) offset);\n    int hours = (int) (absOffset / DateTimeConstants.MILLIS_PER_HOUR);\n    int minutes = (int) ((absOffset / DateTimeConstants.MILLIS_PER_MINUTE) % 60);\n    int seconds = (int) ((absOffset / DateTimeConstants.MILLIS_PER_SECOND) % 60);\n    int millis = (int) (absOffset % DateTimeConstants.MILLIS_PER_SECOND);\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            appendDigits(buf, millis / 100);\n            if (millis % 100 != 0) {\n                appendDigits(buf, (millis / 10) % 10);\n                if (millis % 10 != 0) {\n                    appendDigits(buf, millis % 10);\n                }\n            }\n        }\n    }\n    return buf.toString();\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 29322,
+  "tokens_out": 1529,
+  "brl": 0.020620140000000006,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private static String printOffset(int offset) {\n    int hours = Math.abs(offset / DateTimeConstants.MILLIS_PER_HOUR);\n    int minutes = Math.abs((offset / DateTimeConstants.MILLIS_PER_MINUTE) % 60);\n    int seconds = Math.abs((offset / DateTimeConstants.MILLIS_PER_SECOND) % 60);\n    int millis = Math.abs(offset % DateTimeConstants.MILLIS_PER_SECOND);\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            appendDigits(buf, millis / 100);\n            if (millis % 100 != 0) {\n                appendDigits(buf, (millis / 10) % 10);\n                if (millis % 10 != 0) {\n                    appendDigits(buf, millis % 10);\n                }\n            }\n        }\n    }\n    return buf.toString();\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private static String printOffset(int offset) {\n    int absOffset = Math.abs(offset);\n    int hours = absOffset / DateTimeConstants.MILLIS_PER_HOUR;\n    int minutes = (absOffset / DateTimeConstants.MILLIS_PER_MINUTE) % 60;\n    int seconds = (absOffset / DateTimeConstants.MILLIS_PER_SECOND) % 60;\n    int millis = absOffset % DateTimeConstants.MILLIS_PER_SECOND;\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            appendDigits(buf, millis / 100);\n            if (millis % 100 != 0) {\n                appendDigits(buf, (millis / 10) % 10);\n                if (millis % 10 != 0) {\n                    appendDigits(buf, millis % 10);\n                }\n            }\n        }\n    }\n    return buf.toString();\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private static String printOffset(int offset) {\n    int absOffset = Math.abs(offset);\n    int hours = absOffset / DateTimeConstants.MILLIS_PER_HOUR;\n    int minutes = (absOffset / DateTimeConstants.MILLIS_PER_MINUTE) % 60;\n    int seconds = (absOffset / DateTimeConstants.MILLIS_PER_SECOND) % 60;\n    int millis = absOffset % DateTimeConstants.MILLIS_PER_SECOND;\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            appendDigits(buf, millis / 100);\n            if (millis % 100 != 0) {\n                appendDigits(buf, (millis / 10) % 10);\n                if (millis % 10 != 0) {\n                    appendDigits(buf, millis % 10);\n                }\n            }\n        }\n    }\n    return buf.toString();\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "private static String printOffset(int offset) {\n    int absOffset = Math.abs(offset);\n    int hours = absOffset / DateTimeConstants.MILLIS_PER_HOUR;\n    int minutes = (absOffset / DateTimeConstants.MILLIS_PER_MINUTE) % 60;\n    int seconds = (absOffset / DateTimeConstants.MILLIS_PER_SECOND) % 60;\n    int millis = absOffset % DateTimeConstants.MILLIS_PER_SECOND;\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            if (millis % 100 == 0) {\n                appendDigits(buf, millis / 100);\n            } else if (millis % 10 == 0) {\n                appendDigits(buf, millis / 10);\n            } else {\n                appendDigits(buf, millis);\n            }\n        }\n    }\n    return buf.toString();\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "private static String printOffset(int offset) {\n    long absOffset = Math.abs((long) offset);\n    int hours = (int) (absOffset / DateTimeConstants.MILLIS_PER_HOUR);\n    int minutes = (int) ((absOffset / DateTimeConstants.MILLIS_PER_MINUTE) % 60);\n    int seconds = (int) ((absOffset / DateTimeConstants.MILLIS_PER_SECOND) % 60);\n    int millis = (int) (absOffset % DateTimeConstants.MILLIS_PER_SECOND);\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            appendDigits(buf, millis / 100);\n            if (millis % 100 != 0) {\n                appendDigits(buf, (millis / 10) % 10);\n                if (millis % 10 != 0) {\n                    appendDigits(buf, millis % 10);\n                }\n            }\n        }\n    }\n    return buf.toString();\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 121,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.4770940965000015
+}

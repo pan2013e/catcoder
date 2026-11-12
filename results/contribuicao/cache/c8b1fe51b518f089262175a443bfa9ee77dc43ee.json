@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e corretas: verificam nulo, checam permissão, delegam ao ConverterSet.add e retornam o substituído. Escolhi a 0 por equivalência.\"}",
+  "input_tokens": 1372,
+  "output_tokens": 66,
+  "usd": 0.002375,
+  "brl": 0.013228750000000001,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "a04f3e2fb4c92c14842734105b5876b7aeab411a"
+  }
+}

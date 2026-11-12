@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação trata arrays nulos e comprimentos diferentes e compara cada forma com ShapeUtilities.equal.\"}",
+  "input_tokens": 2332,
+  "output_tokens": 36,
+  "usd": 0.0002512,
+  "brl": 0.001399184,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 157,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "a0b6670fa19e5ccd38193843465b1d0abaac93d4"
+  }
+}

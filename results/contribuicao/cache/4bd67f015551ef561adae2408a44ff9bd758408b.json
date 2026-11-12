@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e implementam corretamente a normalização de cada restrição.\"}",
+  "input_tokens": 3156,
+  "output_tokens": 36,
+  "usd": 0.00033360000000000003,
+  "brl": 0.0018581520000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 167,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "e116e90172068215535c71275648e1756bc58c17"
+  }
+}

@@ -63,6 +63,13 @@ def limpar_codigo(texto, lingua, assinatura):
                 break
         if texto and not texto.startswith("fn") and not texto.startswith("pub fn") and assinatura:
             texto = assinatura.strip() + " " + texto
+    elif lingua == "java" and texto and assinatura:
+        if not texto.startswith(("public", "private", "protected", "static", "@")):
+            if not texto.startswith("{"):
+                texto = "{\n" + texto
+                if not texto.rstrip().endswith("}"):
+                    texto = texto + "\n}"
+            texto = assinatura.strip() + " " + texto
     return cortar(texto, MAX_CHARS_VERSAO)
 
 
@@ -105,8 +112,13 @@ class OpenAICliente:
             {"role": "user", "content": user},
         ]
         kwargs = {"model": modelo, "messages": mensagens}
-        if str(modelo).startswith("gpt-5"):
+        if str(modelo).startswith("gpt-6"):
             kwargs["max_completion_tokens"] = max_output_tokens
+            kwargs["reasoning_effort"] = "none"
+            kwargs["temperature"] = 0.2
+        elif str(modelo).startswith("gpt-5"):
+            kwargs["max_completion_tokens"] = max_output_tokens
+            kwargs["reasoning_effort"] = "minimal"
         else:
             kwargs["max_tokens"] = max_output_tokens
             kwargs["temperature"] = 0.2
@@ -114,9 +126,11 @@ class OpenAICliente:
             resp = self.client.chat.completions.create(**kwargs)
         except Exception as exc:
             msg = str(exc).lower()
-            if "max_tokens" in msg or "max_completion" in msg or "temperature" in msg:
+            if "max_tokens" in msg or "max_completion" in msg or "temperature" in msg or "reasoning_effort" in msg:
                 kwargs.pop("temperature", None)
                 kwargs.pop("max_tokens", None)
+                if "reasoning_effort" in msg:
+                    kwargs.pop("reasoning_effort", None)
                 kwargs["max_completion_tokens"] = max_output_tokens
                 resp = self.client.chat.completions.create(**kwargs)
             else:

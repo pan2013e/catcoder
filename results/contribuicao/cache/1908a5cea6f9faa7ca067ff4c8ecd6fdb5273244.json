@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 verifica nulidade, trata parciais com menos de 2 campos como contíguos e compara corretamente DurationField de range do campo anterior com o DurationField do campo atual, incluindo checagens de null. As versões 2 e 3 são idênticas à 1. A versão 0 não trata null em DurationField, podendo lançar NPE. A versão 4 usa APIs inexistentes no contexto (getField com chronology) e dependência de ISOChronology não fornecida.\"}",
+  "input_tokens": 3114,
+  "output_tokens": 129,
+  "usd": 0.0051825,
+  "brl": 0.028866525,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 58,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-5",
+    "prompt": "d676226c9a422e68a5049b60ede4b4fae0873a68"
+  }
+}

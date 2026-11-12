@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde ao padrão esperado: consome true/false, atualiza o índice do caminho e rejeita outros tokens.\"}",
+  "input_tokens": 3125,
+  "output_tokens": 42,
+  "usd": 0.0003335000000000001,
+  "brl": 0.0018575950000000005,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "4f92f3bcdf23bedb46c08404a5fc289278b0a1a6"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: valida comprimentos iguais e arrays não vazios, depois soma as diferenças pareadas.\"}",
+  "input_tokens": 3271,
+  "output_tokens": 38,
+  "usd": 0.0003461,
+  "brl": 0.001927777,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 26,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "c2123490652cc68bc057e87feecff84fe4a736f2"
+  }
+}

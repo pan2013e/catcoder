@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A versão implementa a contagem de NOT e dos parênteses necessários para AND/OR, conforme a estimativa descrita.\"}",
+  "input_tokens": 3860,
+  "output_tokens": 44,
+  "usd": 0.00040800000000000005,
+  "brl": 0.0022725600000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 17,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "f11f8e09381cb608d7496934a4d0b85cda7f0a95"
+  }
+}

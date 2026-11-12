@@ -1,0 +1,17 @@
+{
+  "texto": "private static int _parseIndex(String str) {\n    final int len = str.length();\n    if (len == 0 || len > 10) {\n        return -1;\n    }\n    if (len > 1 && str.charAt(0) == '0') {\n        return -1;\n    }\n\n    int index = 0;\n    for (int i = 0; i < len; ++i) {\n        char c = str.charAt(i);\n        if (c < '0' || c > '9') {\n            return -1;\n        }\n        index = (index * 10) + (c - '0');\n    }\n    return index < 0 ? -1 : index;\n}",
+  "input_tokens": 1873,
+  "output_tokens": 154,
+  "usd": 0.00026430000000000003,
+  "brl": 0.0014721510000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 109,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "b5b8dcfcf01981e0eb5ac1a01102a361f8f5b2b4"
+  }
+}

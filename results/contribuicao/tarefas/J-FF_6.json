@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public static Object readStaticField(final Field field, final boolean forceAccess) throws IllegalAccessException {\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 23834,
+  "tokens_out": 714,
+  "brl": 0.015306917000000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public static Object readStaticField(final Field field, final boolean forceAccess) throws IllegalAccessException {\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public static Object readStaticField(final Field field, final boolean forceAccess) throws IllegalAccessException {\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public static Object readStaticField(final Field field, final boolean forceAccess) throws IllegalAccessException {\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public static Object readStaticField(final Field field, final boolean forceAccess) throws IllegalAccessException {\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public static Object readStaticField(final Field field, final boolean forceAccess) throws IllegalAccessException {\n    if (field == null) {\n        throw new IllegalArgumentException(\"The field must not be null\");\n    }\n    if (!Modifier.isStatic(field.getModifiers())) {\n        throw new IllegalArgumentException(\"The field '\" + field.getName() + \"' is not static\");\n    }\n    return readField(field, null, forceAccess);\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 6,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.2615114240000007
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A verificação de índice negativo evita retornar incorretamente a primeira legenda; as versões 1, 2 e 3 são equivalentes.\"}",
+  "input_tokens": 4426,
+  "output_tokens": 46,
+  "usd": 0.00046560000000000004,
+  "brl": 0.0025933920000000004,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 88,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "003c3dec95ff5d21b75a7c8530ac7731d459afc3"
+  }
+}
