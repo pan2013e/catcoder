@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois trata corretamente o caso em que não há componentes restantes após remover o último, retornando a raiz. Além disso, utiliza `pop()` para simplificar a remoção do último componente.\"}",
+  "input_tokens": 2121,
+  "output_tokens": 61,
+  "usd": 0.00035475000000000003,
+  "brl": 0.0019759575,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 77,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "0b0465605360672450950ce3a7e5958ecfae40ce"
+  }
+}

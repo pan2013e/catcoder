@@ -1,0 +1,17 @@
+{
+  "texto": "```rust\npub fn as_path(&self) -> &'a Path {\n    let remaining = &self.path[self.len_before_body()..];\n    unsafe { Path::from_u8_slice(remaining) }\n}\n```",
+  "input_tokens": 2220,
+  "output_tokens": 44,
+  "usd": 0.0003594,
+  "brl": 0.002001858,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 75,
+    "rodada": "R-JF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "eb1b2a3c59aec40a73655bb871c29159247fca5d"
+  }
+}

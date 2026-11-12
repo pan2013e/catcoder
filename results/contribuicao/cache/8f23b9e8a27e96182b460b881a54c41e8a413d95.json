@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde à cardinalidade máxima especificada para cada elemento e retorna a coleção construída pelo helper.\"}",
+  "input_tokens": 3463,
+  "output_tokens": 37,
+  "usd": 0.00036480000000000003,
+  "brl": 0.0020319360000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "32bb94811b77876921c0508b7067d591183cf466"
+  }
+}

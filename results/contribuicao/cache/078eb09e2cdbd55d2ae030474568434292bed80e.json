@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    self.ensure_invariant();\n    for w in &mut self.storage {\n        *w = !*w;\n    }\n    self.fix_last_block();\n}\n[/CODE]",
+  "input_tokens": 1079,
+  "output_tokens": 39,
+  "usd": 0.00018525,
+  "brl": 0.0010318425,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 4,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "85772151768bfc661f9ea2cc13a43c2605531d54"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn to_bytes(&self) -> Vec<u8> {\n    let byte_len = (self.nbits + 7) / 8;\n    let mut bytes = vec![0u8; byte_len];\n\n    for i in 0..self.nbits {\n        if self.get(i).unwrap_or(false) {\n            bytes[i / 8] |= 1 << (7 - (i % 8));\n        }\n    }\n\n    bytes\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 10740,
+  "tokens_out": 264,
+  "brl": 0.009855558,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn to_bytes(&self) -> Vec<u8> {\n    let byte_len = (self.nbits + 7) / 8;\n    let mut bytes = vec![0u8; byte_len];\n\n    for i in 0..self.nbits {\n        if self.get(i).unwrap_or(false) {\n            bytes[i / 8] |= 1 << (7 - (i % 8));\n        }\n    }\n\n    bytes\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn to_bytes(&self) -> Vec<u8> {\n    let byte_len = (self.nbits + 7) / 8;\n    let mut bytes = vec![0u8; byte_len];\n\n    for i in 0..self.nbits {\n        if self.get(i).unwrap_or(false) {\n            bytes[i / 8] |= 1 << (7 - (i % 8));\n        }\n    }\n\n    bytes\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 6,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.208458921
+}

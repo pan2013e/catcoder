@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "public LegendTitle getLegend(int index) {\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 42082,
+  "tokens_out": 772,
+  "brl": 0.025620329000000004,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public LegendTitle getLegend(int index) {\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public LegendTitle getLegend(int index) {\n    if (index < 0) {\n        return null;\n    }\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public LegendTitle getLegend(int index) {\n    if (index < 0) {\n        return null;\n    }\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public LegendTitle getLegend(int index) {\n    if (index < 0) {\n        return null;\n    }\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public LegendTitle getLegend(int index) {\n    if (index < 0) {\n        return null;\n    }\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 88,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.2462045070000005
+}

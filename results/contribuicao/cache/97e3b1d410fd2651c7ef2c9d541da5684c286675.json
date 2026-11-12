@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprivate Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        strategy = new TextStrategy(field, definingCalendar, locale);\n        final Strategy existing = cache.putIfAbsent(locale, strategy);\n        if (existing != null) {\n            strategy = existing;\n        }\n    }\n    return strategy;\n}\n[/CODE]",
+  "input_tokens": 2240,
+  "output_tokens": 104,
+  "usd": 0.000276,
+  "brl": 0.00153732,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 68,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "b8f196a7e11d336965904be5af7996d1cf61c34f"
+  }
+}

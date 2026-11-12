@@ -105,32 +105,58 @@ class Context:
             for node in forest:
                 self._str_builder.append_node(node)
     
-    def build(self, *, ignore_std=True, include_path=False, ignore_traits=True):
+    def _vizinhos(self, typedef: TypeDef, ignore_std: bool):
+        achados = []
+        type_elem_offsets = self.ws.query_typedef(typedef.path, typedef.name)
+        if type_elem_offsets is None:
+            return achados
+        for elem_offset in type_elem_offsets:
+            inner = self.ws.get_typedefs(typedef.path, elem_offset)
+            if len(inner) == 0:
+                continue
+            inner = inner[0]
+            if ignore_std and '/lib/rustlib/src/rust' in inner.path:
+                continue
+            if inner in self._typedefs:
+                continue
+            achados.append(inner)
+        return achados
+
+    def build(self, *, degree=2, ignore_std=True, include_path=False, ignore_traits=True):
+        '''
+        `degree` 1 guarda os tipos da assinatura. Cada grau a mais repete
+        o salto de `query_typedef`. O padrão 2 é o comportamento anterior.
+        '''
+        if degree <= 0:
+            return self
         fn_elem_offsets = self.ws.query_function(self.fn_path, self.fn_signature)
-        typedefs: list[TypeDef] = []
-        if fn_elem_offsets is None: return
+        if fn_elem_offsets is None:
+            return self
+        fronteira = []
         for idx, elem_offset in enumerate(fn_elem_offsets):
             typedef = self.ws.get_typedefs(self.fn_path, elem_offset)
             # some built-in types (e.g, usize) don't have a typedef
             # if multiple types are returned, we just use the first one
-            if len(typedef) == 0: continue
+            if len(typedef) == 0:
+                continue
             typedef = typedef[0]
             # rust-src is installed at `<toolchain root>/lib/rustlib/src/rust`
-            if idx > 0 and ignore_std and '/lib/rustlib/src/rust' in typedef.path: continue
-            typedefs.append(typedef)
+            if idx > 0 and ignore_std and '/lib/rustlib/src/rust' in typedef.path:
+                continue
+            fronteira.append(typedef)
             if idx == 0 and '/lib/rustlib/src/rust' in typedef.path:
                 self._build(typedef, include_path, ignore_traits=False)
             else:
                 self._build(typedef, include_path, ignore_traits)
-        for typedef in typedefs:
-            type_elem_offsets = self.ws.query_typedef(typedef.path, typedef.name)
-            if type_elem_offsets is None: continue
-            for elem_offset in type_elem_offsets:
-                inner_typedef = self.ws.get_typedefs(typedef.path, elem_offset)
-                if len(inner_typedef) == 0: continue
-                inner_typedef = inner_typedef[0]
-                if ignore_std and '/lib/rustlib/src/rust' in inner_typedef.path: continue
-                self._build(inner_typedef, include_path, ignore_traits)
+        saltos = degree - 1
+        while saltos > 0 and fronteira:
+            proxima = []
+            for typedef in fronteira:
+                for inner in self._vizinhos(typedef, ignore_std):
+                    proxima.append(inner)
+                    self._build(inner, include_path, ignore_traits)
+            fronteira = proxima
+            saltos -= 1
         return self
     
     def to_str(self):

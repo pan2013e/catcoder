@@ -1,0 +1,131 @@
+{
+  "teto_brl": 20.0,
+  "rodadas": [
+    {
+      "id": "R-FF",
+      "lingua": "rust",
+      "geradora": "gpt-4o-mini",
+      "juiza": "gpt-4o-mini",
+      "n_planejado": 46,
+      "n_completas": 46,
+      "taxa_sucesso": 0.32608695652173914,
+      "taxa_compilacao": 0.5217391304347826,
+      "media_voltas": 2.652173913043478,
+      "media_n": 1.7391304347826086,
+      "acoes": {
+        "continua": 49,
+        "reverte": 35,
+        "parar": 38
+      },
+      "brl": 0.3983388285,
+      "tokens_in": 421987,
+      "tokens_out": 13695,
+      "reserva_brl": 0.0990928065
+    },
+    {
+      "id": "R-JF",
+      "lingua": "rust",
+      "geradora": "gpt-4o-mini",
+      "juiza": "gpt-5",
+      "n_planejado": 8,
+      "n_completas": 8,
+      "taxa_sucesso": 0.25,
+      "taxa_compilacao": 0.5,
+      "media_voltas": 1.0,
+      "media_n": 2.25,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 8
+      },
+      "brl": 0.213358293,
+      "tokens_in": 27292,
+      "tokens_out": 2751,
+      "reserva_brl": 0.4594411715
+    },
+    {
+      "id": "R-FFORTE",
+      "lingua": "rust",
+      "geradora": "gpt-5",
+      "juiza": "gpt-5",
+      "n_planejado": 4,
+      "n_completas": 4,
+      "taxa_sucesso": 0.0,
+      "taxa_compilacao": 0.75,
+      "media_voltas": 1.0,
+      "media_n": 2.5,
+      "acoes": {
+        "continua": 0,
+        "reverte": 0,
+        "parar": 4
+      },
+      "brl": 0.3787112625,
+      "tokens_in": 13433,
+      "tokens_out": 5120,
+      "reserva_brl": 1.0001656315
+    },
+    {
+      "id": "J-FF",
+      "lingua": "java",
+      "geradora": "gpt-6-luna",
+      "juiza": "gpt-6-luna",
+      "n_planejado": 30,
+      "n_completas": 30,
+      "taxa_sucesso": 0.7,
+      "taxa_compilacao": 0.8666666666666667,
+      "media_voltas": 4.3,
+      "media_n": 1.1333333333333333,
+      "acoes": {
+        "continua": 113,
+        "reverte": 5,
+        "parar": 11
+      },
+      "brl": 0.44817139050000004,
+      "tokens_in": 694644,
+      "tokens_out": 21585,
+      "reserva_brl": 0.06980156900000001
+    },
+    {
+      "id": "J-JF",
+      "lingua": "java",
+      "geradora": "gpt-6-luna",
+      "juiza": "gpt-5",
+      "n_planejado": 6,
+      "n_completas": 6,
+      "taxa_sucesso": 0.8333333333333334,
+      "taxa_compilacao": 1.0,
+      "media_voltas": 4.333333333333333,
+      "media_n": 1.6666666666666667,
+      "acoes": {
+        "continua": 23,
+        "reverte": 0,
+        "parar": 3
+      },
+      "brl": 0.6779467015,
+      "tokens_in": 142291,
+      "tokens_out": 4935,
+      "reserva_brl": 0.44419608150000006
+    },
+    {
+      "id": "J-FFORTE",
+      "lingua": "java",
+      "geradora": "gpt-5",
+      "juiza": "gpt-5",
+      "n_planejado": 2,
+      "n_completas": 2,
+      "taxa_sucesso": 1.0,
+      "taxa_compilacao": 1.0,
+      "media_voltas": 3.5,
+      "media_n": 2.0,
+      "acoes": {
+        "continua": 5,
+        "reverte": 1,
+        "parar": 1
+      },
+      "brl": 0.39845691250000004,
+      "tokens_in": 44581,
+      "tokens_out": 1581,
+      "reserva_brl": 1.0001656315
+    }
+  ]
+}

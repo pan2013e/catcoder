@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 39264,
+  "tokens_out": 757,
+  "brl": 0.024002522499999998,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public FieldMatrix<T> outerProduct(ArrayFieldVector<T> v) {\n    final int m = getDimension();\n    final int n = v.getDimension();\n    final FieldMatrix<T> product = new Array2DRowFieldMatrix<T>(field, m, n);\n    for (int i = 0; i < m; i++) {\n        for (int j = 0; j < n; j++) {\n            product.setEntry(i, j, data[i].multiply(v.data[j]));\n        }\n    }\n    return product;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 106,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.5780548025000014
+}

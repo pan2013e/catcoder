@@ -1,0 +1,17 @@
+{
+  "texto": "public String chompBalanced(char open, char close) {\n    int depth = 0;\n    int start = -1;\n    char quote = 0;\n    boolean escaped = false;\n\n    while (!isEmpty()) {\n        char c = consume();\n\n        if (start == -1) {\n            if (c == open) {\n                start = pos;\n                depth = 1;\n            }\n            continue;\n        }\n\n        if (escaped) {\n            escaped = false;\n            continue;\n        }\n\n        if (c == ESC) {\n            escaped = true;\n            continue;\n        }\n\n        if (quote != 0) {\n            if (c == quote)\n                quote = 0;\n            continue;\n        }\n\n        if (c == '\"' || c == '\\'') {\n            quote = c;\n        } else if (c == open) {\n            depth++;\n        } else if (c == close && --depth == 0) {\n            return queue.substring(start, pos - 1);\n        }\n    }\n\n    return start == -1 ? \"\" : queue.substring(start, pos);\n}",
+  "input_tokens": 2054,
+  "output_tokens": 228,
+  "usd": 0.0003194,
+  "brl": 0.0017790580000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 119,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "fc396e900d2abe2e69c3b8cf168db6fcdac0ca62"
+  }
+}

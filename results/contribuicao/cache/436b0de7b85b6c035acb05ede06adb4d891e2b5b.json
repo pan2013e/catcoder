@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação percorre os segmentos até o último, retornando corretamente o nó folha; para o ponteiro vazio, retorna a própria instância.\"}",
+  "input_tokens": 1921,
+  "output_tokens": 46,
+  "usd": 0.0002151,
+  "brl": 0.0011981070000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 100,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "584a560ffae64c30936491b77f2c8a46bdcbf64b"
+  }
+}

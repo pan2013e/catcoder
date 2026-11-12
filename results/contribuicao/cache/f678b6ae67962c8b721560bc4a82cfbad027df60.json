@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static <O> Collection<O> union(final Iterable<? extends O> a, final Iterable<? extends O> b) {\n    final SetOperationCardinalityHelper<O> helper = new SetOperationCardinalityHelper<O>(a, b);\n    for (final O obj : helper) {\n        helper.setCardinality(obj, helper.max(obj));\n    }\n    return helper.list();\n}\n[/CODE]",
+  "input_tokens": 3198,
+  "output_tokens": 87,
+  "usd": 0.0003633,
+  "brl": 0.002023581,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-JF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "728e47029541931b44a766f817c91f9fe845d92c"
+  }
+}

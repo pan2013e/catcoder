@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public static Boolean or(final Boolean... array) {\n    if (array == null) {\n        throw new IllegalArgumentException(\"The array must not be null\");\n    }\n    if (array.length == 0) {\n        throw new IllegalArgumentException(\"The array must not be empty\");\n    }\n    boolean result = false;\n    for (final Boolean value : array) {\n        if (value == null) {\n            throw new IllegalArgumentException(\"The array must not contain null values\");\n        }\n        result |= value.booleanValue();\n    }\n    return Boolean.valueOf(result);\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 6435,
+  "tokens_out": 333,
+  "brl": 0.00459525,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public static Boolean or(final Boolean... array) {\n    if (array == null) {\n        throw new IllegalArgumentException(\"The array must not be null\");\n    }\n    if (array.length == 0) {\n        throw new IllegalArgumentException(\"The array must not be empty\");\n    }\n    boolean result = false;\n    for (final Boolean value : array) {\n        if (value == null) {\n            throw new IllegalArgumentException(\"The array must not contain null values\");\n        }\n        result |= value;\n    }\n    return Boolean.valueOf(result);\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public static Boolean or(final Boolean... array) {\n    if (array == null) {\n        throw new IllegalArgumentException(\"The array must not be null\");\n    }\n    if (array.length == 0) {\n        throw new IllegalArgumentException(\"The array must not be empty\");\n    }\n    boolean result = false;\n    for (final Boolean value : array) {\n        if (value == null) {\n            throw new IllegalArgumentException(\"The array must not contain null values\");\n        }\n        result |= value.booleanValue();\n    }\n    return Boolean.valueOf(result);\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 32,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.5025384135000008
+}

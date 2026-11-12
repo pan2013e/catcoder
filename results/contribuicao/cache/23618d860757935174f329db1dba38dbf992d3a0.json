@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn find_free_sectors(&self) -> Vec<(u64, u64)> {\n    let mut free_sectors = Vec::new();\n    let mut last_end = self.header.first_usable_lba;\n\n    for (_, partition) in self.iter() {\n        let start = partition.starting_lba;\n        if start > last_end {\n            let size = start - last_end;\n            let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n            let aligned_size = size / self.align * self.align;\n            if aligned_size > 0 {\n                free_sectors.push((aligned_start, aligned_size));\n            }\n        }\n        last_end = partition.ending_lba + 1;\n    }\n\n    if last_end < self.header.last_usable_lba {\n        let size = self.header.last_usable_lba + 1 - last_end;\n        let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n        let aligned_size = size / self.align * self.align;\n        if aligned_size > 0 {\n            free_sectors.push((aligned_start, aligned_size));\n        }\n    }\n\n    free_sectors\n}\n[/CODE]",
+  "input_tokens": 3620,
+  "output_tokens": 256,
+  "usd": 0.0006965999999999999,
+  "brl": 0.0038800619999999997,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 26,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "a00a89f572fb2dd134ed112258761fc74e653b40"
+  }
+}

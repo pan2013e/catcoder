@@ -1,0 +1,35 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn grow (&mut self, n: usize, value: bool) {\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage_mut().resize((new_len + 7) / 8, 0);\n    for i in 0..n {\n        let byte_index = (self.nbits + i) / 8;\n        let bit_index = (self.nbits + i) % 8;\n        if value {\n            self.storage_mut()[byte_index] |= 1 << (7 - bit_index);\n        }\n    }\n    self.set_len(new_len);\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 6529,
+  "tokens_out": 329,
+  "brl": 0.0065544975,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn grow (&mut self, n: usize, value: bool) {\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage_mut().resize((new_len + 7) / 8, 0);\n    for i in 0..n {\n        let byte_index = (self.nbits + i) / 8;\n        let bit_index = (self.nbits + i) % 8;\n        if value {\n            self.storage_mut()[byte_index] |= 1 << (7 - bit_index);\n        }\n    }\n    self.set_len(new_len);\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn grow(&mut self, n: usize, value: bool) {\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage_mut().resize((new_len + 7) / 8, 0);\n    for i in 0..n {\n        let byte_index = (self.nbits + i) / 8;\n        let bit_index = (self.nbits + i) % 8;\n        if value {\n            self.storage_mut()[byte_index] |= 1 << (7 - bit_index);\n        }\n    }\n    self.set_len(new_len);\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 7,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.0127973535
+}

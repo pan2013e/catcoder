@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn smallest(&mut self) -> Option<&T> {\n    self.tree.get_lftmost().map(|(v, _)| v)\n}\n[/CODE]",
+  "input_tokens": 1443,
+  "output_tokens": 37,
+  "usd": 0.00023865,
+  "brl": 0.0013292805000000001,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 63,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "51b9444d2b5855ca3c328988a863e1ea3c108e30"
+  }
+}

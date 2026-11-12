@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 é a mais clara e correta, pois utiliza a função `remove` da árvore e mapeia o valor removido corretamente.\"}",
+  "input_tokens": 2331,
+  "output_tokens": 44,
+  "usd": 0.00037605,
+  "brl": 0.0020945985,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 66,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "9a41ff19492e23f879d23d713a346ee0e3c46052"
+  }
+}

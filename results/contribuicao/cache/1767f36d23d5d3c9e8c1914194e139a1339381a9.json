@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta e consistente com o padrão do JsonReader: faz peek se necessário, trata PEEKED_TRUE/FALSE, avança estado (peeked, pathIndices) e lança exceção adequada caso contrário. As versões 1-4 são idênticas à 0; qualquer uma serve.\"}",
+  "input_tokens": 3510,
+  "output_tokens": 84,
+  "usd": 0.0052274999999999995,
+  "brl": 0.029117175,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-5",
+    "prompt": "69ae64775e71704b0b389f46331303fc3f8fb344"
+  }
+}

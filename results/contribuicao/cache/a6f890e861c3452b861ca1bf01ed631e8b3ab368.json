@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As três versões são idênticas e corretas: validam null, checam permissão via checkAlterPartialConverters(), usam o ConverterSet.add com array de removidos tipado e atualizam iPartialConverters, retornando o substituído. Escolhida a versão 0.\"}",
+  "input_tokens": 1445,
+  "output_tokens": 80,
+  "usd": 0.00260625,
+  "brl": 0.014516812500000002,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "308fd184080e17e1f3dcf463589dcb453df00bdb"
+  }
+}

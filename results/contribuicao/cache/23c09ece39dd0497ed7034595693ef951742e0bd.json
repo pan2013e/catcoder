@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":3,\"feedback\":\"A versão 3 é a mais adequada, pois utiliza `values.drain(..).collect()` para transferir os valores do vetor, garantindo que eles sejam removidos corretamente após a inserção no `HeaderMap`.\"}",
+  "input_tokens": 2497,
+  "output_tokens": 58,
+  "usd": 0.00040935,
+  "brl": 0.0022800795,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 52,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "33dc6cd8543966ae278f66344f03ae8ba6e85d38"
+  }
+}

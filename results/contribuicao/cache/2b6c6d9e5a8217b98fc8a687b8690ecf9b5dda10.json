@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois utiliza o método `len_before_body` corretamente para determinar o início do caminho restante e não limita o final do slice, permitindo que toda a parte restante do caminho seja considerada.\"}",
+  "input_tokens": 2523,
+  "output_tokens": 59,
+  "usd": 0.00041385,
+  "brl": 0.0023051445,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 75,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "b85d9e14edef5fd61ff85ee3d86af0a30551bd15"
+  }
+}

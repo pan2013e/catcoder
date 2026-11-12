@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação lê o InputStream em blocos, atualiza o digest com os bytes efetivamente lidos e retorna o digest, conforme esperado.\"}",
+  "input_tokens": 2409,
+  "output_tokens": 46,
+  "usd": 0.0002639,
+  "brl": 0.0014699230000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 101,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "c375159af7b7ab894d5f35014ceae68e30ada5b3"
+  }
+}

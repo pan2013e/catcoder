@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e implementam corretamente a verificação de contiguidade.\"}",
+  "input_tokens": 2644,
+  "output_tokens": 36,
+  "usd": 0.00028240000000000003,
+  "brl": 0.0015729680000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 58,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "ce15050d7a3b15947f5543e9ed3c26403a997de8"
+  }
+}

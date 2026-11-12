@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":3,\"feedback\":\"A versão 3 é a mais adequada, pois utiliza `values.drain(..).collect()` para transferir os valores, garantindo que o vetor original seja esvaziado corretamente e os valores sejam adicionados ao cabeçalho.\"}",
+  "input_tokens": 2422,
+  "output_tokens": 61,
+  "usd": 0.0003999,
+  "brl": 0.0022274430000000004,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 52,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "9a3706dab0cc8891ae4b1d9db9bb9380734b6b0e"
+  }
+}

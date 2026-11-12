@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn get_partition_byte_range(&self, partition_number: u32) -> Result<RangeInclusive<u64>> {\n    if partition_number == 0 || partition_number > self.partitions.len() as u32 {\n        return Err(Result::Err(InvalidPartitionNumber(partition_number)));\n    }\n\n    let partition = &self.partitions[partition_number as usize - 1];\n\n    if !partition.is_used() {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    if partition.ending_lba < partition.starting_lba {\n        return Err(Result::Err(InvalidPartitionBoundaries));\n    }\n\n    let start_byte = partition.starting_lba * self.sector_size;\n    let end_byte = partition.ending_lba * self.sector_size;\n\n    Ok(start_byte..=end_byte)\n}\n[/CODE]",
+  "input_tokens": 2325,
+  "output_tokens": 175,
+  "usd": 0.00045374999999999994,
+  "brl": 0.0025273874999999996,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 29,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "6e40775cb901c8c6f75831690387843c4edf4556"
+  }
+}

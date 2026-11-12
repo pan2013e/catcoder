@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":1,\"feedback\":\"As duas versões são funcionalmente equivalentes e atendem ao contrato; a versão 1 explicita a conversão para boolean.\"}",
+  "input_tokens": 1665,
+  "output_tokens": 43,
+  "usd": 0.00018800000000000002,
+  "brl": 0.00104716,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 32,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "14fb4375f7bb3d78bd854b019bed4837ad1439b8"
+  }
+}

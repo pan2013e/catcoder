@@ -1,0 +1,50 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 5,
+  "acoes": [
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    Cow::Owned(escaped)\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "brl": 0.0,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    Cow::Owned(escaped)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    if escaped.is_empty() {\n        Cow::Borrowed(self.as_str())\n    } else {\n        Cow::Owned(escaped)\n    }\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    Cow::Owned(escaped)\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    if escaped.is_empty() {\n        Cow::Borrowed(self.as_str())\n    } else {\n        Cow::Owned(escaped)\n    }\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    Cow::Owned(escaped)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 48,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 1.106317299000001
+}

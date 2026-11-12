@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `sample_exact` está correta e atende aos requisitos especificados no contexto. Ela gera um polinômio aleatório de um grau específico, garantindo que o termo constante não seja zero para polinômios finitos.\"}",
+  "input_tokens": 1996,
+  "output_tokens": 63,
+  "usd": 0.00033719999999999996,
+  "brl": 0.0018782039999999999,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 10,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "9699bf40a8c66b053ec94cb98b7e09e74529df26"
+  }
+}

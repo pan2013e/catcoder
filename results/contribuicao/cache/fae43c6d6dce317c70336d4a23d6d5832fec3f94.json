@@ -1,0 +1,17 @@
+{
+  "texto": "```rust\npub fn append(&mut self, other: &mut Self) {\n    for (key, value) in other.iter_mut() {\n        self.insert(value.clone());\n    }\n    other.clear();\n}\n```",
+  "input_tokens": 1659,
+  "output_tokens": 44,
+  "usd": 0.00027525,
+  "brl": 0.0015331425,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 81,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "32c330cf123453c4f8705b6c43b448447de516fd"
+  }
+}

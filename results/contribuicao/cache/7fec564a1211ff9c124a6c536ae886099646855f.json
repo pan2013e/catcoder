@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 localiza o primeiro abridor antes de iniciar o rastreamento, ignora delimitadores dentro de aspas ou escapados e retorna o conteúdo sem os delimitadores externos. A versão 0 pode iniciar o conteúdo incorretamente antes do primeiro abridor.\"}",
+  "input_tokens": 2488,
+  "output_tokens": 73,
+  "usd": 0.00028530000000000005,
+  "brl": 0.0015891210000000004,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 119,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "4f163907d5e5c30b666cf09135dcfd524c7b2afa"
+  }
+}

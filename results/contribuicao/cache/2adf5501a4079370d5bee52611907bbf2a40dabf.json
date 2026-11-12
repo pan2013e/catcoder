@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 trata corretamente os limites do arquivo e evita leituras além do fim ao calcular bytesToRead. A implementação está truncada após `if (blockS`; complete a busca retrocedendo os blocos com sobreposição suficiente para detectar assinaturas que cruzem limites, e retorne false quando a busca terminar.\"}",
+  "input_tokens": 3604,
+  "output_tokens": 83,
+  "usd": 0.0004019,
+  "brl": 0.002238583,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 148,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "f17c9f844437f5c14fe370c31614b632dc84ae6a"
+  }
+}

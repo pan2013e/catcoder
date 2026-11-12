@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "private static int estimateCostOneLevel(Node n) {\n  int cost = n.isNot() ? 1 : 0;\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 39170,
+  "tokens_out": 522,
+  "brl": 0.023320197500000004,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private static int estimateCostOneLevel(Node n) {\n  int cost = 0;\n  if (n.isNot()) {\n    cost++;\n  }\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private static int estimateCostOneLevel(Node n) {\n  int cost = n.isNot() ? 1 : 0;\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private static int estimateCostOneLevel(Node n) {\n  int cost = n.isNot() ? 1 : 0;\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "private static int estimateCostOneLevel(Node n) {\n  int cost = n.isNot() ? 1 : 0;\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "private static int estimateCostOneLevel(Node n) {\n  int cost = n.isNot() ? 1 : 0;\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 17,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.525858611000001
+}

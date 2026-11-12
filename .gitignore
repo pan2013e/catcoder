@@ -5,6 +5,9 @@ static/
 build/
 dist/
 target/
+target175/
+*.pyd
 Cargo.lock
 *.so
 .env
+dsb6.txt

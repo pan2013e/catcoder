@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    if let Some(count) = self.elem_counts.get_mut(val) {\n        let actual_removal = (*count).min(times);\n        *count -= actual_removal;\n\n        if *count == 0 {\n            self.elem_counts.remove(val);\n        }\n        self.size -= actual_removal;\n        actual_removal\n    } else {\n        0\n    }\n}\n[/CODE]",
+  "input_tokens": 1678,
+  "output_tokens": 83,
+  "usd": 0.0003015,
+  "brl": 0.0016793550000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 44,
+    "rodada": "R-JF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "b7ed984f7b1a79009a184a77467dc978c291a902"
+  }
+}

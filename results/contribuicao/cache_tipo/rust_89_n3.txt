@@ -1,0 +1,62 @@
+pub struct Weak<'a, T> {
+inner: UninitView<'_, RcBox<T>>,
+}
+fn try_unwrap(self) -> Result<Uninit<'a, ()>, Self>
+fn upgrade(&self) -> Option<Rc<'a, T>>
+fn strong_count(&self) -> usize
+fn weak_count(&self) -> usize
+fn is_unique_to_rc_memory(&self) -> bool
+fn weak(&self) -> &Cell<usize>
+fn strong(&self) -> &Cell<usize>
+fn inc_weak(&self)
+fn dec_weak(&self)
+pub enum Option<T> {
+None,
+Some(T),
+}
+pub struct UninitView<'a, T>
+where
+T: ?Sized, {
+ptr: NonNull<T>,
+len: usize,
+lifetime: PhantomData<&()>,
+typed: PhantomData<*mut T>,
+}
+fn from_memory(ptr: ptr::NonNull<u8>, len: usize) -> Self
+fn split_layout(&mut self, layout: Layout) -> Option<Self>
+fn decast<T: ?Sized>(view: UninitView<'a, T>) -> Self
+fn split_cast<U>(&mut self) -> Option<UninitView<'a, U>>
+fn split_slice<U>(&mut self) -> Option<UninitView<'a, [U]>>
+fn invent_for_zst() -> Self
+fn split_at_byte(&mut self, at: usize) -> Option<UninitView<'a, ()>>
+fn from_maybe_uninit(mem: &'a mem::MaybeUninit<T>) -> Self
+fn cast_slice<U>(self) -> Result<UninitView<'a, [U]>, Self>
+fn split_to_fit(&mut self) -> UninitView<'a, ()>
+fn into_maybe_uninit(self) -> &'a mem::MaybeUninit<T>
+fn new(ptr: ptr::NonNull<T>, len: usize) -> Self
+fn byte_capacity(&self) -> usize
+fn cast<U>(self) -> Result<UninitView<'a, U>, Self>
+fn as_ptr(&self) -> *const T
+fn as_non_null(&self) -> ptr::NonNull<T>
+fn as_ref(&self) -> &T
+fn into_ref(self) -> &'a T
+fn empty() -> Self
+fn from_maybe_uninit_slice(mem: &'a [mem::MaybeUninit<T>]) -> Self
+fn as_begin_ptr(&self) -> *const T
+fn capacity(&self) -> usize
+fn split_at(&mut self, at: usize) -> Option<Self>
+fn shrink_to_fit(&mut self) -> UninitView<'a, ()>
+fn split_first(&mut self) -> Option<UninitView<'a, T>>
+fn split_last(&mut self) -> Option<UninitView<'a, T>>
+fn into_maybe_uninit_slice(self) -> &'a [mem::MaybeUninit<T>]
+fn fits(&self, layout: Layout) -> bool
+fn borrow(&self) -> UninitView<'_, T>
+fn size(&self) -> usize
+pub struct NonNull<T>
+where
+T: PointeeSized, {
+pointer: {unknown},
+}
+pub struct PhantomData<T>
+where
+T: PointeeSized,

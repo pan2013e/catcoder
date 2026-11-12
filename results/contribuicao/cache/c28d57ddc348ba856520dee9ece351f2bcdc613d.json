@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn grow(&mut self, n: usize, value: bool) {\n    let new_len = self.nbits.checked_add(n).expect(\"new length overflows\");\n    self.storage_mut().resize((new_len + 7) / 8, 0);\n    for i in 0..n {\n        let byte_index = (self.nbits + i) / 8;\n        let bit_index = (self.nbits + i) % 8;\n        if value {\n            self.storage_mut()[byte_index] |= 1 << (7 - bit_index);\n        }\n    }\n    self.set_len(new_len);\n}\n[/CODE]",
+  "input_tokens": 1602,
+  "output_tokens": 136,
+  "usd": 0.00032189999999999996,
+  "brl": 0.001792983,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 7,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "bf64b7a274a5eee8325edc2e1f654037f0ecf7b4"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":3,\"feedback\":\"A versão 3 implementa corretamente a lógica: verifica peeked, chama doPeek se necessário, trata PEEKED_TRUE e PEEKED_FALSE, atualiza peeked e pathIndices, e lança exceção adequada caso contrário. As versões 1 e 2 duplicam a assinatura/comentário causando erro de compilação.\"}",
+  "input_tokens": 3526,
+  "output_tokens": 90,
+  "usd": 0.0053075,
+  "brl": 0.029562775,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FFORTE",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-5",
+    "prompt": "2624a68fa98ccb35dae3ad48678598627a2d3755"
+  }
+}

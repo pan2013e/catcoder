@@ -1,0 +1,30 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 1,
+  "acoes": [
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 3397,
+  "tokens_out": 1280,
+  "brl": 0.0949476125,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": ""
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 44,
+  "lingua": "rust",
+  "rodada": "R-FFORTE",
+  "geradora": "gpt-5",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 1.106317299000001
+}

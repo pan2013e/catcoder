@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    self.tree.insert(item, ());\n    self.tree.balance();\n}\n[/CODE]",
+  "input_tokens": 964,
+  "output_tokens": 20,
+  "usd": 0.00015659999999999998,
+  "brl": 0.000872262,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 67,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "676f401f0b03930bdd4b8ca074721fb3d6772a35"
+  }
+}

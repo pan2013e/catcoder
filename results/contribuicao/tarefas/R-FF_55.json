@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn skip(mut self, n: usize) -> Self {\n    self.pos += n;\n    self\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 6600,
+  "tokens_out": 134,
+  "brl": 0.005962128,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn skip(mut self, n: usize) -> Self {\n    self.pos += n;\n    self\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn skip(mut self, n: usize) -> Self {\n    self.pos += n;\n    self\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 55,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.33102677100000005
+}

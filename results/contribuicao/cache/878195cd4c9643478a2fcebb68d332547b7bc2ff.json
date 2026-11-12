@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `pop_back` está correta e segue a lógica esperada para remover e retornar o valor do final da lista.\"}",
+  "input_tokens": 1268,
+  "output_tokens": 41,
+  "usd": 0.0002148,
+  "brl": 0.001196436,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 23,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "93e19e1570b7e9040f1ea4eea964955618e12d91"
+  }
+}

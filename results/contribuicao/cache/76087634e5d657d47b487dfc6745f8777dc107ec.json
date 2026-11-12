@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let mut coefficients = vec![const_term];\n\n    for _ in 1..=n {\n        coefficients.push(Scalar::random());\n    }\n\n    Polynomial::from_coefficients(coefficients)\n}\n[/CODE]",
+  "input_tokens": 1419,
+  "output_tokens": 47,
+  "usd": 0.00024104999999999998,
+  "brl": 0.0013426484999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 11,
+    "rodada": "R-JF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "088e1d8f788d627e603b77386049fa0f9ce2a917"
+  }
+}

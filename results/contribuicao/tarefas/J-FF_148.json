@@ -1,0 +1,40 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 3,
+  "acoes": [
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "private boolean tryToLocateSignature(final long minDistanceFromEnd,\n                                    final long maxDistanceFromEnd,\n                                    final byte[] sig) throws IOException {\n    final long archiveSize = archive.size();\n    final long stopSearching = Math.max(0, archiveSize - maxDistanceFromEnd);\n    long position = archiveSize - minDistanceFromEnd;\n\n    if (position < stopSearching || position < 0) {\n        return false;\n    }\n\n    final int bufferSize = 4096;\n    final ByteBuffer buffer = ByteBuffer.allocate(bufferSize + sig.length - 1);\n\n    while (position >= stopSearching) {\n        final long blockStart = Math.max(stopSearching, position - bufferSize + 1);\n        final int blockLength = (int) (position - blockStart + 1);\n        final int bytesToRead = (int) Math.min(blockLength + sig.length - 1,\n                                               archiveSize - blockStart);\n\n        buffer.clear();\n        buffer.limit(bytesToRead);\n        archive.position(blockStart);\n        IOUtils.readFully(archive, buffer);\n        final byte[] data = buffer.array();\n\n        for (int i = blockLength - 1; i >= 0; i--) {\n            boolean matches = i + sig.length <= bytesToRead;\n            for (int j = 0; matches && j < sig.length; j++) {\n                matches = data[i + j] == sig[j];\n            }\n            if (matches) {\n                archive.position(blockStart + i);\n                return true;\n            }\n        }\n\n        if (blockStart == stopSearching) {\n            break;\n        }\n        position = blockStart - 1;\n    }\n    return false;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 20626,
+  "tokens_out": 1261,
+  "brl": 0.015030088,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private boolean tryToLocateSignature(final long minDistanceFromEnd,\n                                         final long maxDistanceFromEnd,\n                                         final byte[] sig) throws IOException {\n/**\n     * Searches the archive backwards from minDistance to maxDistance\n     * for the given signature, positions the RandomaccessFile right\n     * at the signature if it has been found.\n     */\n    private boolean tryToLocateSignature(final long minDistanceFromEnd,\n                                         final long maxDistanceFromEnd,\n                                         final byte[] sig) throws IOException {\n        final long archiveSize = archive.size();\n        final long stopSearching = Math.max(0, archiveSize - maxDistanceFromEnd);\n        long position = archiveSize - minDistanceFromEnd;\n\n        if (position < 0) {\n            return false;\n        }\n\n        final int bufferSize = 4096;\n        final ByteBuffer buffer = ByteBuffer.allocate(bufferSize + sig.length - 1);\n\n        while (position >= stopSearching) {\n            final long blockStart = Math.max(stopSearching, position - bufferSize + 1);\n            final int blockLength = (int) (position - blockStart + 1);\n            buffer.clear();\n            buffer.limit(blockLength + sig.length - 1);\n            archive.position(blockStart);\n            IOUtils.readFully(archive, buffer);\n            final byte[] data = buffer.array();\n\n            for (int i = blockLength - 1; i >= 0; i--) {\n                boolean matches = true;\n                for (int j = 0; j < sig.length; j++) {\n                    if (data[i + j] != sig[j]) {\n                        matches = false;\n                        break;\n                    }\n                }\n                if (matches) {\n                    archive.position(blockStart + i);\n                    return true;\n                }\n            }\n\n            if (blockStart == stopSearching) {\n                break;\n            }\n            position = blockStart - 1;\n        }\n        return false;\n    }"
+    },
+    {
+      "id": 1,
+      "codigo": "private boolean tryToLocateSignature(final long minDistanceFromEnd,\n                                    final long maxDistanceFromEnd,\n                                    final byte[] sig) throws IOException {\n    final long archiveSize = archive.size();\n    final long stopSearching = Math.max(0, archiveSize - maxDistanceFromEnd);\n    long position = archiveSize - minDistanceFromEnd;\n\n    if (position < stopSearching || position < 0) {\n        return false;\n    }\n\n    final int bufferSize = 4096;\n    final ByteBuffer buffer = ByteBuffer.allocate(bufferSize + sig.length - 1);\n\n    while (position >= stopSearching) {\n        final long blockStart = Math.max(stopSearching, position - bufferSize + 1);\n        final int blockLength = (int) (position - blockStart + 1);\n        final int bytesToRead = (int) Math.min(blockLength + sig.length - 1,\n                                               archiveSize - blockStart);\n\n        buffer.clear();\n        buffer.limit(bytesToRead);\n        archive.position(blockStart);\n        IOUtils.readFully(archive, buffer);\n        final byte[] data = buffer.array();\n\n        for (int i = blockLength - 1; i >= 0; i--) {\n            boolean matches = i + sig.length <= bytesToRead;\n            for (int j = 0; matches && j < sig.length; j++) {\n                matches = data[i + j] == sig[j];\n            }\n            if (matches) {\n                archive.position(blockStart + i);\n                return true;\n            }\n        }\n\n        if (blockStart == stopSearching) {\n            break;\n        }\n        position = blockStart - 1;\n    }\n    return false;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private boolean tryToLocateSignature(final long minDistanceFromEnd,\n                                    final long maxDistanceFromEnd,\n                                    final byte[] sig) throws IOException {\n    final long archiveSize = archive.size();\n    final long stopSearching = Math.max(0, archiveSize - maxDistanceFromEnd);\n    long position = archiveSize - minDistanceFromEnd;\n\n    if (position < stopSearching || position < 0) {\n        return false;\n    }\n\n    final int bufferSize = 4096;\n    final ByteBuffer buffer = ByteBuffer.allocate(bufferSize + sig.length - 1);\n\n    while (position >= stopSearching) {\n        final long blockStart = Math.max(stopSearching, position - bufferSize + 1);\n        final int blockLength = (int) (position - blockStart + 1);\n        final int bytesToRead = (int) Math.min(blockLength + sig.length - 1,\n                                               archiveSize - blockStart);\n\n        buffer.clear();\n        buffer.limit(bytesToRead);\n        archive.position(blockStart);\n        IOUtils.readFully(archive, buffer);\n        final byte[] data = buffer.array();\n\n        for (int i = blockLength - 1; i >= 0; i--) {\n            boolean matches = i + sig.length <= bytesToRead;\n            for (int j = 0; matches && j < sig.length; j++) {\n                matches = data[i + j] == sig[j];\n            }\n            if (matches) {\n                archive.position(blockStart + i);\n                return true;\n            }\n        }\n\n        if (blockStart == stopSearching) {\n            break;\n        }\n        position = blockStart - 1;\n    }\n    return false;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 148,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.4483891015000012
+}

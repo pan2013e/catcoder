@@ -1,0 +1,35 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 2,
+  "acoes": [
+    "reverte",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn insert_before(&mut self, index: Index<T>, value: T) -> Index<T> {\n    let entry = self.entries.get(index.index()).expect(\"Invalid index\");\n    match entry {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let previous_index = entry.previous;\n            let new_index = self.insert_new(value, previous_index, Some(index.index().into()));\n            if let Some(prev_index) = previous_index {\n                self.entries[prev_index.get()].occupied_mut().next = Some(new_index);\n            }\n            entry.previous = Some(new_index);\n            Index::new(new_index, self.generation)\n        }\n        _ => panic!(\"Invalid index\"),\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 9393,
+  "tokens_out": 365,
+  "brl": 0.0090676815,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn insert_before(&mut self, index: Index<T>, value: T) -> Index<T> {\n    let entry = self.entries.get(index.index()).expect(\"Invalid index\");\n    match entry {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let previous_index = entry.previous;\n            let new_index = self.insert_new(value, previous_index, Some(index.index().into()));\n            if let Some(prev_index) = previous_index {\n                self.entries[prev_index.get()].occupied_mut().next = Some(new_index);\n            }\n            entry.previous = Some(new_index);\n            Index::new(new_index, self.generation)\n        }\n        _ => panic!(\"Invalid index\"),\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn insert_before(&mut self, index: Index<T>, value: T) -> Index<T> {\n    let entry = self.entries.get(index.index()).expect(\"Invalid index\");\n    match entry {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let previous_index = entry.previous;\n            let new_index = self.insert_new(value, previous_index, Some(index.index().into()));\n            if let Some(prev_index) = previous_index {\n                self.entries[prev_index.get()].occupied_mut().next = Some(new_index);\n            }\n            entry.previous = Some(new_index);\n            Index::new(new_index, self.generation)\n        }\n        _ => panic!(\"Invalid index\"),\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 21,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.4171158555
+}

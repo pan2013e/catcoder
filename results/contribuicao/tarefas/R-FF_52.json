@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "pub fn add_all<'n, H>(&mut self, name: H, values: &mut Vec<Cow<'h, str>>) \nwhere \n    'n: 'h, \n    H: Into<Cow<'n, str>> \n{\n    self.headers.insert(Uncased::new(name), values.drain(..).collect());\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 23026,
+  "tokens_out": 616,
+  "brl": 0.021296895000000003,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn add_all <'n, H> (&mut self, name: H, values: &mut Vec<Cow<'h, str>>) where 'n:'h, H: Into<Cow<'n, str>> {\n    self.headers.insert(Uncased::new(name), values.clone());\n    values.clear();\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn add_all<'n, H>(&mut self, name: H, values: &mut Vec<Cow<'h, str>>) \nwhere \n    'n: 'h, \n    H: Into<Cow<'n, str>> \n{\n    self.headers.insert(Uncased::new(name), values.clone());\n    values.clear();\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn add_all<'n, H>(&mut self, name: H, values: &mut Vec<Cow<'h, str>>) \nwhere \n    'n: 'h, \n    H: Into<Cow<'n, str>> \n{\n    self.headers.insert(Uncased::new(name), values.clone());\n    values.clear();\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn add_all<'n, H>(&mut self, name: H, values: &mut Vec<Cow<'h, str>>) \nwhere \n    'n: 'h, \n    H: Into<Cow<'n, str>> \n{\n    self.headers.insert(Uncased::new(name), values.drain(..).collect());\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn add_all<'n, H>(&mut self, name: H, values: &mut Vec<Cow<'h, str>>) \nwhere \n    'n: 'h, \n    H: Into<Cow<'n, str>> \n{\n    self.headers.insert(Uncased::new(name), values.drain(..).collect());\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 52,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.317220969
+}

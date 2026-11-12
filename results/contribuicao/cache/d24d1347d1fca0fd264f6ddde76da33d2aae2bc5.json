@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 apresenta uma lógica mais clara e correta ao lidar com a remoção do último componente e o retorno do caminho pai, garantindo que o caminho raiz seja retornado corretamente.\"}",
+  "input_tokens": 2230,
+  "output_tokens": 51,
+  "usd": 0.0003651,
+  "brl": 0.002033607,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 77,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "f725b0614fe7b6c019e5296b31f93ba0334428bc"
+  }
+}

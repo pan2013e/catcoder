@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação garante a capacidade solicitada, preserva os dados existentes e retorna this; a versão 1 é idêntica.\"}",
+  "input_tokens": 3608,
+  "output_tokens": 43,
+  "usd": 0.0003823,
+  "brl": 0.0021294110000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "8939f78915199af517dcd23eab9fcf1f4bc94a0d"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn pack_to(&mut self, minimum_capacity: usize) -> HashMap<Index<T>, Index<T>> {\n    if minimum_capacity < self.length {\n        panic!(\"minimum capacity must be greater than or equal to the current length\");\n    }\n\n    let mut map = HashMap::new();\n    let mut new_entries = Vec::with_capacity(minimum_capacity);\n    let mut current_index = self.head;\n\n    while let Some(index) = current_index {\n        if let Some(entry) = self.entries[index.get()].occupied_ref() {\n            let new_index = new_entries.len();\n            new_entries.push(entry.clone());\n            map.insert(index, Index::new(new_index));\n            current_index = entry.next;\n        } else {\n            break;\n        }\n    }\n\n    self.entries = new_entries.into_iter().map(Entry::Occupied).collect();\n    self.generation += 1;\n    self.head = Some(NonMaxUsize::new(0).unwrap());\n    self.tail = Some(NonMaxUsize::new(self.entries.len() - 1).unwrap());\n    self.vacant_head = None;\n\n    map\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 12629,
+  "tokens_out": 562,
+  "brl": 0.012429733500000002,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn pack_to(&mut self, minimum_capacity: usize) -> HashMap<Index<T>, Index<T>> {\n    if minimum_capacity < self.length {\n        panic!(\"minimum capacity must be greater than or equal to the current length\");\n    }\n\n    let mut map = HashMap::new();\n    let mut new_entries = Vec::with_capacity(minimum_capacity);\n    let mut current_index = self.head;\n\n    while let Some(index) = current_index {\n        if let Some(entry) = self.entries[index.get()].occupied_ref() {\n            let new_index = new_entries.len();\n            new_entries.push(entry.clone());\n            map.insert(index, Index::new(new_index));\n            current_index = entry.next;\n        } else {\n            break;\n        }\n    }\n\n    self.entries = new_entries.into_iter().map(Entry::Occupied).collect();\n    self.generation += 1;\n    self.head = Some(NonMaxUsize::new(0).unwrap());\n    self.tail = Some(NonMaxUsize::new(self.entries.len() - 1).unwrap());\n    self.vacant_head = None;\n\n    map\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn pack_to(&mut self, minimum_capacity: usize) -> HashMap<Index<T>, Index<T>> {\n    if minimum_capacity < self.length {\n        panic!(\"minimum capacity must be greater than or equal to the current length\");\n    }\n\n    let mut map = HashMap::new();\n    let mut new_entries = Vec::with_capacity(minimum_capacity);\n    let mut current_index = self.head;\n\n    while let Some(index) = current_index {\n        if let Some(entry) = self.entries[index.get()].occupied_ref() {\n            let new_index = new_entries.len();\n            new_entries.push(entry.clone());\n            map.insert(index, Index::new(new_index));\n            current_index = entry.next;\n        } else {\n            break;\n        }\n    }\n\n    self.entries = new_entries.into_iter().map(Entry::Occupied).collect();\n    self.generation += 1;\n    self.head = Some(NonMaxUsize::new(0).unwrap());\n    self.tail = Some(NonMaxUsize::new(self.entries.len() - 1).unwrap());\n    self.vacant_head = None;\n\n    map\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 22,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.198603363
+}

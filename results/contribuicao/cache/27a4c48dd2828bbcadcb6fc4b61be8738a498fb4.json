@@ -1,0 +1,17 @@
+{
+  "texto": "public int[] getCounts(int index) throws OutOfRangeException {\n    if (index < 0 || index >= totalSize) {\n        throw new OutOfRangeException(index, 0, totalSize - 1);\n    }\n\n    final int[] counts = new int[dimension];\n    for (int i = 0; i < last; i++) {\n        counts[i] = index / uniCounterOffset[i];\n        index -= counts[i] * uniCounterOffset[i];\n    }\n    counts[last] = index;\n    return counts;\n}",
+  "input_tokens": 1814,
+  "output_tokens": 116,
+  "usd": 0.00023940000000000002,
+  "brl": 0.0013334580000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 99,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "8ec2cd7fe669e041f5c51458c883f1b7bfffb8f8"
+  }
+}

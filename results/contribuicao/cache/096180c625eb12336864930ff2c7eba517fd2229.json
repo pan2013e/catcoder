@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0 && newPos >= text.length()) {\n        long millis = bucket.computeMillis(true, text);\n        DateTimeZone zone = bucket.getZone();\n        if (zone != null) {\n            millis = zone.convertLocalToUTC(millis, false);\n        }\n        return millis;\n    }\n    if (newPos < 0) {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}\n[/CODE]",
+  "input_tokens": 2744,
+  "output_tokens": 208,
+  "usd": 0.0003784,
+  "brl": 0.002107688,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 170,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "2c15acd1fcda897d3203682d96dc483f657ebce2"
+  }
+}

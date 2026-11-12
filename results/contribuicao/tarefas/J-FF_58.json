@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public static final boolean isContiguous(ReadablePartial partial) {\n    if (partial == null) {\n        throw new IllegalArgumentException(\"Partial cannot be null\");\n    }\n    Chronology chrono = getChronology(partial.getChronology());\n    int size = partial.size();\n    if (size < 2) {\n        return true;\n    }\n    DurationField lastUnit = null;\n    for (int i = size - 1; i >= 0; i--) {\n        DateTimeField field = chrono.getField(partial.getFieldType(i));\n        DurationField range = field.getRangeDurationField();\n        if (lastUnit != null && (range == null || !range.equals(lastUnit))) {\n            return false;\n        }\n        lastUnit = field.getDurationField();\n    }\n    return true;\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 10199,
+  "tokens_out": 448,
+  "brl": 0.007018757,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public static final boolean isContiguous(ReadablePartial partial) {\n    if (partial == null) {\n        throw new IllegalArgumentException(\"Partial cannot be null\");\n    }\n    Chronology chrono = getChronology(partial.getChronology());\n    int size = partial.size();\n    if (size < 2) {\n        return true;\n    }\n    DurationField lastUnit = null;\n    for (int i = size - 1; i >= 0; i--) {\n        DateTimeField field = chrono.getField(partial.getFieldType(i));\n        DurationField range = field.getRangeDurationField();\n        if (lastUnit != null && (range == null || !range.equals(lastUnit))) {\n            return false;\n        }\n        lastUnit = field.getDurationField();\n    }\n    return true;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public static final boolean isContiguous(ReadablePartial partial) {\n    if (partial == null) {\n        throw new IllegalArgumentException(\"Partial cannot be null\");\n    }\n    Chronology chrono = getChronology(partial.getChronology());\n    int size = partial.size();\n    if (size < 2) {\n        return true;\n    }\n    DurationField lastUnit = null;\n    for (int i = size - 1; i >= 0; i--) {\n        DateTimeField field = chrono.getField(partial.getFieldType(i));\n        DurationField range = field.getRangeDurationField();\n        if (lastUnit != null && (range == null || !range.equals(lastUnit))) {\n            return false;\n        }\n        lastUnit = field.getDurationField();\n    }\n    return true;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 58,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.1720424635000009
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A implementação da função `html_escape` está correta e atende aos requisitos especificados na documentação. Ela escapa corretamente os caracteres HTML e retorna um `Cow::Owned` com a string resultante.\"}",
+  "input_tokens": 3371,
+  "output_tokens": 54,
+  "usd": 0.00053805,
+  "brl": 0.0029969385,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 48,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "a6c541d6ca400f370c9318227b4ab0c0511e3b6e"
+  }
+}

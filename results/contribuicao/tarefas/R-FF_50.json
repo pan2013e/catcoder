@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn supports_payload(self) -> bool {\n    match self {\n        Method::Put | Method::Post | Method::Delete | Method::Patch => true,\n        _ => false,\n    }\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 3557,
+  "tokens_out": 149,
+  "brl": 0.0034698315,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn supports_payload(self) -> bool {\n    match self {\n        Method::Put | Method::Post | Method::Delete | Method::Patch => true,\n        _ => false,\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn supports_payload(self) -> bool {\n    match self {\n        Method::Put | Method::Post | Method::Delete | Method::Patch => true,\n        _ => false,\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 50,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.14481554400000005
+}

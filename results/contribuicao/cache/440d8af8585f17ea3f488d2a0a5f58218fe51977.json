@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As versões são idênticas e implementam corretamente nextDouble.\"}",
+  "input_tokens": 3110,
+  "output_tokens": 30,
+  "usd": 0.000326,
+  "brl": 0.00181582,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 159,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "e862dea54b3608a12f39fd2c9c5ffd344352c6d5"
+  }
+}

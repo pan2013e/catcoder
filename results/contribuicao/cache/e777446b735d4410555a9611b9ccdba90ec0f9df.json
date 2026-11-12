@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn back_index(&self) -> Option<Index<T>> {\n    self.tail.map(|index| Index::new(index.get(), self.entries[index.get()].generation))\n}\n[/CODE]",
+  "input_tokens": 1916,
+  "output_tokens": 41,
+  "usd": 0.000312,
+  "brl": 0.00173784,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 15,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "416bee4d5098735b66d18a967ae6097e617e619b"
+  }
+}

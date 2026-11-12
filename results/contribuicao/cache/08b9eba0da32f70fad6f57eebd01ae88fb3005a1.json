@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação está correta e preserva o modificador private final static exigido pelo contexto.\"}",
+  "input_tokens": 2017,
+  "output_tokens": 35,
+  "usd": 0.00021920000000000002,
+  "brl": 0.001220944,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 109,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "7bd58510b883a7dd28a7453928be77e617593621"
+  }
+}

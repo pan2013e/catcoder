@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 calcula cada elemento usando o método covariance, que aplica corretamente a correção de viés solicitada. A variável denominator da versão 0 é desnecessária.\"}",
+  "input_tokens": 3204,
+  "output_tokens": 53,
+  "usd": 0.0003469,
+  "brl": 0.001932233,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 104,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "e6b05e937bc5cf63ce17128fdaf740e99dd26f25"
+  }
+}

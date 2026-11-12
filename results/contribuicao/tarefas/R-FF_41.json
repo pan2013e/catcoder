@@ -1,0 +1,35 @@
+{
+  "n_pedido": 3,
+  "n_usado": 3,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn differentiate (&self) -> Polynomial<T> {\n    let mut coef_diff = Vec::with_capacity(self.degree());\n    for (i, &c) in self.coef.iter().enumerate().skip(1) {\n        coef_diff.push(c * T::from_usize(i).unwrap());\n    }\n    Polynomial::from_coef(coef_diff)\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 8844,
+  "tokens_out": 226,
+  "brl": 0.008144454,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn differentiate (&self) -> Polynomial<T> {\n    let mut coef_diff = Vec::with_capacity(self.degree());\n    for (i, &c) in self.coef.iter().enumerate().skip(1) {\n        coef_diff.push(c * T::from_usize(i).unwrap());\n    }\n    Polynomial::from_coef(coef_diff)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn differentiate(&self) -> Polynomial<T> {\n    let mut coef_diff = Vec::with_capacity(self.degree());\n    for (i, &c) in self.coef.iter().enumerate().skip(1) {\n        coef_diff.push(c * T::from_usize(i).unwrap());\n    }\n    Polynomial::from_coef(coef_diff)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 41,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.09429202350000003
+}

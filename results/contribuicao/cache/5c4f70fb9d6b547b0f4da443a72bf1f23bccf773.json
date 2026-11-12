@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e estão corretas.\"}",
+  "input_tokens": 884,
+  "output_tokens": 26,
+  "usd": 0.0001482,
+  "brl": 0.000825474,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 14,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "42ee46cb4edbd207c7b2cb08c292522bc7af51a5"
+  }
+}

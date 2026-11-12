@@ -1,0 +1,17 @@
+{
+  "texto": "private static String printOffset(int offset) {\n    int absOffset = Math.abs(offset);\n    int hours = absOffset / DateTimeConstants.MILLIS_PER_HOUR;\n    int minutes = (absOffset / DateTimeConstants.MILLIS_PER_MINUTE) % 60;\n    int seconds = (absOffset / DateTimeConstants.MILLIS_PER_SECOND) % 60;\n    int millis = absOffset % DateTimeConstants.MILLIS_PER_SECOND;\n\n    StringBuffer buf = new StringBuffer();\n    buf.append(offset >= 0 ? '+' : '-');\n    appendDigits(buf, hours);\n    buf.append(':');\n    appendDigits(buf, minutes);\n    if (seconds != 0 || millis != 0) {\n        buf.append(':');\n        appendDigits(buf, seconds);\n        if (millis != 0) {\n            buf.append('.');\n            if (millis % 100 == 0) {\n                appendDigits(buf, millis / 100);\n            } else if (millis % 10 == 0) {\n                appendDigits(buf, millis / 10);\n            } else {\n                appendDigits(buf, millis);\n            }\n        }\n    }\n    return buf.toString();\n}",
+  "input_tokens": 2678,
+  "output_tokens": 249,
+  "usd": 0.0003923,
+  "brl": 0.002185111,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 121,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "80d2f2a5731c1b9291f47ae96e49fbb7ec85ea79"
+  }
+}

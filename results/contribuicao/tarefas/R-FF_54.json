@@ -1,0 +1,40 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 3,
+  "acoes": [
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn len(&self) -> usize {\n    self.segments.len() - self.pos\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 11952,
+  "tokens_out": 184,
+  "brl": 0.010600824,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn len(&self) -> usize {\n    self.segments.len() - self.pos\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn len(&self) -> usize {\n    self.segments.len() - self.pos\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn len(&self) -> usize {\n    self.segments.len() - self.pos\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 54,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.349934136
+}

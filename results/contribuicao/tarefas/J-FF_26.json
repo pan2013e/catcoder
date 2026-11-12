@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public static double sumDifference(final double[] sample1, final double[] sample2)\n    throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 31425,
+  "tokens_out": 856,
+  "brl": 0.01993503,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public static double sumDifference(final double[] sample1, final double[] sample2)\n    throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public static double sumDifference(final double[] sample1, final double[] sample2)\n        throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public static double sumDifference(final double[] sample1, final double[] sample2)\n        throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public static double sumDifference(final double[] sample1, final double[] sample2)\n        throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public static double sumDifference(final double[] sample1, final double[] sample2)\n        throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 26,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.377949489000001
+}

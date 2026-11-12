@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde ao padrão de nextBoolean: reconhece true e false, consome o token e atualiza o índice do caminho; para outros tokens, lança IllegalStateException.\"}",
+  "input_tokens": 2990,
+  "output_tokens": 53,
+  "usd": 0.0003255,
+  "brl": 0.0018130350000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "624e8d66fec20eb719c45bedb3e33f10de8bd8ec"
+  }
+}

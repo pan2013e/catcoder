@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `supports_payload` está correta e atende aos requisitos especificados.\"}",
+  "input_tokens": 857,
+  "output_tokens": 31,
+  "usd": 0.00014715,
+  "brl": 0.0008196255,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 50,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "ac07c0b1e143797a8c0a473533df4a1290ef95fc"
+  }
+}

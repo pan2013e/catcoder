@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação está truncada; continue a busca retroativa, verificando a assinatura e posicionando o canal no início dela.\"}",
+  "input_tokens": 3278,
+  "output_tokens": 42,
+  "usd": 0.0003488000000000001,
+  "brl": 0.0019428160000000004,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 148,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "a8ca43582eb2362ec90db4dadaadc38398d4bee1"
+  }
+}

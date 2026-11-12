@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"Todas as versões são idênticas e corretas. Implementação duplica capacidade e garante ao menos 'capacity', copiando conteúdo e retornando this.\"}",
+  "input_tokens": 3875,
+  "output_tokens": 54,
+  "usd": 0.00538375,
+  "brl": 0.0299874875,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-5",
+    "prompt": "7a7aad8d42a252d9fcb2b5a13924d0a092b3a109"
+  }
+}

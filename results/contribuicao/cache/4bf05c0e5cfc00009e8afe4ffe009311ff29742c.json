@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A versão 0 trata corretamente a concorrência: usa a estratégia já existente quando putIfAbsent encontra uma entrada concorrente e, caso contrário, retorna a nova estratégia.\"}",
+  "input_tokens": 2479,
+  "output_tokens": 51,
+  "usd": 0.00027340000000000003,
+  "brl": 0.0015228380000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 68,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "efd9ee464bbba084546fe9967b2a279491582472"
+  }
+}

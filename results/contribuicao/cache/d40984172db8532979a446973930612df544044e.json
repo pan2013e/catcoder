@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":4,\"feedback\":\"Usa long antes de Math.abs, evitando overflow para Integer.MIN_VALUE. A formatação dos milissegundos preserva os dígitos necessários.\"}",
+  "input_tokens": 3724,
+  "output_tokens": 48,
+  "usd": 0.0003964,
+  "brl": 0.002207948,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 121,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "1abcbf7d0dd0a1fbb1618d9b5021186b9ea2561c"
+  }
+}

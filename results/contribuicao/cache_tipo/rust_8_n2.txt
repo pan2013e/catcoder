@@ -1,0 +1,63 @@
+pub struct BitVec<B = u32> {
+storage: Vec<B, Global>,
+nbits: usize,
+}
+fn new() -> Self
+fn from_elem(nbits: usize, bit: bool) -> Self
+fn with_capacity(nbits: usize) -> Self
+fn from_bytes(bytes: &[u8]) -> Self
+fn from_fn<F>(len: usize, mut f: F) -> Self
+fn process<F>(&mut self, other: &BitVec<B>, mut op: F) -> bool
+fn blocks_mut(&mut self) -> MutBlocks<B>
+fn blocks(&self) -> Blocks<B>
+fn storage(&self) -> &[B]
+fn storage_mut(&mut self) -> &mut Vec<B>
+fn last_block_with_mask(&self) -> Option<(B, B)>
+fn last_block_mut_with_mask(&mut self) -> Option<(&mut B, B)>
+fn fix_last_block(&mut self)
+fn fix_last_block_with_ones(&mut self)
+fn is_last_block_fixed(&self) -> bool
+fn ensure_invariant(&self)
+fn get(&self, i: usize) -> Option<bool>
+fn set(&mut self, i: usize, x: bool)
+fn set_all(&mut self)
+fn negate(&mut self)
+fn union(&mut self, other: &Self) -> bool
+fn intersect(&mut self, other: &Self) -> bool
+fn or(&mut self, other: &Self) -> bool
+fn and(&mut self, other: &Self) -> bool
+fn difference(&mut self, other: &Self) -> bool
+fn xor(&mut self, other: &Self) -> bool
+fn nand(&mut self, other: &Self) -> bool
+fn nor(&mut self, other: &Self) -> bool
+fn xnor(&mut self, other: &Self) -> bool
+fn all(&self) -> bool
+fn iter(&self) -> Iter<B>
+fn append(&mut self, other: &mut Self)
+fn split_off(&mut self, at: usize) -> Self
+fn none(&self) -> bool
+fn any(&self) -> bool
+fn to_bytes(&self) -> Vec<u8>
+fn eq_vec(&self, v: &[bool]) -> bool
+fn truncate(&mut self, len: usize)
+fn reserve(&mut self, additional: usize)
+fn reserve_exact(&mut self, additional: usize)
+fn capacity(&self) -> usize
+fn grow(&mut self, n: usize, value: bool)
+fn pop(&mut self) -> Option<bool>
+fn push(&mut self, elem: bool)
+fn len(&self) -> usize
+fn set_len(&mut self, len: usize)
+fn is_empty(&self) -> bool
+fn clear(&mut self)
+fn shrink_to_fit(&mut self)
+pub enum Option<T> {
+None,
+Some(T),
+}
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}

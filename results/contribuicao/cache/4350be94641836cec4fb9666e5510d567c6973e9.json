@@ -1,0 +1,17 @@
+{
+  "texto": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}",
+  "input_tokens": 3862,
+  "output_tokens": 69,
+  "usd": 0.0004207,
+  "brl": 0.002343299,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 94,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "cc5f475aa56f0d3e93913c5d41ebdd63c04b1005"
+  }
+}

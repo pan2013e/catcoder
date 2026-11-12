@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn take<Q: ?Sized>(&mut self, value: &Q) -> Option<T>\nwhere\n    T: Borrow<Q>,\n    Q: Ord,\n{\n    if self.contains(value) {\n        self.tree.remove(value).map(|_| value.borrow().to_owned())\n    } else {\n        None\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 21995,
+  "tokens_out": 523,
+  "brl": 0.020124688499999998,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn take <Q: ?Sized> (&mut self, value: &Q) -> Option<T> where\nT: Borrow<Q>,\nQ: Ord, if self.contains(value) {\n        self.tree.remove(value).map(|_| value.borrow().to_owned())\n    } else {\n        None\n    }"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn take<Q: ?Sized>(&mut self, value: &Q) -> Option<T>\nwhere\n    T: Borrow<Q>,\n    Q: Ord,\n{\n    if self.contains(value) {\n        self.tree.remove(value).map(|_| value.borrow().to_owned())\n    } else {\n        None\n    }\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn take<Q: ?Sized>(&mut self, value: &Q) -> Option<T>\nwhere\n    T: Borrow<Q>,\n    Q: Ord,\n{\n    if self.contains(value) {\n        self.tree.remove(value).map(|v| v.1)\n    } else {\n        None\n    }\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn take<Q: ?Sized>(&mut self, value: &Q) -> Option<T>\nwhere\n    T: Borrow<Q>,\n    Q: Ord,\n{\n    if self.contains(value) {\n        self.tree.remove(value).map(|(_, v)| v)\n    } else {\n        None\n    }\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn take<Q: ?Sized>(&mut self, value: &Q) -> Option<T>\nwhere\n    T: Borrow<Q>,\n    Q: Ord,\n{\n    if self.contains(value) {\n        self.tree.remove(value).map(|(_, v)| v)\n    } else {\n        None\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 66,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.47666026949999996
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprivate static int estimateCostOneLevel(Node n) {\n  int cost = n.isNot() ? 1 : 0;\n  if (n.isAnd() || n.isOr()) {\n    cost += 2;\n  }\n  return cost;\n}\n[/CODE]",
+  "input_tokens": 3836,
+  "output_tokens": 61,
+  "usd": 0.0004141,
+  "brl": 0.002306537,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 17,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "7e3ed86fb7494e62830240be8a627a6bbce8efcd"
+  }
+}

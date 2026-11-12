@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação está correta e consistente com o restante do código: consome o peeked token, trata PEEKED_TRUE e PEEKED_FALSE, reseta peeked para PEEKED_NONE, incrementa pathIndices e lança exceção apropriada caso contrário. As versões 1 e 2 são idênticas à 0; qualquer uma serve.\"}",
+  "input_tokens": 3248,
+  "output_tokens": 95,
+  "usd": 0.0050100000000000006,
+  "brl": 0.027905700000000006,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "17ecb5515bfcbf43719b671347ed0f86f0b8dfe1"
+  }
+}

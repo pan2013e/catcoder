@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão original percorre as legendas e retorna a de índice solicitado; índices negativos retornam null naturalmente.\"}",
+  "input_tokens": 4535,
+  "output_tokens": 39,
+  "usd": 0.000473,
+  "brl": 0.0026346100000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 88,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "7cd7801540067e63b713be3c8f6ff1d42aad1300"
+  }
+}

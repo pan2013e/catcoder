@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão 0 não está correta, pois `values.clone()` não deve ser usado. O correto é usar `values.drain(..)` para mover os valores para o `IndexMap`.\"}",
+  "input_tokens": 2347,
+  "output_tokens": 53,
+  "usd": 0.00038385000000000003,
+  "brl": 0.0021380445,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 52,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "315ff9acc7fe0f077c12e53cae9ef19ae64ed833"
+  }
+}

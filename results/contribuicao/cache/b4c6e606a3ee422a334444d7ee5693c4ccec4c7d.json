@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação percorre as legendas entre os subtítulos e retorna a de índice solicitado, ou null se não existir.\"}",
+  "input_tokens": 4099,
+  "output_tokens": 41,
+  "usd": 0.00043040000000000005,
+  "brl": 0.0023973280000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 88,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "e0dfb9754a92d486ae5087a1286a29d3430103dd"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 está correta e funcional, com a formatação adequada e a lógica implementada corretamente.\"}",
+  "input_tokens": 2194,
+  "output_tokens": 35,
+  "usd": 0.00035010000000000005,
+  "brl": 0.0019500570000000005,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 66,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "7f9999222f86481d9fe6c971bc14928eec90396c"
+  }
+}

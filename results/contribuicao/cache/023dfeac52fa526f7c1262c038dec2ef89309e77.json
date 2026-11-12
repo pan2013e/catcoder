@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação está correta e atende ao contexto fornecido.\"}",
+  "input_tokens": 1993,
+  "output_tokens": 25,
+  "usd": 0.00031394999999999996,
+  "brl": 0.0017487014999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 15,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "598b0eb0cce7e78a5b88c0845d57a2903277b8bd"
+  }
+}

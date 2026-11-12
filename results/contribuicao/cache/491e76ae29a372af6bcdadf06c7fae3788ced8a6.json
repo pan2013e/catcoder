@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 implementa corretamente a estimativa: conta um caractere para NOT e dois para AND/OR, sem alterar o nó.\"}",
+  "input_tokens": 3972,
+  "output_tokens": 46,
+  "usd": 0.0004202,
+  "brl": 0.002340514,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 17,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "2e46ecfb9c17610c8ac5fd80821ea1164977fba8"
+  }
+}

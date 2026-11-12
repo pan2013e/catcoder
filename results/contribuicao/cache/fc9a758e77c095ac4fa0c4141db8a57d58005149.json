@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e corretas: percorrem o array, verificam Double.isNaN no valor e coletam os índices originais via getPosition(). Escolhida a versão 0.\"}",
+  "input_tokens": 2509,
+  "output_tokens": 65,
+  "usd": 0.00378625,
+  "brl": 0.0210894125,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 137,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "de67d97575f72215d55da4a7daa872c69199b3e7"
+  }
+}

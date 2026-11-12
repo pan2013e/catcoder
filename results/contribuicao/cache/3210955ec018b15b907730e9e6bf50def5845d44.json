@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Implementação correta: verifica peeked, chama doPeek() se necessário, trata PEEKED_TRUE e PEEKED_FALSE, reseta peeked, incrementa pathIndices e lança exceção apropriada caso contrário. Condiz com o padrão dos outros métodos no contexto.\"}",
+  "input_tokens": 2986,
+  "output_tokens": 78,
+  "usd": 0.0045125,
+  "brl": 0.025134625,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "4719dae544048ef381bce45088c7d7999139a99e"
+  }
+}

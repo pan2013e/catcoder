@@ -1,0 +1,40 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 3,
+  "acoes": [
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn find_free_sectors(&self) -> Vec<(u64, u64)> {\n    let mut free_sectors = Vec::new();\n    let mut last_end = self.header.first_usable_lba;\n\n    for (i, (_, partition)) in self.iter().enumerate() {\n        let start = partition.starting_lba;\n        if start > last_end {\n            let size = start - last_end;\n            let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n            let aligned_size = size / self.align * self.align;\n            if aligned_size > 0 {\n                free_sectors.push((aligned_start, aligned_size));\n            }\n        }\n        last_end = partition.ending_lba + 1;\n    }\n\n    if last_end < self.header.last_usable_lba {\n        let size = self.header.last_usable_lba + 1 - last_end;\n        let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n        let aligned_size = size / self.align * self.align;\n        if aligned_size > 0 {\n            free_sectors.push((aligned_start, aligned_size));\n        }\n    }\n\n    free_sectors\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 22504,
+  "tokens_out": 913,
+  "brl": 0.021853338,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn find_free_sectors(&self) -> Vec<(u64, u64)> {\n    let mut free_sectors = Vec::new();\n    let mut last_end = self.header.first_usable_lba;\n\n    for (i, (_, partition)) in self.iter().enumerate() {\n        let start = partition.starting_lba;\n        if start > last_end {\n            let size = start - last_end;\n            let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n            let aligned_size = size / self.align * self.align;\n            if aligned_size > 0 {\n                free_sectors.push((aligned_start, aligned_size));\n            }\n        }\n        last_end = partition.ending_lba + 1;\n    }\n\n    if last_end < self.header.last_usable_lba {\n        let size = self.header.last_usable_lba + 1 - last_end;\n        let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n        let aligned_size = size / self.align * self.align;\n        if aligned_size > 0 {\n            free_sectors.push((aligned_start, aligned_size));\n        }\n    }\n\n    free_sectors\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn find_free_sectors(&self) -> Vec<(u64, u64)> {\n    let mut free_sectors = Vec::new();\n    let mut last_end = self.header.first_usable_lba;\n\n    for (_, partition) in self.iter() {\n        let start = partition.starting_lba;\n        if start > last_end {\n            let size = start - last_end;\n            let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n            let aligned_size = size / self.align * self.align;\n            if aligned_size > 0 {\n                free_sectors.push((aligned_start, aligned_size));\n            }\n        }\n        last_end = partition.ending_lba + 1;\n    }\n\n    if last_end < self.header.last_usable_lba {\n        let size = self.header.last_usable_lba + 1 - last_end;\n        let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n        let aligned_size = size / self.align * self.align;\n        if aligned_size > 0 {\n            free_sectors.push((aligned_start, aligned_size));\n        }\n    }\n\n    free_sectors\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn find_free_sectors(&self) -> Vec<(u64, u64)> {\n    let mut free_sectors = Vec::new();\n    let mut last_end = self.header.first_usable_lba;\n\n    for (_, partition) in self.iter() {\n        let start = partition.starting_lba;\n        if start > last_end {\n            let size = start - last_end;\n            let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n            let aligned_size = size / self.align * self.align;\n            if aligned_size > 0 {\n                free_sectors.push((aligned_start, aligned_size));\n            }\n        }\n        last_end = partition.ending_lba + 1;\n    }\n\n    if last_end < self.header.last_usable_lba {\n        let size = self.header.last_usable_lba + 1 - last_end;\n        let aligned_start = (last_end + self.align - 1) / self.align * self.align;\n        let aligned_size = size / self.align * self.align;\n        if aligned_size > 0 {\n            free_sectors.push((aligned_start, aligned_size));\n        }\n    }\n\n    free_sectors\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 26,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.06454822349999999
+}

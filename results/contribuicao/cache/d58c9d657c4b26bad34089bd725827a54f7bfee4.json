@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"Implementação correta: valida dados suficientes e calcula cada covariância usando o parâmetro biasCorrected, preenchendo simetricamente a matriz. A variável nRows não utilizada na versão 1 é apenas um aviso, não um erro.\"}",
+  "input_tokens": 3657,
+  "output_tokens": 65,
+  "usd": 0.00039820000000000003,
+  "brl": 0.002217974,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 104,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "ae74029cc6f3f33dddd929e6bed574866b4adff5"
+  }
+}

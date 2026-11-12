@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As três versões são idênticas e implementam corretamente a coleta das posições originais dos valores NaN.\"}",
+  "input_tokens": 2592,
+  "output_tokens": 39,
+  "usd": 0.0002787,
+  "brl": 0.0015523590000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 137,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "c1ea70fde3a6c0e5fd55cd509e3c3f76a1245495"
+  }
+}

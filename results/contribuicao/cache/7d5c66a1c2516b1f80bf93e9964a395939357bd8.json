@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    let (m, n) = self.dim();\n    debug_assert!(s < m);\n    debug_assert!(s + rhs.dim().0 <= m);\n\n    let rhs_data = rhs.convert_to_vec();\n    let self_data = self.convert_to_vec();\n\n    for (i, value) in rhs_data.iter().enumerate() {\n        self_data[s + i] = *value;\n    }\n\n    *self = Vector::new_column(self_data);\n}\n[/CODE]",
+  "input_tokens": 1620,
+  "output_tokens": 100,
+  "usd": 0.000303,
+  "brl": 0.00168771,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 37,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "2d085737495d1b35378cf87300ec1036e01f4be5"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 3,
+  "acoes": [
+    "reverte",
+    "reverte",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn append(&mut self, other: &mut Self) {\n    for (key, value) in other.iter_mut() {\n        self.insert(value.clone());\n    }\n    other.v.clear();\n    other.n = 0;\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 10783,
+  "tokens_out": 327,
+  "brl": 0.0101020305,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn append(&mut self, other: &mut Self) {\n    for (key, value) in other.iter_mut() {\n        self.insert(value.clone());\n    }\n    other.clear();\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn append(&mut self, other: &mut Self) {\n    for (key, value) in other.iter_mut() {\n        self.insert(value.clone());\n    }\n    other.v.clear();\n    other.n = 0;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn append(&mut self, other: &mut Self) {\n    for (key, value) in other.iter_mut() {\n        self.insert(value.clone());\n    }\n    other.v.clear();\n    other.n = 0;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 81,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.40086788700000003
+}

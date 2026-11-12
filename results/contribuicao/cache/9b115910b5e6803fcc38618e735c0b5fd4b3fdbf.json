@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e corretas: utilizam SetOperationCardinalityHelper para iterar pelos elementos, definem a cardinalidade como o máximo entre as duas coleções e retornam a lista resultante. Não há diferença entre id=0 e id=1.\"}",
+  "input_tokens": 3299,
+  "output_tokens": 80,
+  "usd": 0.00492375,
+  "brl": 0.027425287500000003,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-FFORTE",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "305415e7d4aecb2d58d913db6071293f297cb12c"
+  }
+}

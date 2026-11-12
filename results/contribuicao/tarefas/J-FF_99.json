@@ -1,0 +1,40 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 3,
+  "acoes": [
+    "continua",
+    "reverte",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public int[] getCounts(int index) throws OutOfRangeException {\n    if (index < 0 || index >= totalSize) {\n        throw new OutOfRangeException(index, 0, totalSize - 1);\n    }\n\n    final int[] counts = new int[dimension];\n    for (int i = 0; i < last; i++) {\n        counts[i] = index / uniCounterOffset[i];\n        index -= counts[i] * uniCounterOffset[i];\n    }\n    counts[last] = index;\n    return counts;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 11166,
+  "tokens_out": 529,
+  "brl": 0.0077264255,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public int[] getCounts(int index) throws OutOfRangeException {\n    if (index < 0 || index >= totalSize) {\n        throw new OutOfRangeException(index, 0, totalSize - 1);\n    }\n\n    final int[] counts = new int[dimension];\n    for (int i = 0; i < dimension; i++) {\n        counts[i] = index / uniCounterOffset[i];\n        index -= counts[i] * uniCounterOffset[i];\n    }\n    counts[last] = index;\n    return counts;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public int[] getCounts(int index) throws OutOfRangeException {\n    if (index < 0 || index >= totalSize) {\n        throw new OutOfRangeException(index, 0, totalSize - 1);\n    }\n\n    final int[] counts = new int[dimension];\n    for (int i = 0; i < last; i++) {\n        counts[i] = index / uniCounterOffset[i];\n        index -= counts[i] * uniCounterOffset[i];\n    }\n    counts[last] = index;\n    return counts;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public int[] getCounts(int index) throws OutOfRangeException {\n    if (index < 0 || index >= totalSize) {\n        throw new OutOfRangeException(index, 0, totalSize - 1);\n    }\n\n    final int[] counts = new int[dimension];\n    for (int i = 0; i < last; i++) {\n        counts[i] = index / uniCounterOffset[i];\n        index -= counts[i] * uniCounterOffset[i];\n    }\n    counts[last] = index;\n    return counts;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 99,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.3856759145000013
+}

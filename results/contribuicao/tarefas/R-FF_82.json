@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn split_off(&mut self, at: usize) -> Self {\n    let mut new_map = VecMap::new();\n    \n    // Ensure the `at` index is within bounds\n    if at < self.n {\n        // Move elements from the original map to the new map\n        for i in at..self.n {\n            if let Some(value) = self.v[i].take() {\n                new_map.insert(value);\n            }\n        }\n        // Update the original map's size\n        self.n = at;\n    }\n    \n    new_map\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 8678,
+  "tokens_out": 333,
+  "brl": 0.008363355000000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn split_off(&mut self, at: usize) -> Self {\n    let mut new_map = VecMap::new();\n    \n    // Ensure the `at` index is within bounds\n    if at < self.n {\n        // Move elements from the original map to the new map\n        for i in at..self.n {\n            if let Some(value) = self.v[i].take() {\n                new_map.insert(value);\n            }\n        }\n        // Update the original map's size\n        self.n = at;\n    }\n    \n    new_map\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn split_off(&mut self, at: usize) -> Self {\n    let mut new_map = VecMap::new();\n    \n    // Ensure the `at` index is within bounds\n    if at < self.n {\n        // Move elements from the original map to the new map\n        for i in at..self.n {\n            if let Some(value) = self.v[i].take() {\n                new_map.insert(value);\n            }\n        }\n        // Update the original map's size\n        self.n = at;\n    }\n    \n    new_map\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 82,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.3622084665
+}

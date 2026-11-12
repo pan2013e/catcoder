@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0 && newPos >= text.length()) {\n        long millis = bucket.computeMillis(true, text);\n        DateTimeZone zone = bucket.getZone();\n        if (zone != null) {\n            millis = zone.convertLocalToUTC(millis, false);\n        }\n        return millis;\n    }\n    if (newPos < 0) {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 29097,
+  "tokens_out": 1172,
+  "brl": 0.0195197865,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0) {\n        if (newPos >= text.length()) {\n            long millis = bucket.computeMillis(true, text);\n            DateTimeZone zone = bucket.getZone();\n            if (zone != null) {\n                millis = zone.convertLocalToUTC(millis, false);\n            }\n            return millis;\n        }\n    } else {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0 && newPos >= text.length()) {\n        long millis = bucket.computeMillis(true, text);\n        DateTimeZone zone = bucket.getZone();\n        if (zone != null) {\n            millis = zone.convertLocalToUTC(millis, false);\n        }\n        return millis;\n    }\n    if (newPos < 0) {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0 && newPos >= text.length()) {\n        long millis = bucket.computeMillis(true, text);\n        DateTimeZone zone = bucket.getZone();\n        if (zone != null) {\n            millis = zone.convertLocalToUTC(millis, false);\n        }\n        return millis;\n    }\n    if (newPos < 0) {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0 && newPos >= text.length()) {\n        return bucket.computeMillis(true, text);\n    }\n    if (newPos < 0) {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public long parseMillis(String text) {\n    DateTimeParser parser = requireParser();\n    Chronology chrono = selectChronology(ISOChronology.getInstanceUTC());\n    DateTimeParserBucket bucket = new DateTimeParserBucket(\n        0, chrono, iLocale, iPivotYear, iDefaultYear);\n    int newPos = parser.parseInto(bucket, text, 0);\n    if (newPos >= 0 && newPos == text.length()) {\n        return bucket.computeMillis(true, text);\n    }\n    if (newPos < 0) {\n        newPos = ~newPos;\n    }\n    throw new IllegalArgumentException(\"Invalid format: \\\"\" + text + \"\\\" is malformed at \\\"\" +\n        text.substring(Math.min(newPos, text.length())) + \"\\\"\");\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 170,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.4051957010000011
+}

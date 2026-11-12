@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 trata índices negativos explicitamente, retornando null; a versão 0 também acaba retornando null, mas só após percorrer as legendas.\"}",
+  "input_tokens": 4208,
+  "output_tokens": 50,
+  "usd": 0.00044580000000000005,
+  "brl": 0.0024831060000000005,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 88,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "4611330049d447f4a212dcb05357d7610362d2f6"
+  }
+}

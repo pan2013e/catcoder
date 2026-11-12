@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `split_off` está correta e atende aos requisitos descritos na documentação. Ela cria um novo `VecMap`, move os elementos a partir do índice `at` para o novo mapa e atualiza o tamanho do mapa original.\"}",
+  "input_tokens": 2116,
+  "output_tokens": 64,
+  "usd": 0.0003558,
+  "brl": 0.001981806,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 82,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "71cb67b2c057cd307f1b3f5a890d469aee753928"
+  }
+}

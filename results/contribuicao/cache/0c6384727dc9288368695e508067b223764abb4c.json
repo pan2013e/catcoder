@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A versão 0 possui um erro na lógica do cálculo do produto escalar, pois está utilizando as dimensões de forma incorreta ao iterar sobre os índices.\"}",
+  "input_tokens": 1867,
+  "output_tokens": 47,
+  "usd": 0.00030825,
+  "brl": 0.0017169525,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 34,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "ba135620308667178ff8fd471a822132e30af37f"
+  }
+}

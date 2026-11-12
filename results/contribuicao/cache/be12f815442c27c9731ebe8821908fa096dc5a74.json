@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn pop(&mut self) -> Option<bool> {\n    if self.len() == 0 {\n        return None;\n    }\n    \n    let last_index = self.len() - 1;\n    let last_block_index = last_index / B::bits();\n    let bit_index = last_index % B::bits();\n    \n    let last_block = &mut self.storage[last_block_index];\n    let bit = (*last_block >> bit_index) & B::one() != B::zero();\n    \n    // Clear the bit\n    *last_block &= !(B::one() << bit_index);\n    \n    // If this was the last bit in the last block, we might need to fix the last block\n    if last_index == self.len() - 1 {\n        self.fix_last_block_with_ones();\n    }\n    \n    Some(bit)\n}\n[/CODE]",
+  "input_tokens": 1206,
+  "output_tokens": 179,
+  "usd": 0.0002883,
+  "brl": 0.001605831,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 8,
+    "rodada": "R-JF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "a5b93f8832317bcf3ac84bda7a1e023e2112ffdf"
+  }
+}

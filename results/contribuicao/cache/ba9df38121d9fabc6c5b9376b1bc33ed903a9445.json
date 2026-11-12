@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn dotp(&self, rhs: &Self) -> T {\n    let (self_m, self_n) = self.dim();\n    let (rhs_m, rhs_n) = rhs.dim();\n    \n    assert_eq!(self_n, rhs_m, \"Incompatible dimensions for dot product\");\n\n    let mut result = T::zero();\n    for i in 0..self_m {\n        for j in 0..rhs_n {\n            result = result + self[i] * rhs[j];\n        }\n    }\n    result\n}\n[/CODE]",
+  "input_tokens": 1331,
+  "output_tokens": 115,
+  "usd": 0.00026864999999999994,
+  "brl": 0.0014963804999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 34,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "2ee14a963a8265393de49e44c2fc5386538ee584"
+  }
+}

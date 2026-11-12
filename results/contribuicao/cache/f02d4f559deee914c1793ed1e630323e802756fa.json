@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"parar\",\"versao\":0,\"feedback\":\"As três versões são idênticas e implementam corretamente a validação do índice, incluindo rejeição de overflow.\"}",
+  "input_tokens": 2172,
+  "output_tokens": 40,
+  "usd": 0.0002372,
+  "brl": 0.001321204,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 109,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "0c985f2ed2c3a0ad8d79c20461707b5a17408428"
+  }
+}

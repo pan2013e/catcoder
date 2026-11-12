@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "public PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    if (converter == null) {\n        return null;\n    }\n    checkAlterPartialConverters();\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 13586,
+  "tokens_out": 762,
+  "brl": 0.07565368950000001,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    if (converter == null) {\n        return null;\n    }\n    checkAlterPartialConverters();\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    if (converter == null) {\n        return null;\n    }\n    checkAlterPartialConverters();\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    if (converter == null) {\n        return null;\n    }\n    checkAlterPartialConverters();\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    if (converter == null) {\n        return null;\n    }\n    checkAlterPartialConverters();\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    if (converter == null) {\n        return null;\n    }\n    checkAlterPartialConverters();\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 173,
+  "lingua": "java",
+  "rodada": "J-JF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 1.9187374470000018
+}

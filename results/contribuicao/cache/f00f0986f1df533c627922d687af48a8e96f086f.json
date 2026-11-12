@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 é a mais adequada, pois utiliza corretamente o fatiamento do caminho a partir do índice `start`, garantindo que a parte restante do caminho seja extraída corretamente.\"}",
+  "input_tokens": 2421,
+  "output_tokens": 51,
+  "usd": 0.00039374999999999995,
+  "brl": 0.0021931875,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 75,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-4o-mini",
+    "prompt": "2509335d7efab3e1f57f983488f6d3a6b8c599ed"
+  }
+}

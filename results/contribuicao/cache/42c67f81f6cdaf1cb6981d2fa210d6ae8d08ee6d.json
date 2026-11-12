@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"As duas versões são idênticas e implementam corretamente o método.\"}",
+  "input_tokens": 1372,
+  "output_tokens": 31,
+  "usd": 0.0001527,
+  "brl": 0.000850539,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "d73a12b4ccf70b4006b5fe64827acdeb18384d26"
+  }
+}

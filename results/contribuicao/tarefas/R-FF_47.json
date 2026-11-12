@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn from_cow_str(cow: Cow<'_, str>) -> Cow<'_, RawStr> {\n    match cow {\n        Cow::Borrowed(s) => Cow::Borrowed(RawStr::new(s)),\n        Cow::Owned(s) => Cow::Owned(RawStr::new(&s)),\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "brl": 0.0,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn from_cow_str(cow: Cow<'_, str>) -> Cow<'_, RawStr> {\n    match cow {\n        Cow::Borrowed(s) => Cow::Borrowed(RawStr::new(s)),\n        Cow::Owned(s) => Cow::Owned(RawStr::new(&s)),\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn from_cow_str(cow: Cow<'_, str>) -> Cow<'_, RawStr> {\n    match cow {\n        Cow::Borrowed(s) => Cow::Borrowed(RawStr::new(s)),\n        Cow::Owned(s) => Cow::Owned(RawStr::new(&s)),\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 47,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 1.106317299000001
+}

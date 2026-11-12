@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn take<Q: ?Sized>(&mut self, value: &Q) -> Option<T>\nwhere\n    T: Borrow<Q>,\n    Q: Ord,\n{\n    if self.contains(value) {\n        self.tree.remove(value).map(|(_, v)| v)\n    } else {\n        None\n    }\n}\n[/CODE]",
+  "input_tokens": 2106,
+  "output_tokens": 70,
+  "usd": 0.00035789999999999997,
+  "brl": 0.0019935029999999998,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 66,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 5,
+    "modelo": "gpt-4o-mini",
+    "prompt": "f019fd45dfea13a7a441b4ccad25e2606c9b0e9f"
+  }
+}

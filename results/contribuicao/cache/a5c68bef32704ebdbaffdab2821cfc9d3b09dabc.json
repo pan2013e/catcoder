@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static <O> Collection<O> union(final Iterable<? extends O> a, final Iterable<? extends O> b) {\n    final SetOperationCardinalityHelper<O> helper = new SetOperationCardinalityHelper<O>(a, b);\n    for (final O obj : helper) {\n        helper.setCardinality(obj, helper.max(obj));\n    }\n    return helper.list();\n}\n[/CODE]",
+  "input_tokens": 3097,
+  "output_tokens": 93,
+  "usd": 0.00480125,
+  "brl": 0.026742962500000002,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-FFORTE",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-5",
+    "prompt": "8c8cb7b467d19aa1e90d3283b7cab35e076b422a"
+  }
+}

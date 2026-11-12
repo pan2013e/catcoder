@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn parent(&self) -> Option<&Path> {\n    if self.is_absolute() && self.as_u8_slice().len() == 1 {\n        None\n    } else {\n        let mut components = self.components().collect::<Vec<_>>();\n        components.pop(); // Remove the last component\n        if components.is_empty() {\n            Some(Path::new(\"/\")) // Return root if no components left\n        } else {\n            Some(Path::new(components.join(\"/\").as_str()))\n        }\n    }\n}\n[/CODE]",
+  "input_tokens": 2036,
+  "output_tokens": 111,
+  "usd": 0.000372,
+  "brl": 0.0020720400000000003,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 77,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "e3648a995ca434ac065b7ec7488b778ffb3f0a55"
+  }
+}

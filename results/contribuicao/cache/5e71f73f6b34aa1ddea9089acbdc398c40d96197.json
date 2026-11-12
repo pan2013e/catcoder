@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static Boolean or(final Boolean... array) {\n    if (array == null) {\n        throw new IllegalArgumentException(\"The array must not be null\");\n    }\n    if (array.length == 0) {\n        throw new IllegalArgumentException(\"The array must not be empty\");\n    }\n    boolean result = false;\n    for (final Boolean value : array) {\n        if (value == null) {\n            throw new IllegalArgumentException(\"The array must not contain null values\");\n        }\n        result |= value.booleanValue();\n    }\n    return Boolean.valueOf(result);\n}\n[/CODE]",
+  "input_tokens": 1544,
+  "output_tokens": 127,
+  "usd": 0.0002179,
+  "brl": 0.0012137030000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 32,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "fc8ce8caa6dc96c780464daf59f94dff5d780f50"
+  }
+}

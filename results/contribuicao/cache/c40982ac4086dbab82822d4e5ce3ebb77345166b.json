@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn from_cow_str(cow: Cow<'_, str>) -> Cow<'_, RawStr> {\n    match cow {\n        Cow::Borrowed(s) => Cow::Borrowed(RawStr::new(s)),\n        Cow::Owned(s) => Cow::Owned(RawStr::new(&s)),\n    }\n}\n[/CODE]",
+  "input_tokens": 2255,
+  "output_tokens": 72,
+  "usd": 0.00038145000000000003,
+  "brl": 0.0021246765000000004,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 47,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "292685565c4a47b363bf24a98026cb826ab25528"
+  }
+}

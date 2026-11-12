@@ -1,0 +1,17 @@
+{
+  "texto": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}",
+  "input_tokens": 3500,
+  "output_tokens": 88,
+  "usd": 0.00039400000000000004,
+  "brl": 0.0021945800000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 116,
+    "rodada": "J-JF",
+    "papel": "geradora",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "9bb4f52d8729f0c4d88f8493a0ced36613331a10"
+  }
+}

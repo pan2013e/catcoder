@@ -1,0 +1,35 @@
+{
+  "n_pedido": 3,
+  "n_usado": 3,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn sample_exact (degree: impl Into<PolynomialDegree>) -> Self {\n    let degree = degree.into();\n    match degree {\n        PolynomialDegree::Infinity => Polynomial {\n            coefficients: vec![Scalar::zero()],\n        },\n        PolynomialDegree::Finite(deg) => {\n            let mut coefficients = vec![Scalar::random(); (deg + 1) as usize];\n            coefficients[0] = Scalar::random(); // Ensure the constant term is non-zero\n            Polynomial { coefficients }\n        }\n    }\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 8160,
+  "tokens_out": 307,
+  "brl": 0.007843674,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn sample_exact (degree: impl Into<PolynomialDegree>) -> Self {\n    let degree = degree.into();\n    match degree {\n        PolynomialDegree::Infinity => Polynomial {\n            coefficients: vec![Scalar::zero()],\n        },\n        PolynomialDegree::Finite(deg) => {\n            let mut coefficients = vec![Scalar::random(); (deg + 1) as usize];\n            coefficients[0] = Scalar::random(); // Ensure the constant term is non-zero\n            Polynomial { coefficients }\n        }\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn sample_exact(degree: impl Into<PolynomialDegree>) -> Self {\n    let degree = degree.into();\n    match degree {\n        PolynomialDegree::Infinity => Polynomial {\n            coefficients: vec![Scalar::zero()],\n        },\n        PolynomialDegree::Finite(deg) => {\n            let mut coefficients = vec![Scalar::random(); (deg + 1) as usize];\n            coefficients[0] = Scalar::random(); // Ensure the constant term is non-zero\n            Polynomial { coefficients }\n        }\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 10,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.325064643
+}

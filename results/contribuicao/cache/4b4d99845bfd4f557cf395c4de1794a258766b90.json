@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A implementação produz os oito bytes em ordem big-endian, extraindo cada byte do menos significativo para o mais significativo.\"}",
+  "input_tokens": 2048,
+  "output_tokens": 41,
+  "usd": 0.0002253,
+  "brl": 0.001254921,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 22,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "e8c053e65284059692ed5addeba208f00bd213c6"
+  }
+}

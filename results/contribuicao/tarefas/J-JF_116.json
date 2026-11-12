@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 35917,
+  "tokens_out": 766,
+  "brl": 0.1574775465,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "public StrBuilder ensureCapacity(final int capacity) {\n    if (capacity > buffer.length) {\n        final char[] old = buffer;\n        int newCapacity = old.length * 2;\n        if (newCapacity < capacity) {\n            newCapacity = capacity;\n        }\n        buffer = new char[newCapacity];\n        System.arraycopy(old, 0, buffer, 0, size);\n    }\n    return this;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 116,
+  "lingua": "java",
+  "rodada": "J-JF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 2.256001504000001
+}

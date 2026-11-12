@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"Ambas as versões são idênticas e corretas: usam SetOperationCardinalityHelper para ajustar a cardinalidade ao máximo entre as duas coleções e retornam a lista resultante. Escolho a versão 0 por convenção.\"}",
+  "input_tokens": 3299,
+  "output_tokens": 71,
+  "usd": 0.0048337499999999995,
+  "brl": 0.0269239875,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 59,
+    "rodada": "J-JF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-5",
+    "prompt": "305415e7d4aecb2d58d913db6071293f297cb12c"
+  }
+}

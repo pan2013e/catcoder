@@ -1,0 +1,50 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "private Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        final Strategy newStrategy = new TextStrategy(field, definingCalendar, locale);\n        strategy = cache.putIfAbsent(locale, newStrategy);\n        if (strategy == null) {\n            strategy = newStrategy;\n        }\n    }\n    return strategy;\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 24687,
+  "tokens_out": 712,
+  "brl": 0.0157622645,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        strategy = new TextStrategy(field, definingCalendar, locale);\n        final Strategy existing = cache.putIfAbsent(locale, strategy);\n        if (existing != null) {\n            strategy = existing;\n        }\n    }\n    return strategy;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        final Strategy newStrategy = new TextStrategy(field, definingCalendar, locale);\n        strategy = cache.putIfAbsent(locale, newStrategy);\n        if (strategy == null) {\n            strategy = newStrategy;\n        }\n    }\n    return strategy;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        final Strategy newStrategy = new TextStrategy(field, definingCalendar, locale);\n        strategy = cache.putIfAbsent(locale, newStrategy);\n        if (strategy == null) {\n            strategy = newStrategy;\n        }\n    }\n    return strategy;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "private Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        final Strategy newStrategy = new TextStrategy(field, definingCalendar, locale);\n        strategy = cache.putIfAbsent(locale, newStrategy);\n        if (strategy == null) {\n            strategy = newStrategy;\n        }\n    }\n    return strategy;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "private Strategy getLocaleSpecificStrategy(final int field, final Calendar definingCalendar) {\n    final ConcurrentMap<Locale, Strategy> cache = getCache(field);\n    Strategy strategy = cache.get(locale);\n    if (strategy == null) {\n        final Strategy newStrategy = new TextStrategy(field, definingCalendar, locale);\n        strategy = cache.putIfAbsent(locale, newStrategy);\n        if (strategy == null) {\n            strategy = newStrategy;\n        }\n    }\n    return strategy;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 68,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.3318769555000007
+}

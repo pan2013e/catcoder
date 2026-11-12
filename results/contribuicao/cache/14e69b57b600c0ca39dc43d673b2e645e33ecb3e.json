@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn html_escape(&self) -> Cow<'_, str> {\n    let mut escaped = String::new();\n    for c in self.as_str().chars() {\n        match c {\n            '&' => escaped.push_str(\"&amp;\"),\n            '<' => escaped.push_str(\"&lt;\"),\n            '>' => escaped.push_str(\"&gt;\"),\n            '\"' => escaped.push_str(\"&quot;\"),\n            '\\'' => escaped.push_str(\"&apos;\"),\n            '/' => escaped.push_str(\"&sol;\"),\n            '`' => escaped.push_str(\"&grave;\"),\n            _ => escaped.push(c),\n        }\n    }\n    Cow::Owned(escaped)\n}\n[/CODE]",
+  "input_tokens": 3198,
+  "output_tokens": 137,
+  "usd": 0.0005618999999999999,
+  "brl": 0.0031297829999999997,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 48,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "980237dd19a41f9bf92157eb9ba14b87830a2c38"
+  }
+}

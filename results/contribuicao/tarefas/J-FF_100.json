@@ -1,0 +1,45 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 4,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public JsonPointer last() {\n    JsonPointer current = this;\n    while (current._nextSegment != null) {\n        current = current._nextSegment;\n    }\n    return current;\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 15596,
+  "tokens_out": 334,
+  "brl": 0.0096397205,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public JsonPointer last() {\n    JsonPointer current = this;\n    while (current._nextSegment != null) {\n        current = current._nextSegment;\n    }\n    return current;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public JsonPointer last() {\n    JsonPointer current = this;\n    while (current._nextSegment != null) {\n        current = current._nextSegment;\n    }\n    return current;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "public JsonPointer last() {\n    JsonPointer current = this;\n    while (current._nextSegment != null) {\n        current = current._nextSegment;\n    }\n    return current;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "public JsonPointer last() {\n    JsonPointer current = this;\n    while (current._nextSegment != null) {\n        current = current._nextSegment;\n    }\n    return current;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 100,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.308575974500001
+}

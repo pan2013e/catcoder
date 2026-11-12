@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação produz os oito bytes em big-endian por meio da extração dos bytes menos significativos e da inversão da ordem. Funciona também para valores negativos, usando o deslocamento aritmético de BigInteger.\"}",
+  "input_tokens": 1811,
+  "output_tokens": 62,
+  "usd": 0.0002121,
+  "brl": 0.001181397,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 22,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "bbe86670dd58cec54ae51d8c2f1a4c66b3137430"
+  }
+}

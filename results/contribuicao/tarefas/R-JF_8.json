@@ -1,0 +1,30 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 1,
+  "acoes": [
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn pop(&mut self) -> Option<bool> {\n    if self.len() == 0 {\n        return None;\n    }\n    \n    let last_index = self.len() - 1;\n    let last_block_index = last_index / B::bits();\n    let bit_index = last_index % B::bits();\n    \n    let last_block = &mut self.storage[last_block_index];\n    let bit = (*last_block >> bit_index) & B::one() != B::zero();\n    \n    // Clear the bit\n    *last_block &= !(B::one() << bit_index);\n    \n    // If this was the last bit in the last block, we might need to fix the last block\n    if last_index == self.len() - 1 {\n        self.fix_last_block_with_ones();\n    }\n    \n    Some(bit)\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 2626,
+  "tokens_out": 435,
+  "brl": 0.025751781,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn pop(&mut self) -> Option<bool> {\n    if self.len() == 0 {\n        return None;\n    }\n    \n    let last_index = self.len() - 1;\n    let last_block_index = last_index / B::bits();\n    let bit_index = last_index % B::bits();\n    \n    let last_block = &mut self.storage[last_block_index];\n    let bit = (*last_block >> bit_index) & B::one() != B::zero();\n    \n    // Clear the bit\n    *last_block &= !(B::one() << bit_index);\n    \n    // If this was the last bit in the last block, we might need to fix the last block\n    if last_index == self.len() - 1 {\n        self.fix_last_block_with_ones();\n    }\n    \n    Some(bit)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 8,
+  "lingua": "rust",
+  "rodada": "R-JF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 0.5077107915000001
+}

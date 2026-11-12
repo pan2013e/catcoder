@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação trata arrays nulos e dimensões diferentes e compara cada forma com ShapeUtilities.equal.\"}",
+  "input_tokens": 2118,
+  "output_tokens": 36,
+  "usd": 0.00022980000000000003,
+  "brl": 0.0012799860000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 157,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "9be2acf0b5c699cfb2f9e0842a2bfe9599574e6c"
+  }
+}

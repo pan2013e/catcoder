@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação percorre os segmentos até o último não nulo e retorna esse segmento; para o ponteiro vazio, retorna EMPTY. As três versões são idênticas.\"}",
+  "input_tokens": 2007,
+  "output_tokens": 51,
+  "usd": 0.00022620000000000002,
+  "brl": 0.001259934,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 100,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "1ef0b0c0a833a7edada5ab9f84d1f292b4d1d67b"
+  }
+}

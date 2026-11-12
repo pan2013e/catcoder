@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "continua"
+  ],
+  "acao_final": "continua",
+  "codigo": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}",
+  "compilou": true,
+  "passou": false,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "brl": 0.0,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "private boolean argsMayHaveSideEffects(Node call) {\n  for (Node arg = call.getFirstChild().getNext();\n       arg != null;\n       arg = arg.getNext()) {\n    if (NodeUtil.mayHaveSideEffects(arg, compiler)) {\n      return true;\n    }\n  }\n  return false;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 94,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.298936254000001
+}

@@ -1,0 +1,17 @@
+{
+  "texto": "```rust\npub fn pop_back(&mut self) -> Option<T> {\n    self.remove_entry(self.tail?).map(|entry| entry.value)\n}\n```",
+  "input_tokens": 1198,
+  "output_tokens": 32,
+  "usd": 0.0001989,
+  "brl": 0.001107873,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 23,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "8841d1737c6925615e7924c6d977d6f0c8bde04b"
+  }
+}

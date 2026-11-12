@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação corresponde à documentação: usa a chave do dataset quando o índice é válido e gera uma chave Integer como fallback.\"}",
+  "input_tokens": 4919,
+  "output_tokens": 41,
+  "usd": 0.0005124,
+  "brl": 0.002854068,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 152,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "b014f2ec4a0768c20d2b1412504f703f639c8f0e"
+  }
+}

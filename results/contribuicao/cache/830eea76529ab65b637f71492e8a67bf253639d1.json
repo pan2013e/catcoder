@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 (equivalente às versões 2 e 3) é a melhor: ignora caracteres antes do primeiro abridor, acompanha aninhamento, aspas e escapes, e retorna o conteúdo sem os delimitadores. A versão 0 pode iniciar a captura incorretamente antes de encontrar o abridor.\"}",
+  "input_tokens": 2717,
+  "output_tokens": 83,
+  "usd": 0.00031319999999999997,
+  "brl": 0.001744524,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 119,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "5cab46488ae662f68f736ddc3b5aa440c944d711"
+  }
+}

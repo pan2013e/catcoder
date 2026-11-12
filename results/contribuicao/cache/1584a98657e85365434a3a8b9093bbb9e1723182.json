@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":0,\"feedback\":\"A implementação não inclui corretamente os caracteres escapados e entre aspas no resultado, e retorna uma substring incorreta quando não encontra um par balanceado. Reavalie a lógica de início e extração do conteúdo.\"}",
+  "input_tokens": 2030,
+  "output_tokens": 60,
+  "usd": 0.00023300000000000003,
+  "brl": 0.0012978100000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 119,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "bb26e690b5aead71b57e5ec387651cf2d031caae"
+  }
+}

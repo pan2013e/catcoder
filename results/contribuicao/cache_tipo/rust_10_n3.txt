@@ -1,0 +1,24 @@
+pub struct Polynomial<E>
+where
+E: Curve, {
+coefficients: Vec<Scalar<E>, Global>,
+}
+fn from_coefficients(coefficients: Vec<Scalar<E>>) -> Self
+fn sample_exact(degree: impl Into<PolynomialDegree>) -> Self
+fn sample_exact_with_fixed_const_term(n: u16, const_term: Scalar<E>) -> Self
+fn degree(&self) -> PolynomialDegree
+fn evaluate(&self, point_x: &Scalar<E>) -> Scalar<E>
+fn evaluate_bigint<B>(&self, point_x: B) -> Scalar<E>
+fn evaluate_many<'i, I>(&'i self, points_x: I) -> impl Iterator<Item = Scalar<E>> + 'i
+fn evaluate_many_bigint<'i, B, I>( &'i self, points_x: I, ) -> impl Iterator<Item = Scalar<E>> + 'i
+fn coefficients(&self) -> &[Scalar<E>]
+fn lagrange_basis(x: &Scalar<E>, j: u16, xs: &[Scalar<E>]) -> Scalar<E>
+pub trait Into<T>
+where
+Self: Sized,
+pub struct Vec<T, A = Global>
+where
+A: Allocator, {
+buf: RawVec<T, A>,
+len: usize,
+}

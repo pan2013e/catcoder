@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação da função `differentiate` está correta e funcional, utilizando a regra de diferenciação dos polinômios.\"}",
+  "input_tokens": 2167,
+  "output_tokens": 39,
+  "usd": 0.00034845000000000004,
+  "brl": 0.0019408665000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 41,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "2d7242341d829712e90924a176f0bcf20db35c8c"
+  }
+}

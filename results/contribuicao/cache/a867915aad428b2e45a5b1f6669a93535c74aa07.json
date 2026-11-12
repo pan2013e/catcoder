@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic LegendTitle getLegend(int index) {\n    if (index < 0) {\n        return null;\n    }\n    int legendIndex = 0;\n    for (int i = 0; i < this.subtitles.size(); i++) {\n        Title subtitle = (Title) this.subtitles.get(i);\n        if (subtitle instanceof LegendTitle) {\n            if (legendIndex == index) {\n                return (LegendTitle) subtitle;\n            }\n            legendIndex++;\n        }\n    }\n    return null;\n}\n[/CODE]",
+  "input_tokens": 4128,
+  "output_tokens": 114,
+  "usd": 0.00046980000000000004,
+  "brl": 0.0026167860000000003,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 88,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "017152a509b35979bd244adb5c9c000ce8a618c2"
+  }
+}

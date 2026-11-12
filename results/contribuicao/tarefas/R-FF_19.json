@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn get_next_index (&self, index: Index<T>) -> Option<Index<T>> {\n    match self.entries.get(index.index())? {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let next_index = entry.next?;\n            let next_entry = self.entries[next_index.get()].occupied_ref();\n            Some(Index::new(next_index, next_entry.generation))\n        },\n        _ => None,\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 7246,
+  "tokens_out": 252,
+  "brl": 0.0068962170000000005,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn get_next_index (&self, index: Index<T>) -> Option<Index<T>> {\n    match self.entries.get(index.index())? {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let next_index = entry.next?;\n            let next_entry = self.entries[next_index.get()].occupied_ref();\n            Some(Index::new(next_index, next_entry.generation))\n        },\n        _ => None,\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn get_next_index(&self, index: Index<T>) -> Option<Index<T>> {\n    match self.entries.get(index.index())? {\n        Entry::Occupied(entry) if entry.generation == index.generation => {\n            let next_index = entry.next?;\n            let next_entry = self.entries[next_index.get()].occupied_ref();\n            Some(Index::new(next_index, next_entry.generation))\n        },\n        _ => None,\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 19,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.0368079525
+}

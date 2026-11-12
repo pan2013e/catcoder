@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 implementa o parse completo e converte para UTC quando o texto contém um fuso, conforme o comportamento esperado.\"}",
+  "input_tokens": 3464,
+  "output_tokens": 44,
+  "usd": 0.0003684,
+  "brl": 0.0020519880000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 170,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 5,
+    "modelo": "gpt-6-luna",
+    "prompt": "417e000a950dd2b1aff2af0254a5608a1ae7c937"
+  }
+}

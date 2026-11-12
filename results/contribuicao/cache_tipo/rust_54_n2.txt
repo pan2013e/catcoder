@@ -1,0 +1,43 @@
+pub struct Segments<'a, P>
+where
+P: Part, {
+pub(super) source: &RawStr,
+pub(super) segments: &[<P as Part>::Raw],
+pub(super) pos: usize,
+}
+fn new<'a>(source: &'a RawStr, segments: &'a [P::Raw]) -> Segments<'a, P>
+fn len(&self) -> usize
+fn is_empty(&self) -> bool
+fn skip(mut self, n: usize) -> Self
+fn get(&self, n: usize) -> Option<&'a str>
+fn prefix_of(self, other: Segments<'_, Path>) -> bool
+fn to_path_buf(&self, allow_dotfiles: bool) -> Result<PathBuf, PathError>
+fn get(&self, n: usize) -> Option<(&'a str, &'a str)>
+pub struct RawStr(str);
+fn new<S: AsRef<str> + ?Sized>(string: &S) -> &RawStr
+fn from_cow_str(cow: Cow<'_, str>) -> Cow<'_, RawStr>
+fn into_cow_str(cow: Cow<'_, RawStr>) -> Cow<'_, str>
+fn _percent_decode(&self) -> percent_encoding::PercentDecode<'_>
+fn percent_decode(&self) -> Result<Cow<'_, str>, Utf8Error>
+fn percent_decode_lossy(&self) -> Cow<'_, str>
+fn _replace_plus(&self) -> Cow<'_, str>
+fn percent_encode(&self) -> Cow<'_, RawStr>
+fn percent_encode_bytes(bytes: &[u8]) -> Cow<'_, RawStr>
+fn url_decode(&self) -> Result<Cow<'_, str>, Utf8Error>
+fn url_decode_lossy(&self) -> Cow<'_, str>
+fn html_escape(&self) -> Cow<'_, str>
+fn len(&self) -> usize
+fn is_empty(&self) -> bool
+fn as_str(&self) -> &str
+fn as_bytes(&self) -> &[u8]
+fn as_ptr(&self) -> *const u8
+fn as_uncased_str(&self) -> &UncasedStr
+fn contains<'a, P: Pattern<'a>>(&'a self, pat: P) -> bool
+fn starts_with<'a, P: Pattern<'a>>(&'a self, pat: P) -> bool
+fn ends_with<'a, P>(&'a self, pat: P) -> bool
+fn find<'a, P: Pattern<'a>>(&'a self, pat: P) -> Option<usize>
+fn split<'a, P>(&'a self, pat: P) -> impl Iterator<Item = &'a RawStr>
+fn split_at_byte(&self, b: u8) -> (&RawStr, &RawStr)
+fn strip_prefix<'a, P: Pattern<'a>>(&'a self, prefix: P) -> Option<&'a RawStr>
+fn strip_suffix<'a, P>(&'a self, suffix: P) -> Option<&'a RawStr>
+fn parse<F: std::str::FromStr>(&self) -> Result<F, F::Err>

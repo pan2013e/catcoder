@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\nprivate boolean tryToLocateSignature(final long minDistanceFromEnd,\n                                    final long maxDistanceFromEnd,\n                                    final byte[] sig) throws IOException {\n    final long archiveSize = archive.size();\n    final long stopSearching = Math.max(0, archiveSize - maxDistanceFromEnd);\n    long position = archiveSize - minDistanceFromEnd;\n\n    if (position < stopSearching || position < 0) {\n        return false;\n    }\n\n    final int bufferSize = 4096;\n    final ByteBuffer buffer = ByteBuffer.allocate(bufferSize + sig.length - 1);\n\n    while (position >= stopSearching) {\n        final long blockStart = Math.max(stopSearching, position - bufferSize + 1);\n        final int blockLength = (int) (position - blockStart + 1);\n        final int bytesToRead = (int) Math.min(blockLength + sig.length - 1,\n                                               archiveSize - blockStart);\n\n        buffer.clear();\n        buffer.limit(bytesToRead);\n        archive.position(blockStart);\n        IOUtils.readFully(archive, buffer);\n        final byte[] data = buffer.array();\n\n        for (int i = blockLength - 1; i >= 0; i--) {\n            boolean matches = i + sig.length <= bytesToRead;\n            for (int j = 0; matches && j < sig.length; j++) {\n                matches = data[i + j] == sig[j];\n            }\n            if (matches) {\n                archive.position(blockStart + i);\n                return true;\n            }\n        }\n\n        if (blockStart == stopSearching) {\n            break;\n        }\n        position = blockStart - 1;\n    }\n    return false;\n}\n[/CODE]",
+  "input_tokens": 3380,
+  "output_tokens": 356,
+  "usd": 0.000516,
+  "brl": 0.00287412,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 148,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "3c75420e9f751716c0d172d460c2c56564549226"
+  }
+}

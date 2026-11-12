@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":1,\"feedback\":\"A versão 1 calcula os componentes a partir do valor absoluto do offset, evitando erros de sinal na decomposição.\"}",
+  "input_tokens": 2947,
+  "output_tokens": 40,
+  "usd": 0.0003147,
+  "brl": 0.0017528790000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 121,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-6-luna",
+    "prompt": "704aa6452f83c28346135495c9088bcfbe202328"
+  }
+}

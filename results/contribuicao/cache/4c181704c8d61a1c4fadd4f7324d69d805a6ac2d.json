@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A versão 0 está correta, completa e sem duplicações do método ou do comentário. As versões 1 e 2 repetem o cabeçalho/comentário e o método, causando código inválido.\"}",
+  "input_tokens": 3391,
+  "output_tokens": 66,
+  "usd": 0.0048987499999999995,
+  "brl": 0.0272860375,
+  "modelo": "gpt-5",
+  "chave": {
+    "lingua": "java",
+    "indice": 92,
+    "rodada": "J-FFORTE",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-5",
+    "prompt": "15800c80fb766d9f53cbb3fe3bbfb67f492b761e"
+  }
+}

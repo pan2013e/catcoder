@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":2,\"feedback\":\"As versões 1, 2 e 3 são equivalentes e calculam corretamente os componentes do offset. A versão 0 pode falhar para Integer.MIN_VALUE, pois Math.abs não consegue representá-lo como positivo.\"}",
+  "input_tokens": 3452,
+  "output_tokens": 62,
+  "usd": 0.00037620000000000004,
+  "brl": 0.002095434,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 121,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 4,
+    "modelo": "gpt-6-luna",
+    "prompt": "0b4af9f7bdc5e89d20a01a7333ac9ff928f5213a"
+  }
+}

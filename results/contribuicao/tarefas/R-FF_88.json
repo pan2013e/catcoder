@@ -1,0 +1,50 @@
+{
+  "n_pedido": 4,
+  "n_usado": 4,
+  "voltas": 5,
+  "acoes": [
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte",
+    "reverte"
+  ],
+  "acao_final": "reverte",
+  "codigo": "pub fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T> {\n    assert!(at <= self.capacity(), \"`at` out of bounds\");\n    \n    let new_uninit = self.uninit.split_at(at).unwrap();\n    let new_len = at;\n\n    // Update the length of the current FixedVec\n    self.set_len(new_len);\n\n    // Return a new FixedVec borrowing the memory\n    FixedVec {\n        uninit: new_uninit,\n        length: self.length - new_len,\n    }\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 37572,
+  "tokens_out": 921,
+  "brl": 0.034469388000000004,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T> {\n    assert!(at <= self.capacity(), \"`at` out of bounds\");\n    \n    let new_uninit = self.uninit.split_at(at).unwrap();\n    let new_len = at;\n\n    // Update the length of the current FixedVec\n    self.set_len(new_len);\n\n    // Return a new FixedVec borrowing the memory\n    FixedVec {\n        uninit: new_uninit,\n        length: self.length - new_len,\n    }\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T> {\n    assert!(at <= self.capacity(), \"`at` out of bounds\");\n    \n    let new_uninit = self.uninit.split_at(at).unwrap();\n    let new_len = at;\n\n    // Update the length of the current FixedVec\n    self.set_len(new_len);\n\n    // Return a new FixedVec borrowing the memory with the same capacity\n    FixedVec {\n        uninit: new_uninit,\n        length: new_len,\n    }\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "pub fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T> {\n    assert!(at <= self.capacity(), \"`at` out of bounds\");\n    \n    let new_uninit = self.uninit.split_at(at).unwrap();\n    let new_len = at;\n\n    // Update the length of the current FixedVec\n    self.set_len(new_len);\n\n    // Return a new FixedVec borrowing the memory with the correct length\n    FixedVec {\n        uninit: new_uninit,\n        length: self.length - new_len,\n    }\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "pub fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T> {\n    assert!(at <= self.capacity(), \"`at` out of bounds\");\n    \n    let new_uninit = self.uninit.split_at(at).unwrap();\n    let new_len = at;\n\n    // Update the length of the current FixedVec\n    self.set_len(new_len);\n\n    // Return a new FixedVec borrowing the memory with the same capacity\n    FixedVec {\n        uninit: new_uninit,\n        length: new_len,\n    }\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "pub fn split_borrowed(&mut self, at: usize) -> FixedVec<'_, T> {\n    assert!(at <= self.capacity(), \"`at` out of bounds\");\n    \n    let new_uninit = self.uninit.split_at(at).unwrap();\n    let new_len = at;\n\n    // Update the length of the current FixedVec\n    self.set_len(new_len);\n\n    // Return a new FixedVec borrowing the memory with the same capacity\n    FixedVec {\n        uninit: new_uninit,\n        length: new_len,\n    }\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 88,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.2959240740000001
+}

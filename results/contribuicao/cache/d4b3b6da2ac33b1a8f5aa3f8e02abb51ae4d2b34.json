@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação usa o cache por locale e putIfAbsent corretamente, retornando a estratégia já existente em caso de concorrência.\"}",
+  "input_tokens": 2581,
+  "output_tokens": 42,
+  "usd": 0.0002791,
+  "brl": 0.001554587,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 68,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 3,
+    "modelo": "gpt-6-luna",
+    "prompt": "b661605426588a20b26f302a1b7774a5c3b4072c"
+  }
+}

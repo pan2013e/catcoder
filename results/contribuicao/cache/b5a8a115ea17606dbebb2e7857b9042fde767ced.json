@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npub fn from_fn<F>(len: usize, mut f: F) -> Self where F: FnMut(usize) -> bool {\n    let mut bit_vec = BitVec::with_capacity(len);\n    for i in 0..len {\n        bit_vec.push(f(i));\n    }\n    bit_vec.nbits = len;\n    bit_vec\n}\n[/CODE]",
+  "input_tokens": 1797,
+  "output_tokens": 78,
+  "usd": 0.00031634999999999996,
+  "brl": 0.0017620695,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 1,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 4,
+    "modelo": "gpt-4o-mini",
+    "prompt": "a821ff111d202bc262a31dcf1c0b60ddf83e63ef"
+  }
+}

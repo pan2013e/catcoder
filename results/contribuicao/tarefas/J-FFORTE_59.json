@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "public static <O> Collection<O> union(final Iterable<? extends O> a, final Iterable<? extends O> b) {\n    final SetOperationCardinalityHelper<O> helper = new SetOperationCardinalityHelper<O>(a, b);\n    for (final O obj : helper) {\n        helper.setCardinality(obj, helper.max(obj));\n    }\n    return helper.list();\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 12864,
+  "tokens_out": 342,
+  "brl": 0.10861500000000002,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "public static <O> Collection<O> union(final Iterable<? extends O> a, final Iterable<? extends O> b) {\n    final SetOperationCardinalityHelper<O> helper = new SetOperationCardinalityHelper<O>(a, b);\n    for (final O obj : helper) {\n        helper.setCardinality(obj, helper.max(obj));\n    }\n    return helper.list();\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "public static <O> Collection<O> union(final Iterable<? extends O> a, final Iterable<? extends O> b) {\n    final SetOperationCardinalityHelper<O> helper = new SetOperationCardinalityHelper<O>(a, b);\n    for (final O obj : helper) {\n        helper.setCardinality(obj, helper.max(obj));\n    }\n    return helper.list();\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 59,
+  "lingua": "java",
+  "rodada": "J-FFORTE",
+  "geradora": "gpt-5",
+  "juiza": "gpt-5",
+  "n_corte": 4,
+  "medido_brl": 2.6544584164999994
+}

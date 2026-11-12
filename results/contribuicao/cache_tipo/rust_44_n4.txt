@@ -1,0 +1,21 @@
+pub struct HashMultiSet<K> {
+elem_counts: HashMap<K, usize, RandomState, Global>,
+size: usize,
+}
+fn new() -> Self
+fn iter(&self) -> Iter<K>
+fn is_empty(&self) -> bool
+fn contains<Q: ?Sized>(&self, value: &Q) -> bool
+fn len(&self) -> usize
+fn distinct_elements<'a>(&'a self) -> Keys<'a, K, usize>
+fn insert(&mut self, val: K)
+fn insert_times(&mut self, val: K, n: usize)
+fn remove(&mut self, val: &K) -> bool
+fn remove_times(&mut self, val: &K, times: usize) -> usize
+fn remove_all(&mut self, val: &K)
+fn count_of(&self, val: &K) -> usize
+pub struct HashMap<K, V, S = RandomState, A = Global>
+where
+A: Allocator, {
+base: {unknown},
+}

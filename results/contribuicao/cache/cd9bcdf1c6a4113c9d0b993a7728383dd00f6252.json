@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"continua\",\"versao\":0,\"feedback\":\"A implementação verifica os dados e calcula cada covariância entre colunas, preenchendo simetricamente a matriz de resultado.\"}",
+  "input_tokens": 3042,
+  "output_tokens": 42,
+  "usd": 0.00032520000000000004,
+  "brl": 0.0018113640000000004,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 104,
+    "rodada": "J-FF",
+    "papel": "juiza",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "768075605e46168b47b836e253acb71dc20041ac"
+  }
+}

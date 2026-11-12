@@ -1,0 +1,17 @@
+{
+  "texto": "{\"acao\":\"reverte\",\"versao\":1,\"feedback\":\"A versão 1 é preferível porque limpa a estrutura interna do `other` de forma mais explícita, garantindo que tanto o vetor quanto o contador de elementos sejam redefinidos corretamente após a operação de append.\"}",
+  "input_tokens": 1793,
+  "output_tokens": 57,
+  "usd": 0.00030315,
+  "brl": 0.0016885455000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 81,
+    "rodada": "R-FF",
+    "papel": "juiza",
+    "volta": 2,
+    "modelo": "gpt-4o-mini",
+    "prompt": "77850615320ac73f579b5889ca492a61eca495ca"
+  }
+}

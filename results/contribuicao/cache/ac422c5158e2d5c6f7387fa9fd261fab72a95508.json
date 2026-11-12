@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\n{\n    self.headers.insert(Uncased::new(name), values.clone());\n    values.clear();\n}\n[/CODE]",
+  "input_tokens": 2089,
+  "output_tokens": 26,
+  "usd": 0.00032895,
+  "brl": 0.0018322515000000002,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 52,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "4696336c2c7ee448498676bb2a375f3c11563a28"
+  }
+}

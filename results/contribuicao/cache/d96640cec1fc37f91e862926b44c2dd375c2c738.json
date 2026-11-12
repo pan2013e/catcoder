@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic PartialConverter addPartialConverter(PartialConverter converter)\n        throws SecurityException {\n    checkAlterPartialConverters();\n    if (converter == null) {\n        return null;\n    }\n    PartialConverter[] removed = new PartialConverter[1];\n    iPartialConverters = iPartialConverters.add(converter, removed);\n    return removed[0];\n}\n[/CODE]",
+  "input_tokens": 1188,
+  "output_tokens": 78,
+  "usd": 0.00015780000000000001,
+  "brl": 0.0008789460000000001,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 173,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "ecda28187e05902c3c7eead30447ce48f00c4b74"
+  }
+}

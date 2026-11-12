@@ -1,0 +1,17 @@
+{
+  "texto": "{\n    let count = self.elem_counts.entry(val).or_insert(0);\n    *count += n;\n    self.size += n;\n}",
+  "input_tokens": 1184,
+  "output_tokens": 29,
+  "usd": 0.00019499999999999997,
+  "brl": 0.00108615,
+  "modelo": "gpt-4o-mini",
+  "chave": {
+    "lingua": "rust",
+    "indice": 43,
+    "rodada": "R-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-4o-mini",
+    "prompt": "e0fb3c179968726a85c84788194d1934e13373d2"
+  }
+}

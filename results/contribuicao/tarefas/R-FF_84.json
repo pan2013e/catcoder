@@ -1,0 +1,35 @@
+{
+  "n_pedido": 2,
+  "n_usado": 2,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn insert(&mut self, key: usize, value: V) -> Option<V> {\n    if key >= self.v.len() {\n        self.v.resize_with(key + 1, || None);\n    }\n    let result = std::mem::replace(&mut self.v[key], Some(value));\n    if result.is_none() {\n        self.n += 1;\n    }\n    result\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 8186,
+  "tokens_out": 277,
+  "brl": 0.007765137,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn insert(&mut self, key: usize, value: V) -> Option<V> {\n    if key >= self.v.len() {\n        self.v.resize_with(key + 1, || None);\n    }\n    let result = std::mem::replace(&mut self.v[key], Some(value));\n    if result.is_none() {\n        self.n += 1;\n    }\n    result\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn insert(&mut self, key: usize, value: V) -> Option<V> {\n    if key >= self.v.len() {\n        self.v.resize_with(key + 1, || None);\n    }\n    let result = std::mem::replace(&mut self.v[key], Some(value));\n    if result.is_none() {\n        self.n += 1;\n    }\n    result\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 84,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.15258068100000002
+}

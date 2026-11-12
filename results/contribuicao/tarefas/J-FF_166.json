@@ -1,0 +1,50 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 5,
+  "acoes": [
+    "continua",
+    "continua",
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "private double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 14989,
+  "tokens_out": 324,
+  "brl": 0.009277392,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}"
+    },
+    {
+      "id": 3,
+      "codigo": "private double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}"
+    },
+    {
+      "id": 4,
+      "codigo": "private double eval(UnivariateFunction f, double x) {\n    evaluations.incrementCount();\n    return f.value(x);\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 166,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.358014459000001
+}

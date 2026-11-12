@@ -1,0 +1,35 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 2,
+  "acoes": [
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "pub fn pop(&mut self) -> Option<bool> {\n    if self.len() == 0 {\n        return None;\n    }\n\n    let last_index = self.len() - 1;\n    let last_block_index = last_index / B::bits();\n    let bit_index = last_index % B::bits();\n\n    let last_block = &mut self.storage[last_block_index];\n    let bit = (*last_block >> bit_index) & B::one() != B::zero();\n\n    // Clear the bit\n    *last_block &= !(B::one() << bit_index);\n\n    // If the last block is now empty, we may need to fix it\n    if last_index % B::bits() == 0 && last_block_index > 0 {\n        self.storage.pop();\n    }\n\n    Some(bit)\n}",
+  "compilou": false,
+  "passou": false,
+  "tokens_in": 5764,
+  "tokens_out": 427,
+  "brl": 0.006242856,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "pub fn pop(&mut self) -> Option<bool> {\n    if self.len() == 0 {\n        return None;\n    }\n\n    let last_index = self.len() - 1;\n    let last_block_index = last_index / B::bits();\n    let bit_index = last_index % B::bits();\n\n    let last_block = &mut self.storage[last_block_index];\n    let bit = (*last_block >> bit_index) & B::one() != B::zero();\n\n    // Clear the bit\n    *last_block &= !(B::one() << bit_index);\n\n    // If the last block is now empty, we may need to fix it\n    if last_index % B::bits() == 0 && last_block_index > 0 {\n        self.storage.pop();\n    }\n\n    Some(bit)\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "pub fn pop(&mut self) -> Option<bool> {\n    if self.len() == 0 {\n        return None;\n    }\n\n    let last_index = self.len() - 1;\n    let last_block_index = last_index / B::bits();\n    let bit_index = last_index % B::bits();\n\n    let last_block = &mut self.storage[last_block_index];\n    let bit = (*last_block >> bit_index) & B::one() != B::zero();\n\n    // Clear the bit\n    *last_block &= !(B::one() << bit_index);\n\n    // If the last block is now empty, we may need to fix it\n    if last_index % B::bits() == 0 && last_block_index > 0 {\n        self.storage.pop();\n    }\n\n    Some(bit)\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 8,
+  "lingua": "rust",
+  "rodada": "R-FF",
+  "geradora": "gpt-4o-mini",
+  "juiza": "gpt-4o-mini",
+  "n_corte": 4,
+  "medido_brl": 0.006242856000000001
+}

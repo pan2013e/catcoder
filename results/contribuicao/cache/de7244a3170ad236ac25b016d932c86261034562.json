@@ -1,0 +1,17 @@
+{
+  "texto": "[CODE]\npublic static double sumDifference(final double[] sample1, final double[] sample2)\n    throws DimensionMismatchException, NoDataException {\n    if (sample1.length != sample2.length) {\n        throw new DimensionMismatchException(sample1.length, sample2.length);\n    }\n    if (sample1.length == 0) {\n        throw new NoDataException();\n    }\n\n    double sum = 0d;\n    for (int i = 0; i < sample1.length; i++) {\n        sum += sample1[i] - sample2[i];\n    }\n    return sum;\n}\n[/CODE]",
+  "input_tokens": 2861,
+  "output_tokens": 129,
+  "usd": 0.0003506,
+  "brl": 0.0019528420000000002,
+  "modelo": "gpt-6-luna",
+  "chave": {
+    "lingua": "java",
+    "indice": 26,
+    "rodada": "J-FF",
+    "papel": "geradora",
+    "volta": 1,
+    "modelo": "gpt-6-luna",
+    "prompt": "944aaf70b308c0c6327c738eb29ce4c3a03b6ff7"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "n_pedido": 0,
+  "n_usado": 0,
+  "voltas": 3,
+  "acoes": [
+    "continua",
+    "continua",
+    "parar"
+  ],
+  "acao_final": "parar",
+  "codigo": "private final static int _parseIndex(String str) {\n    final int len = str.length();\n    if (len == 0 || len > 10) {\n        return -1;\n    }\n    if (len > 1 && str.charAt(0) == '0') {\n        return -1;\n    }\n\n    int index = 0;\n    for (int i = 0; i < len; ++i) {\n        char c = str.charAt(i);\n        if (c < '0' || c > '9') {\n            return -1;\n        }\n        index = (index * 10) + (c - '0');\n    }\n    return index < 0 ? -1 : index;\n}",
+  "compilou": true,
+  "passou": true,
+  "tokens_in": 11494,
+  "tokens_out": 598,
+  "brl": 0.008084855,
+  "versoes": [
+    {
+      "id": 0,
+      "codigo": "private final static int _parseIndex(String str) {\n    final int len = str.length();\n    if (len == 0 || len > 10) {\n        return -1;\n    }\n    if (len > 1 && str.charAt(0) == '0') {\n        return -1;\n    }\n\n    int index = 0;\n    for (int i = 0; i < len; ++i) {\n        char c = str.charAt(i);\n        if (c < '0' || c > '9') {\n            return -1;\n        }\n        index = (index * 10) + (c - '0');\n    }\n    return index < 0 ? -1 : index;\n}"
+    },
+    {
+      "id": 1,
+      "codigo": "private static int _parseIndex(String str) {\n    final int len = str.length();\n    if (len == 0 || len > 10) {\n        return -1;\n    }\n    if (len > 1 && str.charAt(0) == '0') {\n        return -1;\n    }\n\n    int index = 0;\n    for (int i = 0; i < len; ++i) {\n        char c = str.charAt(i);\n        if (c < '0' || c > '9') {\n            return -1;\n        }\n        index = (index * 10) + (c - '0');\n    }\n    return index < 0 ? -1 : index;\n}"
+    },
+    {
+      "id": 2,
+      "codigo": "private static int _parseIndex(String str) {\n    final int len = str.length();\n    if (len == 0 || len > 10) {\n        return -1;\n    }\n    if (len > 1 && str.charAt(0) == '0') {\n        return -1;\n    }\n\n    int index = 0;\n    for (int i = 0; i < len; ++i) {\n        char c = str.charAt(i);\n        if (c < '0' || c > '9') {\n            return -1;\n        }\n        index = (index * 10) + (c - '0');\n    }\n    return index < 0 ? -1 : index;\n}"
+    }
+  ],
+  "erro": "",
+  "completo": true,
+  "indice": 109,
+  "lingua": "java",
+  "rodada": "J-FF",
+  "geradora": "gpt-6-luna",
+  "juiza": "gpt-6-luna",
+  "n_corte": 4,
+  "medido_brl": 1.4564739565000009
+}
